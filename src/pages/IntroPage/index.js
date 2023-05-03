@@ -42,7 +42,7 @@ const CategoryButton = styled.button`
   padding: 6px 15px;
 
   &:hover {
-    background-color: ${palette.blue_1};
+    background-color: ${palette.blue_2};
     color: ${palette.white};
   }
 `;
@@ -84,6 +84,7 @@ const IntroPage = () => {
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState();
   const [waiting, setWaiting] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(-1);
   const CategoryList = [
     "👨‍👩‍👧‍👦 가족",
     "🍳 요리",
@@ -107,8 +108,7 @@ const IntroPage = () => {
     "🎸 악기",
   ];
 
-  useEffect(() => {}, [answer]);
-  useEffect(() => {}, [waiting]);
+  useEffect(() => {}, [answer, waiting, selectedIndex]);
 
   const handleSubmit = async (e) => {
     setAnswer("");
@@ -152,8 +152,24 @@ const IntroPage = () => {
       <FullTitle>OPIc Script Generator</FullTitle>
       <TitleBox>카테고리</TitleBox>
       <CategoryContainer>
-        {CategoryList.map((category) => (
-          <CategoryButton>{category}</CategoryButton>
+        {CategoryList.map((category, index) => (
+          <>
+            {index == selectedIndex ? (
+              <CategoryButton
+                style={{
+                  backgroundColor: palette.blue_1,
+                  color: palette.white,
+                }}
+                onClick={() => setSelectedIndex(-1)}
+              >
+                {category}
+              </CategoryButton>
+            ) : (
+              <CategoryButton onClick={() => setSelectedIndex(index)}>
+                {category}
+              </CategoryButton>
+            )}
+          </>
         ))}
       </CategoryContainer>
       <TitleBox>한국어 대본</TitleBox>

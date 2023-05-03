@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { IntroPage } from "./pages";
+import { IntroPage, ScriptGeneratePage } from "./pages";
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
@@ -32,6 +32,7 @@ function App() {
           <WebAppContainer>
             <Routes>
               <Route exact path="/" element={<IntroPage />} />
+              <Route path="/generate" element={<ScriptGeneratePage />} />
             </Routes>
           </WebAppContainer>
         </BodyInner>

@@ -1,4 +1,15 @@
 export const COLORS = {
+  // theme color
+  t_red: "#F34A53",
+  t_yellow: "#FAE3B4",
+  t_melon: "#CFF09E",
+  darker_green: "#79BD9A",
+  darkest_green: "#02362A",
+  background: "#DDEEE5",
+  t_red: "#F34A53",
+  t_black: "#1B2A22",
+  light_bg: "#DDEEE533",
+
   // Blue
   blue_1: "#4880EE",
   blue_2: "#6D99F1",
@@ -28,7 +39,7 @@ export const COLORS = {
   gray: "#999999",
   light_gray: "#E6E6E6",
 
-  background: "#F6F6F6",
+  background: "#DDEEE5",
   white: "#FFFFFF",
 
   // Red
