@@ -92,13 +92,13 @@ const ButtonText = styled.div`
   text-align: center;
   margin: auto 5px;
   color: ${palette.darkest_green};
-`
+`;
 
 const ArrowIcon = styled.img`
   width: 24px;
   height: 24px;
   margin: auto 0px;
-`
+`;
 
 const SurveyBox = ({ questions }) => {
   const [currentQuestionIdx, setCurrentQuestionIdx] = useState(0);
@@ -109,34 +109,46 @@ const SurveyBox = ({ questions }) => {
   const [gptResult, setGptResult] = useState("");
   const [waiting, setWaiting] = useState(false);
 
-  useEffect(()=>{
-    if(questions?.length > 0){
+  useEffect(() => {
+    if (questions?.length > 0) {
       let questionNum = questions?.length;
       let arr;
       (arr = []).length = questionNum;
       arr.fill("");
       setDescriptionAnswerList(arr);
     }
-  }, [questions])
+  }, [questions]);
 
-  useEffect(()=>{
-    if(currentQuestionIdx > -1){
+  useEffect(() => {
+    if (currentQuestionIdx > -1) {
       descriptionAnswerList[currentQuestionIdx] = descriptionAnswer;
     }
-  }, [descriptionAnswer])
+  }, [descriptionAnswer]);
 
   const SubmitOnClick = async (e) => {
     setGptResult("");
     setWaiting(true);
     e.preventDefault();
-    
-    let mergeSentence = ""
-    questions?.map((item, idx)=>{
-      mergeSentence = mergeSentence + (idx+1).toString() + ". " + item.question + " : " + descriptionAnswerList[idx] + "\n"
-    })
-    setQnaMerge(mergeSentence)
-    console.log(mergeSentence)
-  }
+
+    let mergeSentence = "";
+    questions?.map((item, idx) => {
+      mergeSentence =
+        mergeSentence +
+        (idx + 1).toString() +
+        ". " +
+        item.question +
+        " : " +
+        descriptionAnswerList[idx] +
+        "\n";
+    });
+    setQnaMerge(mergeSentence);
+    console.log(mergeSentence);
+
+    setWaiting(false);
+    setGptResult(
+      "My favorite piece of furniture in my house is not actually a furniture, but it's my Bluetooth speaker. It's a JBL speaker that my friends gave me as a birthday present when I turned 23. I really like it because it's portable, which means I can take it with me anywhere I go. It's also quite expensive, but it's totally worth it because the sound quality is really good. I especially like the strong bass that it produces, which makes my music sound even better. Overall, I think my Bluetooth speaker is a really cool gadget that adds a lot of value to my life."
+    );
+  };
 
   const handleSubmit = async (e) => {
     setGptResult("");
@@ -177,54 +189,70 @@ const SurveyBox = ({ questions }) => {
   };
 
   return (
-    <Container>{waiting && gptResult == "" ? <>
-    <Loading />
-    </>:<>
-    {
-      gptResult ? <OutputEssay /> :<>
-      <NumStatus>
-        {currentQuestionIdx + 1} of {questions?.length}
-      </NumStatus>
-      <QuestionSentence>
-        {questions[currentQuestionIdx]?.question}
-      </QuestionSentence>
-      {questions[currentQuestionIdx]?.type == "descriptive_form" ? (
+    <Container>
+      {waiting && gptResult == "" ? (
         <>
-          <QuestionSubSentence>(자세히 설명해주세요)</QuestionSubSentence>
-          <AnswerTextArea
-            placeholder={questions[currentQuestionIdx]?.placeholder}
-            onChange={(e) => {
-              setDescriptionAnswer(e.target.value);
-            }}
-            value={descriptionAnswer}
-          />
+          <Loading />
         </>
       ) : (
-        <></>
+        <>
+          {gptResult ? (
+            <OutputEssay response={gptResult} />
+          ) : (
+            <>
+              <NumStatus>
+                {currentQuestionIdx + 1} of {questions?.length}
+              </NumStatus>
+              <QuestionSentence>
+                {questions[currentQuestionIdx]?.question}
+              </QuestionSentence>
+              {questions[currentQuestionIdx]?.type == "descriptive_form" ? (
+                <>
+                  <QuestionSubSentence>
+                    (자세히 설명해주세요)
+                  </QuestionSubSentence>
+                  <AnswerTextArea
+                    placeholder={questions[currentQuestionIdx]?.placeholder}
+                    onChange={(e) => {
+                      setDescriptionAnswer(e.target.value);
+                    }}
+                    value={descriptionAnswer}
+                  />
+                </>
+              ) : (
+                <></>
+              )}
+              <BottomBar>
+                <LeftButton
+                  onClick={() => {
+                    setCurrentQuestionIdx(currentQuestionIdx - 1);
+                  }}
+                  style={
+                    currentQuestionIdx == 0 ? { visibility: "hidden" } : {}
+                  }
+                >
+                  <ArrowIcon src={LeftArrow} />
+                </LeftButton>
+                <LeftButton
+                  onClick={(e) => {
+                    currentQuestionIdx == questions?.length - 1
+                      ? SubmitOnClick(e)
+                      : setCurrentQuestionIdx(currentQuestionIdx + 1);
+                    setDescriptionAnswer("");
+                  }}
+                >
+                  <ButtonText>
+                    {currentQuestionIdx == questions?.length - 1
+                      ? "완료"
+                      : "다음"}
+                  </ButtonText>
+                  <ArrowIcon src={RightArrow} />
+                </LeftButton>
+              </BottomBar>
+            </>
+          )}
+        </>
       )}
-      <BottomBar>
-        <LeftButton
-          onClick={() => {
-            setCurrentQuestionIdx(currentQuestionIdx - 1);
-          }}
-          style={currentQuestionIdx==0?{visibility: "hidden"}:{}}
-        >
-          <ArrowIcon src={LeftArrow}/>
-        </LeftButton>
-        <LeftButton
-          onClick={(e) => {
-            currentQuestionIdx == questions?.length - 1 ? SubmitOnClick(e):
-            setCurrentQuestionIdx(currentQuestionIdx + 1);
-            setDescriptionAnswer("");
-          }}
-        >
-          <ButtonText>
-          {currentQuestionIdx == questions?.length - 1 ? "완료" : "다음"}
-          </ButtonText>
-          <ArrowIcon src={RightArrow}/>
-        </LeftButton>
-      </BottomBar></>}</>
-}
     </Container>
   );
 };
