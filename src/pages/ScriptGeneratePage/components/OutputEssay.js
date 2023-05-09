@@ -104,7 +104,7 @@ const OutputEssay = ({ response }) => {
           onClose={() => {
             setOptionModalShow(false);
           }}
-          text={"hello"}
+          text={response}
         />
       ) : (
         <></>
