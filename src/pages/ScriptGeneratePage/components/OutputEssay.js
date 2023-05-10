@@ -4,6 +4,8 @@ import { COLORS as palette } from "../../../utils/style/Color/colors";
 import CopyIcon from "../../../assets/icons/copy.svg";
 import Logo from "../../../assets/icons/logo.svg";
 import OptionEssay from "./OptionEssay";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const PageHeader = styled.div`
   width: 100%;
@@ -35,6 +37,7 @@ const ResponseContainer = styled.div`
   text-align: left;
   position: relative;
   margin-top: 40px;
+  overflow-y: auto;
 `;
 
 const ContainerHeader = styled.div`
@@ -62,7 +65,7 @@ const OptionBox = styled.div`
   grid-template-rows: repeat(2, 1fr);
   gap: 1rem;
   margin-top: 26px;
-  margin-bottom: 100px;
+  padding-bottom: 100px;
 `;
 
 const OptionButton = styled.button`
@@ -82,19 +85,31 @@ const OptionButton = styled.button`
 `;
 
 const OutputEssay = ({ response }) => {
+  const [text, setText] = useState("");
   const [optionModalShow, setOptionModalShow] = useState(false);
+  const [command, setCommand] = useState("");
   const OptionList = [
-    { title: "더 짧게", command: "" },
-    { title: "더 길게", command: "" },
-    { title: "더 쉽게", command: "" },
-    { title: "더 어렵게", command: "" },
+    { title: "더 짧게", command: "Can you make the above script shorter?" },
+    { title: "더 길게", command: "Can you make the above script longer?" },
+    { title: "더 쉽게", command: "Can you make the above script easier?" },
+    { title: "더 어렵게", command: "Can you make the above script more challenging, at an advanced level?" },
   ];
 
-  useEffect(() => {}, [optionModalShow]);
+  useEffect(() => {}, [optionModalShow, text]);
+  useEffect(()=>{
+    setText(response);
+  }, [response])
 
-  const optionButtonOnClick = () => {
+  const optionButtonOnClick = (idx) => {
     setOptionModalShow(true);
+    setCommand(OptionList[idx].command)
   };
+
+  const copyOnClick = () => {
+    navigator.clipboard.writeText(text);
+    toast.success("복사완료!");
+  }
+
   return (
     <>
       {optionModalShow ? (
@@ -104,7 +119,9 @@ const OutputEssay = ({ response }) => {
           onClose={() => {
             setOptionModalShow(false);
           }}
-          text={response}
+          text={text}
+          command={command}
+          setOverwriting={setText}
         />
       ) : (
         <></>
@@ -114,17 +131,18 @@ const OutputEssay = ({ response }) => {
       </PageHeader>
       <ResponseContainer>
         <ContainerHeader>
-          <CopyButton />
+          <CopyButton onClick={copyOnClick}/>
         </ContainerHeader>
-        {response}
+        {text}
       </ResponseContainer>
       <OptionBox>
         {OptionList.map((item, index) => (
-          <OptionButton onClick={optionButtonOnClick}>
+          <OptionButton onClick={()=>optionButtonOnClick(index)}>
             {item.title}
           </OptionButton>
         ))}
       </OptionBox>
+      <ToastContainer position="top-center" autoClose={1000} />
     </>
   );
 };

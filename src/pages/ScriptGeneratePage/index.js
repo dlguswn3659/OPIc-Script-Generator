@@ -8,6 +8,7 @@ const Container = styled.div`
   width: 100%;
   padding-top: 50px;
   background-color: ${palette.light_bg};
+  min-height: 100vh;
 `;
 
 const PageTitle = styled.div`
@@ -29,6 +30,7 @@ const GategoryCardContainer = styled.div`
 const CategoryBox = styled.button`
   width: 100%;
   height: 138px;
+  position: relative;
   border-radius: 16px;
   background-color: ${palette.white};
   color: ${palette.darkest_green};
@@ -40,22 +42,27 @@ const CategoryBox = styled.button`
   margin: 4px 0px;
   font-family: Noto Sans KR;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 900;
   line-height: 29px;
   text-align: left;
-  background: linear-gradient(
-    90deg,
-    #ffffff 9.68%,
-    rgba(255, 255, 255, 0) 60.99%
-  );
-  filter: brightness(1.2) contrast(0.8) saturate(1.1);
   background-repeat: no-repeat;
   background-size: cover;
-
   &:hover {
-    background-color: ${palette.darker_green};
-    color: ${palette.white};
+    // border: 5px solid ${palette.darker_green};
+    box-shadow: inset 0 0 0 5px ${palette.darker_green}, 0.9120142459869385px 0.9120142459869385px 7.296113967895508px 0px
+    #02362a40;
   }
+`;
+
+const Gradient = styled.div`
+  position: absolute;
+  border-radius: 16px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 300px; /* 그라데이션의 높이 조정 */
+  background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  z-index: 1;
 `;
 
 const ScriptGeneratePage = () => {
@@ -81,7 +88,10 @@ const ScriptGeneratePage = () => {
                   backgroundImage: `url(${process.env.PUBLIC_URL}${category.img}`,
                 }}
               >
-                {category.title}
+                <div style={{position:"absolute", zIndex:2, top:"50%", transform:"translateY(-50%)"}}>
+                  {category.title}
+                </div>
+                <Gradient/>
               </CategoryBox>
             ))}
           </GategoryCardContainer>

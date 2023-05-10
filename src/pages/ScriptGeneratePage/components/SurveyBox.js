@@ -144,48 +144,79 @@ const SurveyBox = ({ questions }) => {
     setQnaMerge(mergeSentence);
     console.log(mergeSentence);
 
-    setWaiting(false);
-    setGptResult(
-      "My favorite piece of furniture in my house is not actually a furniture, but it's my Bluetooth speaker. It's a JBL speaker that my friends gave me as a birthday present when I turned 23. I really like it because it's portable, which means I can take it with me anywhere I go. It's also quite expensive, but it's totally worth it because the sound quality is really good. I especially like the strong bass that it produces, which makes my music sound even better. Overall, I think my Bluetooth speaker is a really cool gadget that adds a lot of value to my life."
-    );
-  };
+    // test
+    mergeSentence = `1. 거주 형태가 어떻게 되시나요? : 혼자 홍대에서 자취하고 있어요.
+    2. 누구랑 거주하고 계시나요? : 혼자 살아요.
+    3. 어디 지역에 사세요? : 마포구 홍대요.
+    4. 그 지역은 뭐로 유명한가요? : 놀기 좋고 술집이 많아요.
+    5. 이 지역에 얼마나 오래 사셨어요? : 이사온 지 3개월 됐어요.
+    6. 이 집에서는 얼마나 자주 사셨나요? : 3개월이요.
+    7. 이사를 많이 하셨어요? : 자주 한 편이에요.
+    8. 집의 크기가 어떻게 되시나요? : 작은 원룸입니다.
+    9. 집 구조가 어떻게 되나요? : 원룸인데 있을 건 다 있어서 편해요.
+    10. 집의 분위기가 어떤가요? : 동네는 시끄러운데 우리 집은 조용해요.
+    11. 집에 있는 주요 가구들을 간단하게 설명해주세요. : 냉장고, 세탁기 등은 기본 옵션이고 음악 연주하는 걸 좋아해서 기타나 피아노 같은 악기도 있어요.
+    12. 집이 좋은 이유를 써주세요. : 주변에 뭐가 많고 교통이 편리해요.
+    13. 집이 싫은 이유를 써주세요. : 집이 좁고 환기가 잘 안 돼요.
+    14. 집의 특이사항이 있다면 써주세요. : 신설이에요.
+    15. 집의 한줄평을 써주세요. : 좁지만 있을 건 다 있고 가성비가 좋아요.`
+    setQnaMerge(mergeSentence)
 
-  const handleSubmit = async (e) => {
-    setGptResult("");
-    setWaiting(true);
-    e.preventDefault();
 
-    // try {
-    //   const response = await fetch("http://localhost:5000/ask", {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //     body: JSON.stringify({ prompt: "Please translate these questions and responses to these questions to English. They are the following: \n\n" + qnaMerge }),
-    //   });
+    try {
+      const response = await fetch("http://localhost:5000/ask", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ prompt: "Please translate these questions and responses to these questions to **English** . They are the following: \n\n" + mergeSentence + "\n\n\n(+ requirements : Your response script's form is '<START> {your **full** translate result including all questions and answers} <END>'. )"}),
+      });
 
-    //   const data = await response.json();
-    //   if (response.status !== 200) {
-    //     throw (
-    //       data.error ||
-    //       new Error(`request failed with status ${response.status}`)
-    //     );
-    //   }
+      const data = await response.json();
+      if (response.status !== 200) {
+        throw (
+          data.error ||
+          new Error(`request failed with status ${response.status}`)
+        );
+      }
 
-    //   console.log(data.response);
-    //   const text = data.response;
-    //   const regex = /<START>(.*?)<END>/s;
-    //   const parsedText = text.match(regex)[1];
-    //   console.log(parsedText);
-    //   setGptResult(parsedText);
-    //   setWaiting(false);
-    //   // setQuestion("");
-    // } catch (error) {
-    //   console.error(error);
-    //   // alert(error.message);
-    //   setGptResult(error.message);
-    //   setWaiting(false);
-    // }
+      console.log(data.response);
+      const text = data.response;
+      const regex = /<START>(.*?)<END>/s;
+      const parsedText = text.match(regex)[1];
+      console.log(parsedText);
+
+      const response2 = await fetch("http://localhost:5000/ask", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ prompt: `The answers to these questions are the details to my student David's house. Based on these details, can you write a script for David's OPIc Test? In a speech format, not in a dialogue format. He wants to get an IM score. The question to answer in the script is below.\n\n\n\n${parsedText}\n\n (+ requirements : Your response OPIC test script's form is '<START> {your OPIC test script} <END>'. )`}),
+      });
+
+      const data2 = await response2.json();
+      if (response2.status !== 200) {
+        throw (
+          data.error ||
+          new Error(`request failed with status ${response2.status}`)
+        );
+      }
+
+      console.log(data2.response);
+      const text2 = data2.response;
+      const regex2 = /<START>(.*?)<END>/s;
+      const parsedText2 = text2.match(regex2)[1];
+      console.log(parsedText2);
+
+      setGptResult(parsedText2);
+      setWaiting(false);
+      // setQuestion("");
+    } catch (error) {
+      console.error(error);
+      // alert(error.message);
+      setGptResult(error.message);
+      setWaiting(false);
+    }
   };
 
   return (

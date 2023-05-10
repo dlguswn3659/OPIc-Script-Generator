@@ -3,7 +3,10 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import { COLORS as palette } from "../../../utils/style/Color/colors";
 import CopyIcon from "../../../assets/icons/copy.svg";
+import CloseIcon from "../../../assets/icons/close.svg";
 import Loading from "./Loading";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const InnerContainer = styled.div`
   width: 100%;
@@ -28,6 +31,11 @@ const ResponseContainer = styled.div`
   text-align: left;
   position: relative;
   margin-top: 40px;
+  overflow-y: auto;
+  z-index: 1;
+  ::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 const ContainerHeader = styled.div`
@@ -47,6 +55,14 @@ const CopyButton = styled.button`
   background-color: transparent;
   background-image: url(${CopyIcon});
 `;
+
+const CloseButton = styled.button`
+  width: 8px;
+  height: 8px;
+  border: hidden;
+  background-color: transparent;
+  background: url(${CloseIcon}) no-repeat center center/cover;
+`
 
 const OptionBox = styled.div`
   width: 100%;
@@ -106,8 +122,15 @@ const DeleteButton = styled.button`
   text-decoration: underline solid #01191380;
 `
 
-
-
+const Gradient = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  height: 50px; /* 그라데이션의 높이 조정 */
+  background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+`;
 
 function OptionEssay({
   className,
@@ -115,21 +138,63 @@ function OptionEssay({
   maskClosable,
   visible,
   text,
-  buttonText,
+  command,
+  setOverwriting
 }) {
-  const [response, setResponse] = useState("");
+  const [oldResponse, setOldResponse] = useState("");
+  const [newResponse, setNewResponse] = useState("");
   const [waiting, setWaiting] = useState(false);
+  const [addedCommand, setAddedCommand] = useState("");
 
   const OptionList = [
-    { title: "더 짧게", command: "" },
-    { title: "더 길게", command: "" },
-    { title: "더 쉽게", command: "" },
-    { title: "더 어렵게", command: "" },
+    { title: "더 짧게", command: "Can you make the above script shorter?" },
+    { title: "더 길게", command: "Can you make the above script longer?" },
+    { title: "더 쉽게", command: "Can you make the above script easier?" },
+    { title: "더 어렵게", command: "Can you make the above script more challenging, at an advanced level?" },
   ];
 
+  useEffect(()=>{},[oldResponse]);
+
   useEffect(()=>{
-    setResponse(text);
+    setOldResponse(text);
   }, [text])
+
+  useEffect(()=>{
+    setAddedCommand(command)
+  }, [command])
+
+  useEffect(()=>{
+    (async()=>{
+      if(addedCommand!=""){
+        setWaiting(true)
+        const response = await fetch("http://localhost:5000/ask", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ prompt: `${oldResponse}\n\n\n${addedCommand}\n\n(+ requirements : Your response script's form is '<START> {your OPIc test script} <END>'. )`}),
+        });
+
+        const data = await response.json();
+        if (response.status !== 200) {
+          throw (
+            data.error ||
+            new Error(`request failed with status ${response.status}`)
+          );
+        }
+
+        console.log(data.response);
+        const text = data.response;
+        const regex = /<START>(.*?)<END>/s;
+        const parsedText = text.match(regex)[1];
+        console.log(parsedText);
+        setNewResponse(parsedText)
+  
+        setAddedCommand("")
+        setWaiting(false)
+      }
+    })()
+  },[addedCommand])
 
   const onMaskClick = (e) => {
     if (e.target === e.currentTarget) {
@@ -141,9 +206,26 @@ function OptionEssay({
     onClose();
   };
 
-  const optionButtonOnClick = () => {
+  const optionButtonOnClick = (idx) => {
     setWaiting(true)
+    setAddedCommand(OptionList[idx].command)
   };
+
+  const overwriteOnClick = () => {
+    setOverwriting(newResponse)
+    setOldResponse(newResponse)
+    setNewResponse("")
+  }
+
+  const deleteOnClick = () => {
+    setNewResponse("");
+    setOldResponse("");
+  }
+
+  const copyOnClick = () => {
+    navigator.clipboard.writeText(text);
+    toast.success("복사완료!");
+  }
 
   return (
     <React.Fragment>
@@ -159,21 +241,30 @@ function OptionEssay({
             <>{waiting?<>
             <Loading />
             </>:<>
-            <ResponseContainer>
-              <ContainerHeader>
-                <CopyButton />
-              </ContainerHeader>
-              {response}
-            </ResponseContainer>
+            <ContainerHeader>
+              <CloseButton onClick={onClose}/>
+            </ContainerHeader>
+            <div style={{position:"relative", width: "!00%"}}>
+              <ResponseContainer>
+                <ContainerHeader>
+                  <CopyButton onClick={copyOnClick}/>
+                </ContainerHeader>
+                {oldResponse}
+                <br/>
+                <br/>
+                {newResponse}
+              </ResponseContainer>
+              <Gradient/>
+            </div>
             <OptionBox>
               {OptionList.map((item, index) => (
-                <OptionButton onClick={optionButtonOnClick}>
+                <OptionButton onClick={()=>optionButtonOnClick(index)}>
                   {item.title}
                 </OptionButton>
               ))}
             </OptionBox>
-            <FullButton>덮어 쓰기</FullButton>
-            <DeleteButton>삭제</DeleteButton>
+            <FullButton onClick={overwriteOnClick}>덮어 쓰기</FullButton>
+            <DeleteButton onClick={deleteOnClick}>삭제</DeleteButton>
             </>}</>
             
           </InnerContainer>
