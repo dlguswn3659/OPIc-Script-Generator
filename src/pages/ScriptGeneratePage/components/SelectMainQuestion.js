@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { COLORS as palette } from "../../../utils/style/Color/colors";
 import SurveyBox from "./SurveyBox";
+import LeftArrow from "../../../assets/icons/left-arrow.svg";
 
 const PageTitle = styled.div`
   padding: 12px 16px;
@@ -21,7 +22,6 @@ const MainQuestionCardContainer = styled.div`
 
 const MainQuestionBox = styled.button`
   width: 100%;
-  height: 138px;
   border-radius: 16px;
   background-color: ${palette.white};
   color: ${palette.darkest_green};
@@ -42,7 +42,30 @@ const MainQuestionBox = styled.button`
   }
 `;
 
-const SelectMainQuestion = ({ mainQuestionList }) => {
+const BottomBar = styled.div`
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  // position: absolute;
+  // bottom: 0px;
+`;
+
+const LeftButton = styled.button`
+  height: 30px;
+  background: transparent;
+  border: 0px;
+  margin-top: 100px;
+  display: flex;
+`;
+
+const ArrowIcon = styled.img`
+  width: 24px;
+  height: 24px;
+  margin: auto 0px;
+`;
+
+const SelectMainQuestion = ({ mainQuestionList, setSelectedCategoryId }) => {
   const [selectedMainQuestionIdx, setSelectedMainQuestionIdx] = useState(-1);
 
   return (
@@ -50,6 +73,7 @@ const SelectMainQuestion = ({ mainQuestionList }) => {
       {selectedMainQuestionIdx > -1 ? (
         <SurveyBox
           questions={mainQuestionList[selectedMainQuestionIdx].questions}
+          setSelectedMainQuestionIdx={setSelectedMainQuestionIdx}
         />
       ) : (
         <>
@@ -64,6 +88,15 @@ const SelectMainQuestion = ({ mainQuestionList }) => {
                 {item.mainQuestion}
               </MainQuestionBox>
             ))}
+            <BottomBar>
+              <LeftButton
+                onClick={() => {
+                  setSelectedCategoryId(-1);
+                }}
+              >
+                <ArrowIcon src={LeftArrow} />
+              </LeftButton>
+            </BottomBar>
           </MainQuestionCardContainer>
         </>
       )}

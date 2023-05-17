@@ -49,8 +49,9 @@ const CategoryBox = styled.button`
   background-size: cover;
   &:hover {
     // border: 5px solid ${palette.darker_green};
-    box-shadow: inset 0 0 0 5px ${palette.darker_green}, 0.9120142459869385px 0.9120142459869385px 7.296113967895508px 0px
-    #02362a40;
+    box-shadow: inset 0 0 0 5px ${palette.darker_green},
+      0.9120142459869385px 0.9120142459869385px 7.296113967895508px 0px
+        #02362a40;
   }
 `;
 
@@ -61,7 +62,11 @@ const Gradient = styled.div`
   bottom: 0;
   left: 0;
   width: 300px; /* 그라데이션의 높이 조정 */
-  background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0)
+  );
   z-index: 1;
 `;
 
@@ -74,6 +79,7 @@ const ScriptGeneratePage = () => {
       {selectedCategoryId > -1 ? (
         <SelectMainQuestion
           mainQuestionList={Categories[selectedCategoryId].mainQuestions}
+          setSelectedCategoryId={setSelectedCategoryId}
         />
       ) : (
         <>
@@ -88,10 +94,17 @@ const ScriptGeneratePage = () => {
                   backgroundImage: `url(${process.env.PUBLIC_URL}${category.img}`,
                 }}
               >
-                <div style={{position:"absolute", zIndex:2, top:"50%", transform:"translateY(-50%)"}}>
+                <div
+                  style={{
+                    position: "absolute",
+                    zIndex: 2,
+                    top: "50%",
+                    transform: "translateY(-50%)",
+                  }}
+                >
                   {category.title}
                 </div>
-                <Gradient/>
+                <Gradient />
               </CategoryBox>
             ))}
           </GategoryCardContainer>
