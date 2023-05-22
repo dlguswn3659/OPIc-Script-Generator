@@ -52,6 +52,7 @@ const CategoryBox = styled.button`
     box-shadow: inset 0 0 0 5px ${palette.darker_green},
       0.9120142459869385px 0.9120142459869385px 7.296113967895508px 0px
         #02362a40;
+    background-color: ${palette.darker_green};
   }
 `;
 
@@ -90,9 +91,9 @@ const ScriptGeneratePage = () => {
                 onClick={() => {
                   setSelectedCategoryId(idx);
                 }}
-                style={{
-                  backgroundImage: `url(${process.env.PUBLIC_URL}${category.img}`,
-                }}
+                // style={{
+                //   backgroundImage: `url(${process.env.PUBLIC_URL}${category.img}`,
+                // }}
               >
                 <div
                   style={{
@@ -104,7 +105,7 @@ const ScriptGeneratePage = () => {
                 >
                   {category.title}
                 </div>
-                <Gradient />
+                {/* <Gradient /> */}
               </CategoryBox>
             ))}
           </GategoryCardContainer>

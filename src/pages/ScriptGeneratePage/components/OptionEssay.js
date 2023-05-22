@@ -339,7 +339,9 @@ const ModalInner = styled.div`
   background-color: rgba(255, 255, 255, 1);
   left: 50%;
   transform: translate(-50%, 0%);
-  bottom: 0;
+  //bottom: 0;
+  height: 100vh;
+  top: 50px;
 `;
 
 export default OptionEssay;
