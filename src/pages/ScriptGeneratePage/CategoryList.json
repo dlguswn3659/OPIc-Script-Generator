@@ -2,6 +2,7 @@
   "categoryList": [
     {
       "title": "학교",
+      "titleEng": "school",
       "img": "/images/school.jpeg",
       "id": 0,
       "mainQuestions": [
@@ -204,8 +205,9 @@
     },
     {
       "title": "주택",
+      "titleEng": "home",
       "img": "/images/home.png",
-      "id": 0,
+      "id": 1,
       "mainQuestions": [
         {
           "mainQuestion": "Tell me about your home. What does it look like? What types of rooms does it have? Please describe it in detail.",
@@ -501,8 +503,9 @@
     },
     {
       "title": "공연",
+      "titleEng": "concert",
       "img": "/images/concert.jpeg",
-      "id": 0,
+      "id": 2,
       "mainQuestions": [
         {
           "mainQuestion": "You indicated in survey that you enjoy watching a performance. Tell me the performance hall you like to go. Where is it located? Why do you like to go there? I’d like to know about in and out of the performance hall.",
@@ -703,8 +706,9 @@
     },
     {
       "title": "조깅",
+      "titleEng": "jogging",
       "img": "/images/jogging.jpeg",
-      "id": 0,
+      "id": 3,
       "mainQuestions": [
         {
           "mainQuestion": "You said you like jogging. I would like to know why you like jogging. Tell me about the reasons in detail.",
@@ -905,8 +909,9 @@
     },
     {
       "title": "음악",
+      "titleEng": "music",
       "img": "/images/music.jpeg",
-      "id": 0,
+      "id": 4,
       "mainQuestions": [
         {
           "mainQuestion": "In your background survey, you indicated that you enjoy listening to music. What kind of music do you like? Who is your favorite singer or composer?",
@@ -1171,276 +1176,10 @@
       ]
     },
     {
-      "title": "주택",
-      "img": "/images/home.png",
-      "id": 0,
-      "mainQuestions": [
-        {
-          "mainQuestion": "Tell me about your home. What does it look like? What types of rooms does it have? Please describe it in detail.",
-          "questions": [
-            {
-              "question": "거주 형태가 어떻게 되시나요? (자취, 가족, 룸메이트, 등)",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": "혼자 홍대에서 자취하고 있어요."
-            },
-            {
-              "question": "누구랑 거주하고 계시나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": "혼자 살아요."
-            },
-            {
-              "question": "어디 지역에 사세요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": "마포구 홍대요."
-            },
-            {
-              "question": "그 지역은 뭐로 유명한가요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": "놀기에 좋죠. 술집도 많고, 맛집도 많고, 주변에 연희동도 있어서 데이트 하러 많이 옵니다. 사람들이 주로 여기서 약속을 잡아요. 지인들이 주로 놀러와서 사람 만나기는 좋고 주변에 없는게 없어서 편리해요. 근데 좀 시끄러워서 귀찮습니다. "
-            },
-            {
-              "question": "이 지역에 얼마나 오래 사셨어요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": "이사온지 3개월 됐어요. 군대 전역하고 이사왔어요. "
-            },
-            {
-              "question": "이 집에서는 얼마나 오래 사셨나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": "3개월이요."
-            },
-            {
-              "question": "집의 크기가 어떻게 되시나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": "작은 원룸입니다."
-            },
-            {
-              "question": "집 구조가 어떻게 되나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": "원룸인데 있을건 다 있어서 편해요."
-            },
-            {
-              "question": "집의 분위기가 어떤가요? (지향하는 인테리어 분위기)",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": "동네는 시끄러운데 우리 집은 조용한 편이에요. 근데 문이 얇아서 복도 소리가 잘 들려서 귀찮습니다."
-            },
-            {
-              "question": "집에 있는 주요 가구들을 간단하게 설명해주세요.",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": "냉장고, 세탁기, 식탁은 기본 옵션이고, 악기 연주하는 걸 좋아해서 기타랑 피아노가 있어요!"
-            },
-            {
-              "question": "이 집을 선택한 이유와 내가 개인적으로 이 공간에서 시간을 보내는 것을 좋아하는 이유를 써주세요.",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": "집이 시원하고 아늑함. 침대에서 폰하는게 좋음. 주변에 뭐가 많음. 교통편 좋음. 월세가 쌈. 있을거 다 있음."
-            },
-            {
-              "question": "집이 싫은 이유를 써주세요.",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": "집이 좁음. 창문이 작음. 환기가 잘 안되고 햇빛이 잘 안들어옴."
-            },
-            {
-              "question": "집의 특이사항이 있다면 써주세요.",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": "신설임. 그래서 모든 가구가 새거라 그건 너무 좋네요."
-            },
-            {
-              "question": "집의 한줄평을 써주세요.",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": "좁지만 있을건 다 있고 가성비가 좋다. 홍대에서 한번 살아보고 싶었는데 괜찮은 것 같다. 내가 사교적인 편이라 사람 자주 만나면서 만족하면서 살고 있다."
-            }
-          ]
-        },
-        {
-          "mainQuestion": "Tell me about your bedroom. What does it look like and what do you keep in it? Use as many details as possible to describe it.",
-          "questions": [
-            {
-              "question": "침실 크기와 구조가 어떤가요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "방 분위기를 묘사해주세요",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "한마디로 방의 구조를 요약하면?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "벽은 어떤 색이고, 바닥은 어떤 자재인가요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "방에 어떤 가구와 물건들이 있나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "가장 마음에 드는 물건 / 가구에 대해 구체적으로 말해주세요",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "방에서 주로 어떻게 시간을 보내나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "방이 왜 좋은가요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "방이 왜 싫은가요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "방에 최근에 준 변화가 있나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "방에서 최근에 기억남는 일이 있었다면 말해주세요",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            }
-          ]
-        },
-        {
-          "mainQuestion": " It’s important for a family to spend time together. When do you spend time at home with your family? What does your family usually do at home?",
-          "questions": [
-            {
-              "question": "가족이 함께 시간을 보내는 것의 중요성을 어떻게 설명하시겠습니까?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "집에서 가족과 함께 시간을 보내는 일반적인 루틴이나 일정에 대해 말씀해주세요.",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "주 몇회 그리고 무슨 요일에 주로 가족을 만날 수 있나요? (가족 모두가 모일 필요는 없음)",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "집에서 가족과 함께 즐기는 특별한 취미나 관심사가 있나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "집에서 가족 시간 동안 함께 하는 특정한 가사 또는 업무가 있나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "요근래 집에서 가족과 함께 보낸 기억에 남거나 소중한 순간을 공유해주실 수 있을까요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "가족과 함께 시간을 보내는데 있어서 속상한 부분이 있을까요? (특정한 가족 구성원에 대한 속상함, 시간적인 제약, 등) ",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            }
-          ]
-        },
-        {
-          "mainQuestion": "Have you made any changes to your house within the last few years? If so, what kinds of changes have you made to your home? Are you satisfied with the changes?",
-          "questions": [
-            {
-              "question": "최근 몇년 동안 방에 준 변화가 있나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "변화를 주지 않았다면 그 이유가 뭔가요? (해당되지 않으면 건너뛰기) ",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "집 어디에 준 변화인가요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "왜 이런 변화를 줬나요? 어떤 문제가 있었나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "혼자 바꿨나요? 아니면 전문가를 고용했나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "변화가 만족스러웠나요? 만족스럽지 않았나요? 그 이유가 뭔가요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "다른 사람들도 이 변화에 만족하나요? 누구의 어떤 반응이 있었나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "앞으로 집에 또 주고 싶은 변화가 있나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
       "title": "동네 및 이웃",
+      "titleEng": "neighborhood",
       "img": "/images/neighborhood.jpeg",
-      "id": 1,
+      "id": 5,
       "mainQuestions": [
         {
           "mainQuestion": "\bYou indicated in the survey that you live in an apartment. Tell me about your neighborhood. What does you neighborhood look like? Where is it located?",
@@ -1605,8 +1344,9 @@
     },
     {
       "title": "회사",
+      "titleEng": "office",
       "img": "/images/office.png",
-      "id": 1,
+      "id": 6,
       "mainQuestions": [
         {
           "mainQuestion": "You indicated in the survey that you are employed. Tell me about the company you work for. Where is it located and when was it established? What services or products does it provide to the customers? ",
@@ -1830,8 +1570,9 @@
     },
     {
       "title": "회사 업무",
+      "titleEng": "working",
       "img": "/images/working.jpeg",
-      "id": 1,
+      "id": 7,
       "mainQuestions": [
         {
           "mainQuestion": "In your backgroun survey, you indicated in the survey that you have a job. Describe the most memorable project that you've worked on for your company. Why was it so memorable? ",
@@ -2042,211 +1783,10 @@
       ]
     },
     {
-      "title": "학교",
-      "img": "/images/school.jpeg",
-      "id": 1,
-      "mainQuestions": [
-        {
-          "mainQuestion": "Many students become friends with their classmates. I’d like to know about a classmate you are close to. Tell me about how and when you met him or her.",
-          "questions": [
-            {
-              "question": "친한 동기 이름이 무엇인가요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": "지교누나"
-            },
-            {
-              "question": "그 친구와 언제 어떻게 만났나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": "신입생 때 처음 만났어요"
-            },
-            {
-              "question": "그 친구를 만났을 때 기억남는 사건이 있나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": "같이 수업 전에 낮술했었어요"
-            },
-            {
-              "question": "왜 그 친구랑 친해졌나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": "같은 반이었고 같은 동아리도 하다보니 친해졌어요"
-            },
-            {
-              "question": "어떻게 아직도 그 친구와 좋은 친분 관계를 유지하고 있나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": "계속 연락을 하고 자주 만나서"
-            },
-            {
-              "question": "그 친구와 학교에서 겹치는 수업이나 동아리 또는 모임 같은게 있나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": "떼울림이라는 같은 동아리하고 있어요"
-            },
-            {
-              "question": "있다면 어떤 모임인가요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": "한국 풍물놀이 동아리에요"
-            },
-            {
-              "question": "어떤 학교에 다니시나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": "국민대학교에 다니고 있고 경영학과 입니다"
-            },
-            {
-              "question": "그 친구와 만나면 보통 어떻게 시간을 함께 보내나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": "밥먹고 술먹으면서 이야기하죠"
-            },
-            {
-              "question": "그 친구와 얼마나 자주 만나나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": "일주일에 한번은 보는 거 같아"
-            }
-          ]
-        },
-        {
-          "mainQuestion": "Tell me about your first visit to your school. When was it and who were you with? What did you do and what was your first impression of the school?",
-          "questions": [
-            {
-              "question": "수업을 온라인으로 듣고 계시나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "언제 방문했고 누구와 함께 갔나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "어떤 이유 때문에 방문을 했나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "학교에서 무엇을 했나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "가장 기억남는게 뭔가요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "학교에 대한 첫인상은 어땠나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "학교가 어떻게 생겼나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "학교를 방문한 첫날 기분이 어땠나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "그날 있었던 기억 남는 일화가 있나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "마지막으로 학교를 방문한 첫날을 한줄로 요약해주세요",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            }
-          ]
-        },
-        {
-          "mainQuestion": "Tell me about a special event that took place at your university, such as a graduation ceremony or a school trip. What were some memorable things that happened during that event?",
-          "questions": [
-            {
-              "question": "학교에서 어떤 특별한 행사가 있었나요? 이야기하고 싶은 행사를 말해주세요",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "그날 가장 기억에 남았던 일이 무엇인가요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "정확히 어떤 행사인가요? 행사를 구체적으로 설명해 주실 수 있나요? 대학교에 다른 행사들과 비교해 특별한 점이 뭔가요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "이 행사가 본인한테 왜 특별했나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "그 행사 진행에 대해 간단히 말해주세요",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "어떤 부분이 제일 재미있었나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": " 행사 분위기가 어땠나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "이 행사가 특별히 기억 남는 이유가 뭔가요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "행사 중에 예상치 못했다던가 기억에 남는 순간들이 있었나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "그 날의 경험을 한줄 요약 하자면?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
       "title": "영화보기",
+      "titleEng": "movie",
       "img": "/images/movie.jpeg",
-      "id": 1,
+      "id": 8,
       "mainQuestions": [
         {
           "mainQuestion": "영화 중 어떤 장르를 가장 좋아하시나요? 그 장르가 왜 귀하에게 공감되는지 설명해 주실 수 있나요?",
@@ -2434,8 +1974,9 @@
     },
     {
       "title": "공원가기",
+      "titleEng": "park",
       "img": "/images/park.jpeg",
-      "id": 1,
+      "id": 9,
       "mainQuestions": [
         {
           "mainQuestion": "You indicated that you like to go to parks. Tell me about one of the parks that you often visit. What does it look like? What makes it so special?",

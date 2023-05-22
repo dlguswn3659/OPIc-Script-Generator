@@ -47,6 +47,7 @@ const BottomBar = styled.div`
   height: 100px;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 50px;
   // position: absolute;
   // bottom: 0px;
 `;

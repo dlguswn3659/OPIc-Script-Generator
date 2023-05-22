@@ -121,6 +121,7 @@ const DeleteButton = styled.button`
   border: hidden;
   margin-top: 5px;
   text-decoration: underline solid #01191380;
+  margin-bottom: 30px;
 `;
 
 const Gradient = styled.div`
@@ -159,6 +160,11 @@ function OptionEssay({
       title: "더 어렵게",
       command:
         "Can you make the above script more challenging, at an advanced level?",
+    },
+    {
+      title: "더 창의적이게",
+      command:
+        "Can you make the above script more creative? I don't mind adding supplementary explanations or expressions based on the information I gave you, or adding your imagination to some extent.",
     },
   ];
 
@@ -340,7 +346,7 @@ const ModalInner = styled.div`
   left: 50%;
   transform: translate(-50%, 0%);
   //bottom: 0;
-  height: 100vh;
+  min-height: 100vh;
   top: 50px;
 `;
 

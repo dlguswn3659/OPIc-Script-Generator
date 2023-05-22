@@ -66,6 +66,7 @@ const OptionBox = styled.div`
   gap: 1rem;
   margin-top: 26px;
   padding-bottom: 100px;
+  margin-bottom: 30px;
 `;
 
 const OptionButton = styled.button`
@@ -92,23 +93,32 @@ const OutputEssay = ({ response }) => {
     { title: "더 짧게", command: "Can you make the above script shorter?" },
     { title: "더 길게", command: "Can you make the above script longer?" },
     { title: "더 쉽게", command: "Can you make the above script easier?" },
-    { title: "더 어렵게", command: "Can you make the above script more challenging, at an advanced level?" },
+    {
+      title: "더 어렵게",
+      command:
+        "Can you make the above script more challenging, at an advanced level?",
+    },
+    {
+      title: "더 창의적이게",
+      command:
+        "Can you make the above script more creative? I don't mind adding supplementary explanations or expressions based on the information I gave you, or adding your imagination to some extent.",
+    },
   ];
 
   useEffect(() => {}, [optionModalShow, text]);
-  useEffect(()=>{
+  useEffect(() => {
     setText(response);
-  }, [response])
+  }, [response]);
 
   const optionButtonOnClick = (idx) => {
     setOptionModalShow(true);
-    setCommand(OptionList[idx].command)
+    setCommand(OptionList[idx].command);
   };
 
   const copyOnClick = () => {
     navigator.clipboard.writeText(text);
     toast.success("복사완료!");
-  }
+  };
 
   return (
     <>
@@ -131,13 +141,13 @@ const OutputEssay = ({ response }) => {
       </PageHeader>
       <ResponseContainer>
         <ContainerHeader>
-          <CopyButton onClick={copyOnClick}/>
+          <CopyButton onClick={copyOnClick} />
         </ContainerHeader>
         {text}
       </ResponseContainer>
       <OptionBox>
         {OptionList.map((item, index) => (
-          <OptionButton onClick={()=>optionButtonOnClick(index)}>
+          <OptionButton onClick={() => optionButtonOnClick(index)}>
             {item.title}
           </OptionButton>
         ))}
