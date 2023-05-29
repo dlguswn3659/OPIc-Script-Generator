@@ -256,6 +256,9 @@ const SurveyBox = ({ questions, setSelectedMainQuestionIdx }) => {
                         }
                       : () => {
                           setCurrentQuestionIdx(currentQuestionIdx - 1);
+                          setDescriptionAnswer(
+                            descriptionAnswerList[currentQuestionIdx - 1]
+                          );
                         }
                   }
                 >
@@ -266,7 +269,9 @@ const SurveyBox = ({ questions, setSelectedMainQuestionIdx }) => {
                     currentQuestionIdx == questions?.length - 1
                       ? SubmitOnClick(e)
                       : setCurrentQuestionIdx(currentQuestionIdx + 1);
-                    setDescriptionAnswer("");
+                    setDescriptionAnswer(
+                      descriptionAnswerList[currentQuestionIdx + 1]
+                    );
                   }}
                 >
                   <ButtonText>
