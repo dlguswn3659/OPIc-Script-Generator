@@ -183,7 +183,7 @@ const SurveyBox = ({ questions, setSelectedMainQuestionIdx }) => {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            prompt: `The answers to these questions are the details to my student David's house. Based on these details, can you write a script for David's OPIc Test? In a speech format, not in a dialogue format. He wants to get an IM score. The question to answer in the script is below.\n\n\n\n${parsedText}\n\n (+ requirements : Your response OPIC test script's form is '<START> {your OPIC test script} <END>'. )`,
+            prompt: `Can you write a script for interviewee's OPIc Test? In a speech format, not in a dialogue format. He wants to get an IM score. Using the information obtained from this question and answer at below.\n\n\n\n${parsedText}\n\n (+ requirements : formulate a 200-300 word script in the form of an essay that aims to obtain IH level in an OPIC test. You are free to add your own creative information and make sure the resulting paragraph is concise, logically correct, grammatically correct, unique and mostly engaging to the reader. Your response OPIC test script's form must be '<START> {your OPIC test script} <END>'. )`,
           }),
         }
       );

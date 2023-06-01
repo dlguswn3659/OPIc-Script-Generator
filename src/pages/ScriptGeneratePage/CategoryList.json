@@ -2167,6 +2167,292 @@
           ]
         }
       ]
+    },
+    {
+      "title": "카페 가기",
+      "titleEng": "cafe",
+      "img": "",
+      "id": 10,
+      "mainQuestions": [
+        {
+          "mainQuestion": "In your background survey, you indicated that you like going out for coffee. When do you usually go to coffee shops? What do you typically order, and what do you do while you are there?",
+          "questions": [
+            {
+              "question": "카페를 자주 방문하시나요?",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            },
+            {
+              "question": "방문하시는 카페 이름이 뭔가요?",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            },
+            {
+              "question": "선호하는 커피숍 유형이 있나요? (예: 지역 카페, 체인점, 특별한 커피숍 등)",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            },
+            {
+              "question": "왜 이런 유형의 카페를 찾으시나요? ",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            },
+            {
+              "question": "보통 커피숍에서 어떤 활동을 하시나요? (친구와 수다, 공부, 일, 카페 탐방, 커피 마시기) ",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            },
+            {
+              "question": "커피숍에 가실 때 주문하시는 주문이 있나요? 어떤 기준으로 메뉴를 고르시나요? ",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            }
+          ]
+        },
+        {
+          "mainQuestion": "Tell me about your favorite coffee shop. Where is it located? What does it look like? Describe it in as much detail as possible.",
+          "questions": [
+            {
+              "question": "가장 좋아하는 카페의 이름은 무엇인가요?",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            },
+            {
+              "question": "그 카페는 어디에 위치하고 있나요? 주소를 알려주시거나 대략적인 지역을 설명해주세요.",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            },
+            {
+              "question": "이 카페를 어떻게 알게 되셨나요?",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            },
+            {
+              "question": "독특한 건축적 또는 인테리어 디자인적 요소가 있나요?",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            },
+            {
+              "question": "이 카페에서 나오는 음악은 어떤가요? 이 카페를 좋아하는 이유에 포함되나요? ",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            },
+            {
+              "question": "이 커피숍을 특별하게 만드는 매뉴가 있나요?",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            },
+            {
+              "question": "그 외에도 이 카페를 특별하게 만드는 요소가 있나요?",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            },
+            {
+              "question": "\b마지막으로 이 카페의 한줄평을 해주세요!",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            }
+          ]
+        },
+        {
+          "mainQuestion": "Tell me about a memorable experience you have had at a coffee shop. When and where was it? Who were you with? What happened? Talk about the experience in detail, and explain why it was so memorable.",
+          "questions": [
+            {
+              "question": "먼저 커피숍에서의 기억에 남는 경험에 대해 간단히 이야기해 주실 수 있나요?",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            },
+            {
+              "question": "이 기억에 남는 커피숍 경험은 언제 어디에서 있었나요?",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            },
+            {
+              "question": "그때 함께 하신 분들은 누구였나요? 혼자 갔으셨나요, 아니면 친구와 함께 갔으셨나요?",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            },
+            {
+              "question": "이 경험을 기억에 남게 만든 하이라이트 또는 주요 사건은 무엇이었나요?",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            },
+            {
+              "question": "커피숍에서의 시간 동안 특정한 대화나 교류가 있었나요?",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            },
+            {
+              "question": "\b마지막으로 그 날의 기억남는 경험을 한줄 요약해주세요. ",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "국내 여행",
+      "titleEng": "\bDomestic Trip",
+      "img": "",
+      "id": 11,
+      "mainQuestions": [
+        {
+          "mainQuestion": " In your background survey, you indicated that you enjoy domestic travel. Where do you like to visit? Which do you prefer, mountains or beaches? Describe the place you like to visit and why you like to go there.",
+          "questions": [
+            {
+              "question": "국내 여행을 즐기신다고 밝히셨는데, 좋아하는 여행지 중 한 곳을 정해서 추천해주세요. ",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            },
+            {
+              "question": "그 곳에는 산 또는 해변이 있나요? 평소에 산과 해변 중에서 어떤 것을 더 선호하시나요?",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            },
+            {
+              "question": "그곳이 왜 특별하고 여행하고 싶은 이유가 무엇인지 알려주세요.",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            },
+            {
+              "question": "그 여행지를 갔던 경험을 이야기해 주세요. 어떤 부분이 기억에 남았나요? ",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            },
+            {
+              "question": "그 곳에서 어떤 음식을 먹었나요?",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            },
+            {
+              "question": "\b친구에게 그 곳을 추천한다면 꼭 가봐야 할 곳이나 꼭 먹어봐야 할 음식이 있을까요? ",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            },
+            {
+              "question": "마지막으로 내가 좋아하는 국내 여행지와 그곳을 추천하고 싶은 이유를 한 두 문장으로 요약해주세요. ",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            }
+          ]
+        },
+        {
+          "mainQuestion": "Unexpected things can happen on trips. Talk about an unforgettable incident that happened on a trip. Why was the experience so memorable? Give me all the details.",
+          "questions": [
+            {
+              "question": "먼저 여행 중에 잊지 못할 사건에 대해 한 두 문장으로 간단하게 이야기해 주실 수 있나요?",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            },
+            {
+              "question": "이 사건은 언제 어디에서 발생했나요?",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            },
+            {
+              "question": "이 사건이 발생할 당시 함께 여행하셨던 사람들은 누구였나요? 친구, 가족, 아니면 낯선 사람들이었나요?",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            },
+            {
+              "question": "이 예기치 않은 사건이나 사고를 가능한 한 자세하게 설명해 주실 수 있을까요?",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            },
+            {
+              "question": "이 사건이 여행 일정이나 전체 여행 경로에 어떤 영향을 미쳤나요?",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            },
+            {
+              "question": "이 사건이 발생할 당시 어떻게 대처했나요?",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            },
+            {
+              "question": "마지막으로, 왜 이 사건을 그렇게 잊지 못할 만큼 특별한 것으로 생각하시는지 알려주실 수 있을까요? (감정, 교훈, 추억, 등등) ",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            }
+          ]
+        },
+        {
+          "mainQuestion": "Talk about a trip you went on in your childhood. What do you remember about that trip? Where did you go, and whom did you go with? What made the trip special?",
+          "questions": [
+            {
+              "question": "어린 시절에 가족과 여행을 자주 가셨나요?",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            },
+            {
+              "question": "한 문장으로 요약하자면 어릴적 기억남는 여행이 몇 살 때 어디였나요?",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            },
+            {
+              "question": "그 여행에 대해 조금 설명해 주세요. 어디를 가셨고 뭘 먹었나요?",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            },
+            {
+              "question": "여행한 목적지의 전반적인 분위기나 느낌을 설명해 주실 수 있나요?",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            },
+            {
+              "question": "이 여행을 다른 여행들과 비교했을 때 기억에 남게 만든 하이라이트 또는 주요 사건은 무엇이라고 생각하나요?",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            },
+            {
+              "question": "마지막으로, 왜 이 어린 시절의 여행을 여러분의 기억 속에서 중요하거나 특별한 것으로 생각하시는지 알려주세요. (어린 시절 감정, 추억, 가족의 분위기, 등등) ",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
