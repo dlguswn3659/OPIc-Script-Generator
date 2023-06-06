@@ -37,6 +37,7 @@ const CategoryBox = styled.button`
   text-align: left;
   padding: 29px;
   border: 0px;
+  position: relative;
   box-shadow: 0.9120142459869385px 0.9120142459869385px 7.296113967895508px 0px
     #02362a40;
   margin: 4px 0px;
@@ -71,6 +72,16 @@ const Gradient = styled.div`
   z-index: 1;
 `;
 
+const BackgroundImageArea = styled.div`
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 175px;
+  height: 118px;
+  top: 20px;
+  position: absolute;
+  right: 30px;
+`;
+
 const ScriptGeneratePage = () => {
   const [selectedCategoryId, setSelectedCategoryId] = useState(-1);
 
@@ -91,10 +102,12 @@ const ScriptGeneratePage = () => {
                 onClick={() => {
                   setSelectedCategoryId(idx);
                 }}
-                // style={{
-                //   backgroundImage: `url(${process.env.PUBLIC_URL}${category.img}`,
-                // }}
               >
+                <BackgroundImageArea
+                  style={{
+                    backgroundImage: `url(${process.env.PUBLIC_URL}${category.img}`,
+                  }}
+                />
                 <div
                   style={{
                     position: "absolute",

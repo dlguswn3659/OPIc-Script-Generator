@@ -3,7 +3,7 @@
     {
       "title": "학교",
       "titleEng": "school",
-      "img": "/images/school.jpeg",
+      "img": "/images/school.svg",
       "id": 0,
       "mainQuestions": [
         {
@@ -206,7 +206,7 @@
     {
       "title": "주택",
       "titleEng": "home",
-      "img": "/images/home.png",
+      "img": "/images/home.svg",
       "id": 1,
       "mainQuestions": [
         {
@@ -504,7 +504,7 @@
     {
       "title": "공연",
       "titleEng": "concert",
-      "img": "/images/concert.jpeg",
+      "img": "/images/concert.svg",
       "id": 2,
       "mainQuestions": [
         {
@@ -707,7 +707,7 @@
     {
       "title": "조깅",
       "titleEng": "jogging",
-      "img": "/images/jogging.jpeg",
+      "img": "/images/jogging.svg",
       "id": 3,
       "mainQuestions": [
         {
@@ -910,7 +910,7 @@
     {
       "title": "음악",
       "titleEng": "music",
-      "img": "/images/music.jpeg",
+      "img": "/images/music.svg",
       "id": 4,
       "mainQuestions": [
         {
@@ -1178,7 +1178,7 @@
     {
       "title": "동네 및 이웃",
       "titleEng": "neighborhood",
-      "img": "/images/neighborhood.jpeg",
+      "img": "/images/neighborhood.svg",
       "id": 5,
       "mainQuestions": [
         {
@@ -1345,7 +1345,7 @@
     {
       "title": "회사",
       "titleEng": "office",
-      "img": "/images/office.png",
+      "img": "/images/office.svg",
       "id": 6,
       "mainQuestions": [
         {
@@ -1571,7 +1571,7 @@
     {
       "title": "회사 업무",
       "titleEng": "working",
-      "img": "/images/working.jpeg",
+      "img": "/images/working.svg",
       "id": 7,
       "mainQuestions": [
         {
@@ -1785,7 +1785,7 @@
     {
       "title": "영화보기",
       "titleEng": "movie",
-      "img": "/images/movie.jpeg",
+      "img": "/images/movie.svg",
       "id": 8,
       "mainQuestions": [
         {
@@ -1975,7 +1975,7 @@
     {
       "title": "공원가기",
       "titleEng": "park",
-      "img": "/images/park.jpeg",
+      "img": "/images/jogging.svg",
       "id": 9,
       "mainQuestions": [
         {

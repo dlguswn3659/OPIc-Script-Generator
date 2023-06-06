@@ -5,6 +5,7 @@ import LeftArrow from "../../../assets/icons/left-arrow.svg";
 import RightArrow from "../../../assets/icons/right-arrow.svg";
 import OutputEssay from "./OutputEssay";
 import Loading from "./Loading";
+import DetailOptions from "./DetailOptions";
 
 const Container = styled.div`
   width: 100%;
@@ -36,8 +37,8 @@ const QuestionSentence = styled.div`
 const QuestionSubSentence = styled.div`
   font-family: Noto Sans KR;
   font-size: 12px;
-  font-weight: 500;
-  line-height: 32px;
+  font-weight: 400;
+  line-height: 19px;
   letter-spacing: 0em;
   text-align: center;
   color: ${palette.darkest_green};
@@ -71,6 +72,7 @@ const BottomBar = styled.div`
   height: 100px;
   display: flex;
   justify-content: space-between;
+  margin-top: 100px;
   // position: absolute;
   // bottom: 0px;
 `;
@@ -79,8 +81,9 @@ const LeftButton = styled.button`
   height: 30px;
   background: transparent;
   border: 0px;
-  margin-top: 100px;
   display: flex;
+  margin: auto 0px;
+  width: 80px;
 `;
 
 const ButtonText = styled.div`
@@ -100,6 +103,19 @@ const ArrowIcon = styled.img`
   margin: auto 0px;
 `;
 
+const CenterButton = styled.button`
+  font-family: Noto Sans KR;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: center;
+  background-color: transparent;
+  border: hidden;
+  text-decoration-line: underline;
+  color: ${palette.darkest_green};
+`;
+
 const SurveyBox = ({ questions, setSelectedMainQuestionIdx }) => {
   const [currentQuestionIdx, setCurrentQuestionIdx] = useState(0);
   const [listAnswerIdx, setListAnswerIdx] = useState(-1);
@@ -108,6 +124,25 @@ const SurveyBox = ({ questions, setSelectedMainQuestionIdx }) => {
   const [qnaMerge, setQnaMerge] = useState("");
   const [gptResult, setGptResult] = useState("");
   const [waiting, setWaiting] = useState(false);
+  const [detailOptions, setDetailOptions] = useState({});
+
+  useEffect(() => {
+    if (detailOptions?.length) {
+      const fetchData = async () => {
+        try {
+          await SubmitOnClick(); // SubmitOnClick 함수 호출
+
+          // Fetch 요청 및 데이터 처리 코드
+        } catch (error) {
+          console.error(error);
+          setGptResult(error.message);
+          setWaiting(false);
+        }
+      };
+
+      fetchData();
+    }
+  }, [detailOptions]);
 
   useEffect(() => {
     if (questions?.length > 0) {
@@ -233,9 +268,6 @@ const SurveyBox = ({ questions, setSelectedMainQuestionIdx }) => {
               </QuestionSentence>
               {questions[currentQuestionIdx]?.type == "descriptive_form" ? (
                 <>
-                  <QuestionSubSentence>
-                    (자세히 설명해주세요)
-                  </QuestionSubSentence>
                   <AnswerTextArea
                     placeholder={questions[currentQuestionIdx]?.placeholder}
                     onChange={(e) => {
@@ -243,6 +275,10 @@ const SurveyBox = ({ questions, setSelectedMainQuestionIdx }) => {
                     }}
                     value={descriptionAnswer}
                   />
+                  <QuestionSubSentence>
+                    (자세히 설명해주세요, 해당 되지않은 질문은 “건너뛰기” 하시면
+                    됩니다)
+                  </QuestionSubSentence>
                 </>
               ) : (
                 <></>
@@ -264,6 +300,18 @@ const SurveyBox = ({ questions, setSelectedMainQuestionIdx }) => {
                 >
                   <ArrowIcon src={LeftArrow} />
                 </LeftButton>
+                <CenterButton
+                  onClick={(e) => {
+                    currentQuestionIdx == questions?.length - 1
+                      ? SubmitOnClick(e)
+                      : setCurrentQuestionIdx(currentQuestionIdx + 1);
+                    setDescriptionAnswer(
+                      descriptionAnswerList[currentQuestionIdx + 1]
+                    );
+                  }}
+                >
+                  건너뛰기
+                </CenterButton>
                 <LeftButton
                   onClick={(e) => {
                     currentQuestionIdx == questions?.length - 1
