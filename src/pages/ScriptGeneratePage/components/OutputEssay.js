@@ -85,10 +85,44 @@ const OptionButton = styled.button`
     #02362a40;
 `;
 
+const TextInfoBox = styled.div`
+  display: flex;
+  justify-content: right;
+`;
+
+const TextInfoTitle = styled.div`
+  height: 32px;
+  font-family: Noto Sans KR;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: ${palette.darkest_green};
+`;
+
+const TextInfoValue = styled.div`
+  font-family: Noto Sans KR;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: ${palette.darkest_green};
+`;
+
+const InfoDivide = styled.div`
+  width: 1px;
+  height: 18px;
+  background-color: ${palette.darkest_green};
+  margin: 8px;
+`;
+
 const OutputEssay = ({ response }) => {
   const [text, setText] = useState("");
   const [optionModalShow, setOptionModalShow] = useState(false);
   const [command, setCommand] = useState("");
+  const [wordCount, setWordCount] = useState(0);
   const OptionList = [
     { title: "더 짧게", command: "Can you make the above script shorter?" },
     { title: "더 길게", command: "Can you make the above script longer?" },
@@ -105,7 +139,12 @@ const OutputEssay = ({ response }) => {
     },
   ];
 
-  useEffect(() => {}, [optionModalShow, text]);
+  useEffect(() => {
+    var str = text.trim();
+
+    const words = str.split(/\s+/);
+    setWordCount(words.length);
+  }, [optionModalShow, text]);
   useEffect(() => {
     setText(response);
   }, [response]);
@@ -137,7 +176,10 @@ const OutputEssay = ({ response }) => {
         <></>
       )}
       <PageHeader>
-        <LogoContainer src={Logo} />
+        <LogoContainer
+          src={Logo}
+          onClick={() => (window.location.href = "/")}
+        />
       </PageHeader>
       <ResponseContainer>
         <ContainerHeader>
@@ -145,6 +187,13 @@ const OutputEssay = ({ response }) => {
         </ContainerHeader>
         {text}
       </ResponseContainer>
+      <TextInfoBox>
+        <TextInfoTitle>Word : </TextInfoTitle>
+        <TextInfoValue>{wordCount}</TextInfoValue>
+        <InfoDivide />
+        <TextInfoTitle>예상 수준 : </TextInfoTitle>
+        <TextInfoValue>NH</TextInfoValue>
+      </TextInfoBox>
       <OptionBox>
         {OptionList.map((item, index) => (
           <OptionButton onClick={() => optionButtonOnClick(index)}>

@@ -163,7 +163,7 @@ const SurveyBox = ({ questions, setSelectedMainQuestionIdx }) => {
   const SubmitOnClick = async (e) => {
     setGptResult("");
     setWaiting(true);
-    e.preventDefault();
+    // e.preventDefault();
 
     let mergeSentence = "";
     questions?.map((item, idx) => {
@@ -243,7 +243,7 @@ const SurveyBox = ({ questions, setSelectedMainQuestionIdx }) => {
     } catch (error) {
       console.error(error);
       // alert(error.message);
-      setGptResult(error.message);
+      setGptResult(error.message ? error.message : error);
       setWaiting(false);
     }
   };
@@ -260,76 +260,83 @@ const SurveyBox = ({ questions, setSelectedMainQuestionIdx }) => {
             <OutputEssay response={gptResult} />
           ) : (
             <>
-              <NumStatus>
-                {currentQuestionIdx + 1} of {questions?.length}
-              </NumStatus>
-              <QuestionSentence>
-                {questions[currentQuestionIdx]?.question}
-              </QuestionSentence>
-              {questions[currentQuestionIdx]?.type == "descriptive_form" ? (
-                <>
-                  <AnswerTextArea
-                    placeholder={questions[currentQuestionIdx]?.placeholder}
-                    onChange={(e) => {
-                      setDescriptionAnswer(e.target.value);
-                    }}
-                    value={descriptionAnswer}
-                  />
-                  <QuestionSubSentence>
-                    (자세히 설명해주세요, 해당 되지않은 질문은 “건너뛰기” 하시면
-                    됩니다)
-                  </QuestionSubSentence>
-                </>
+              {currentQuestionIdx == questions?.length ? (
+                <DetailOptions setDetailOptions={setDetailOptions} />
               ) : (
-                <></>
+                <>
+                  <NumStatus>
+                    {currentQuestionIdx + 1} of {questions?.length}
+                  </NumStatus>
+                  <QuestionSentence>
+                    {questions[currentQuestionIdx]?.question}
+                  </QuestionSentence>
+                  {questions[currentQuestionIdx]?.type == "descriptive_form" ? (
+                    <>
+                      <AnswerTextArea
+                        placeholder={questions[currentQuestionIdx]?.placeholder}
+                        onChange={(e) => {
+                          setDescriptionAnswer(e.target.value);
+                        }}
+                        value={descriptionAnswer}
+                      />
+                      <QuestionSubSentence>
+                        (자세히 설명해주세요, 해당 되지않은 질문은 “건너뛰기”
+                        하시면 됩니다)
+                      </QuestionSubSentence>
+                    </>
+                  ) : (
+                    <></>
+                  )}
+                  <BottomBar>
+                    <LeftButton
+                      onClick={
+                        currentQuestionIdx == 0
+                          ? () => {
+                              setSelectedMainQuestionIdx(-1);
+                            }
+                          : () => {
+                              setCurrentQuestionIdx(currentQuestionIdx - 1);
+                              setDescriptionAnswer(
+                                descriptionAnswerList[currentQuestionIdx - 1]
+                              );
+                            }
+                      }
+                    >
+                      <ArrowIcon src={LeftArrow} />
+                    </LeftButton>
+                    <CenterButton
+                      onClick={(e) => {
+                        currentQuestionIdx == questions?.length - 1
+                          ? SubmitOnClick(e)
+                          : setCurrentQuestionIdx(currentQuestionIdx + 1);
+                        setDescriptionAnswer(
+                          descriptionAnswerList[currentQuestionIdx + 1]
+                        );
+                      }}
+                    >
+                      건너뛰기
+                    </CenterButton>
+                    <LeftButton
+                      onClick={(e) => {
+                        // currentQuestionIdx == questions?.length - 1
+                        //   ? SubmitOnClick(e)
+                        //     :
+                        setCurrentQuestionIdx(currentQuestionIdx + 1);
+                        setDescriptionAnswer(
+                          descriptionAnswerList[currentQuestionIdx + 1]
+                        );
+                      }}
+                    >
+                      <ButtonText>
+                        {currentQuestionIdx == questions?.length - 1
+                          ? "완료"
+                          : "다음"}
+                      </ButtonText>
+                      <ArrowIcon src={RightArrow} />
+                    </LeftButton>
+                  </BottomBar>
+                </>
               )}
-              <BottomBar>
-                <LeftButton
-                  onClick={
-                    currentQuestionIdx == 0
-                      ? () => {
-                          setSelectedMainQuestionIdx(-1);
-                        }
-                      : () => {
-                          setCurrentQuestionIdx(currentQuestionIdx - 1);
-                          setDescriptionAnswer(
-                            descriptionAnswerList[currentQuestionIdx - 1]
-                          );
-                        }
-                  }
-                >
-                  <ArrowIcon src={LeftArrow} />
-                </LeftButton>
-                <CenterButton
-                  onClick={(e) => {
-                    currentQuestionIdx == questions?.length - 1
-                      ? SubmitOnClick(e)
-                      : setCurrentQuestionIdx(currentQuestionIdx + 1);
-                    setDescriptionAnswer(
-                      descriptionAnswerList[currentQuestionIdx + 1]
-                    );
-                  }}
-                >
-                  건너뛰기
-                </CenterButton>
-                <LeftButton
-                  onClick={(e) => {
-                    currentQuestionIdx == questions?.length - 1
-                      ? SubmitOnClick(e)
-                      : setCurrentQuestionIdx(currentQuestionIdx + 1);
-                    setDescriptionAnswer(
-                      descriptionAnswerList[currentQuestionIdx + 1]
-                    );
-                  }}
-                >
-                  <ButtonText>
-                    {currentQuestionIdx == questions?.length - 1
-                      ? "완료"
-                      : "다음"}
-                  </ButtonText>
-                  <ArrowIcon src={RightArrow} />
-                </LeftButton>
-              </BottomBar>
             </>
           )}
         </>

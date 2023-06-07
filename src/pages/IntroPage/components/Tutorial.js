@@ -103,7 +103,7 @@ const Tutorial = () => {
   return (
     <Container>
       <ContentBox>
-        <LogoImage src={Logo} />
+        <LogoImage src={Logo} onClick={() => (window.location.href = "/")} />
         <Header1>안녕하세요 Opicscript 입니다.</Header1>
         <Content1>
           Opicscript는 간단한 설문을 통해 개인에게 커스터마이징 된 OPIC 대본을

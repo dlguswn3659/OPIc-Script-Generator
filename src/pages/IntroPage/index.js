@@ -91,7 +91,7 @@ const IntroPage = () => {
               Chat-GPT 기술을 통해 대본이 생성되면 다양한 버튼들을 통해 내 영어
               실력과 목표 성적에 맞는 대본을 완성하세요!
             </Content1>
-            <StartButton onClick={startOnClick}>시작하기</StartButton>
+            <StartButton onClick={startOnClick}>시작</StartButton>
             <TutorialButton onClick={tutorialOnClick}>TUTORIAL</TutorialButton>
           </CenterBox>
         </Container>
