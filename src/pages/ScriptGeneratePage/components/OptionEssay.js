@@ -138,6 +138,23 @@ const Gradient = styled.div`
   );
 `;
 
+const Content1 = styled.div`
+  font-family: Noto Sans KR;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: ${palette.darkest_green};
+`
+
+const DivideLine = styled.div`
+    height: 1px;
+    width: 100%;
+    background-color: ${palette.darkest_green};
+    margin-top: 20px;
+`
+
 function OptionEssay({
   className,
   onClose,
@@ -273,9 +290,12 @@ function OptionEssay({
                       <ContainerHeader>
                         <CopyButton onClick={copyOnClick} />
                       </ContainerHeader>
+                      <Content1>원본</Content1>
                       {oldResponse}
                       <br />
+                      <DivideLine />
                       <br />
+                      <Content1>수정본</Content1>
                       {newResponse}
                     </ResponseContainer>
                     <Gradient />

@@ -166,14 +166,17 @@ const DetailOptions = ({ setDetailOptions }) => {
     {
       name: "짧게",
       id: "short",
+      prompt: `+Requirements: Write the response above to be within 40-80 words. Use the word "I". Do not change the vocabulary level.`
     },
     {
       name: "보통",
       id: "reg",
+      prompt: `+Requirements: Write the response above to be within 100-150 words. Use the word "I". You are free to add your own creative information if needed. Do not change the vocabulary level.`
     },
     {
       name: "길게",
       id: "long",
+      prompt: `+Requirements: Write the response above to be within 200-300 words. Use the word "I". You are free to add your own creative information if needed. Do not change the vocabulary level.`
     },
   ];
 
@@ -181,26 +184,47 @@ const DetailOptions = ({ setDetailOptions }) => {
     {
       name: "NH",
       id: "NH",
-    },
-    {
-      name: "NM",
-      id: "NM",
+      prompt: `+Write this script with the following literary restrictions:
+      Vocabulary: stick to a vocabulary pool of a foreigner who barely knows how to speak english.
+      Fluency:  Can only respond in short sentences.
+      Comprehension: Sometimes doesn't understand the question too clearly. About 70% comprehension.
+      Word count: Limit the script again to 50 words.`
     },
     {
       name: "IL",
       id: "IL",
+      prompt: `+Write this script with the following literary restrictions:
+      Vocabulary: stick to a vocabulary pool of a 2nd grader
+      Fluency: A foreign adult student who has been learning english for about 2 years.
+      Comprehension: Understand and respond to straightforward questions, statements, and short conversations on familiar topics.
+      Word count: Limit the script again to 100 words.`
     },
     {
       name: "IM",
       id: "IM",
+      prompt: `+Write this script with the following literary restrictions:
+      Vocabulary: stick to a vocabulary pool of a 4th grader.
+      Fluency: A foreign adult student who has been learning english for about 3 years.
+      Comprehension: Understand and respond to straightforward questions, statements, and short conversations on familiar topics.
+      Word count: Limit the script again to 150 words.`
     },
     {
       name: "IH",
       id: "IH",
+      prompt: `+Write this script with the following literary restrictions:
+      Vocabulary: stick to a vocabulary pool of a 6th grader.
+      Fluency: A foreign adult student who has been learning english for about 5 years.
+      Comprehension: Understand and respond to questions well in most cases.
+      Word count: Limit the script again to 250 words.`
     },
     {
       name: "AL",
       id: "AL",
+      prompt: `+Write this script with the following literary restrictions:
+      Vocabulary: stick to a vocabulary pool of an adult conversation.
+      Fluency: quite fluent
+      Comprehension: Understand and respond to questions well.
+      Word count: Limit the script again to 250 words.`
     },
   ];
 
@@ -208,14 +232,32 @@ const DetailOptions = ({ setDetailOptions }) => {
     {
       name: "캐쥬얼",
       id: "casual",
+      prompt: `+Write casually but adult casual.`
     },
     {
       name: "포멀",
       id: "formal",
+      prompt: `+Write formally like you are talking in an interview.`
     },
     {
       name: "담백하게",
       id: "plainly",
+      prompt: `+Write in easy simple clean sentences.`
+    },
+    {
+      name: "콩글리쉬",
+      id: "konlish",
+      prompt: `+Write like a Korean with broken English.`
+    },
+    {
+      name: "유치원생",
+      id: "preschooler",
+      prompt: `+Write like a preschooler`
+    },
+    {
+      name: "MZ힙스터",
+      id: "MZhipster",
+      prompt: `+Write like a MZ hipster.`
     },
   ];
 
@@ -224,7 +266,7 @@ const DetailOptions = ({ setDetailOptions }) => {
       length: lengthList[length],
       level: levelList[level],
       speech: speechList[speech],
-      style: style,
+      style: "write like a/an '"+style+"', but limit to 200 words.",
     });
   };
 

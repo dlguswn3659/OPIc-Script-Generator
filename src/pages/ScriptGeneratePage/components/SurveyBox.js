@@ -128,6 +128,8 @@ const SurveyBox = ({ questions, setSelectedMainQuestionIdx }) => {
 
   useEffect(() => {
     if (detailOptions?.length) {
+      console.log("hihi")
+      console.log(detailOptions)
       const fetchData = async () => {
         try {
           await SubmitOnClick(); // SubmitOnClick 함수 호출
@@ -179,6 +181,12 @@ const SurveyBox = ({ questions, setSelectedMainQuestionIdx }) => {
     setQnaMerge(mergeSentence);
     console.log(mergeSentence);
 
+    var detailOptionStr = (detailOptions?.length?.prompt + "\n"
+    + detailOptions?.level?.prompt + "\n"
+    + detailOptions?.speech?.prompt + "\n"
+    + detailOptions?.style + "\n").toString()
+    console.log(detailOptionStr)
+
     try {
       const response = await fetch(
         `${process.env.REACT_APP_EC2_IP_ADDRESS}/ask`,
@@ -191,7 +199,9 @@ const SurveyBox = ({ questions, setSelectedMainQuestionIdx }) => {
             prompt:
               "Please translate these questions and responses to these questions to **English** . They are the following: \n\n" +
               mergeSentence +
-              "\n\n\n(+ requirements : Your response script's form is '<START> {your **full** translate result including all questions and answers} <END>'. )",
+              "\n\n\n(+ requirements : Your response script's form is '<START> {your **full** translate result including all questions and answers} <END>'. )"
+              
+              ,
           }),
         }
       );
@@ -218,7 +228,9 @@ const SurveyBox = ({ questions, setSelectedMainQuestionIdx }) => {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            prompt: `Can you write a script for interviewee's OPIc Test? In a speech format, not in a dialogue format. He wants to get an IM score. Using the information obtained from this question and answer at below.\n\n\n\n${parsedText}\n\n (+ requirements : formulate a 200-300 word script in the form of an essay that aims to obtain IH level in an OPIC test. You are free to add your own creative information and make sure the resulting paragraph is concise, logically correct, grammatically correct, unique and mostly engaging to the reader. Your response OPIC test script's form must be '<START> {your OPIC test script} <END>'. )`,
+            prompt: `Can you write a script for interviewee's OPIc Test? In a speech format, not in a dialogue format. He wants to get an IM score. Using the information obtained from this question and answer at below.\n\n\n\n${parsedText}\n\n (+ requirements : formulate a 200-300 word script in the form of an essay that aims to obtain IH level in an OPIC test. You are free to add your own creative information and make sure the resulting paragraph is concise, logically correct, grammatically correct, unique and mostly engaging to the reader. Your response OPIC test script's form must be '<START> {your OPIC test script} <END>'. )`
+            + "\n\n"
+              + detailOptionStr,
           }),
         }
       );
@@ -306,9 +318,10 @@ const SurveyBox = ({ questions, setSelectedMainQuestionIdx }) => {
                     </LeftButton>
                     <CenterButton
                       onClick={(e) => {
-                        currentQuestionIdx == questions?.length - 1
-                          ? SubmitOnClick(e)
-                          : setCurrentQuestionIdx(currentQuestionIdx + 1);
+                        // currentQuestionIdx == questions?.length - 1
+                        //   ? SubmitOnClick(e)
+                          // : 
+                          setCurrentQuestionIdx(currentQuestionIdx + 1);
                         setDescriptionAnswer(
                           descriptionAnswerList[currentQuestionIdx + 1]
                         );
