@@ -6,6 +6,7 @@ import Logo from "../../../assets/icons/logo.svg";
 import OptionEssay from "./OptionEssay";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import SurveyListBox from "./SurveyListBox";
 
 const PageHeader = styled.div`
   width: 100%;
@@ -118,8 +119,9 @@ const InfoDivide = styled.div`
   margin: 8px;
 `;
 
-const OutputEssay = ({ response }) => {
+const OutputEssay = ({ response, questions, answers }) => {
   const [text, setText] = useState("");
+  const [surveyListBoxShow, setSurveyListBoxShow] = useState(false)
   const [optionModalShow, setOptionModalShow] = useState(false);
   const [command, setCommand] = useState("");
   const [wordCount, setWordCount] = useState(0);
@@ -160,7 +162,9 @@ const OutputEssay = ({ response }) => {
   };
 
   return (
-    <>
+    <>{
+      surveyListBoxShow ? <SurveyListBox questions={questions} answers={answers}/>:<>
+    
       {optionModalShow ? (
         <OptionEssay
           visible={setOptionModalShow}
@@ -180,6 +184,7 @@ const OutputEssay = ({ response }) => {
           src={Logo}
           onClick={() => (window.location.href = "/")}
         />
+        <button onClick={()=>setSurveyListBoxShow(true)}>목록보기</button>
       </PageHeader>
       <ResponseContainer>
         <ContainerHeader>
@@ -202,6 +207,7 @@ const OutputEssay = ({ response }) => {
         ))}
       </OptionBox>
       <ToastContainer position="top-center" autoClose={1000} />
+    </>}
     </>
   );
 };

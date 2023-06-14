@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { COLORS as palette } from "../../utils/style/Color/colors";
 import Logo from "../../assets/icons/logo.svg";
-import { Tutorial } from "./components";
+import { Tutorial, TutorialCard } from "./components";
 import Tutorial1 from "../../assets/images/tutorial1.png";
 import Tutorial2 from "../../assets/images/tutorial2.png";
 
@@ -78,7 +78,7 @@ const IntroPage = () => {
   return (
     <>
       {tutorialStatus ? (
-        <Tutorial />
+        <TutorialCard />
       ) : (
         <Container>
           <CenterBox>

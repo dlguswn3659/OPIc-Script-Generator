@@ -10,15 +10,15 @@ import "react-toastify/dist/ReactToastify.css";
 
 const InnerContainer = styled.div`
   width: 100%;
-  margin-top: 24px;
+  margin-top: 0px;
 `;
 
 const ResponseContainer = styled.div`
   width: 100%;
   height: 400px;
   border-radius: 16px;
-  box-shadow: 0.9120142459869385px 0.9120142459869385px 7.296113967895508px 0px
-    #02362a40;
+  // box-shadow: 0.9120142459869385px 0.9120142459869385px 7.296113967895508px 0px
+  //   #02362a40;
   background-color: ${palette.white};
   font-family: Noto Sans;
   font-size: 12px;
@@ -27,10 +27,10 @@ const ResponseContainer = styled.div`
   letter-spacing: 0em;
   text-align: justified;
   color: ${palette.Black};
-  padding: 50px 20px;
+  padding: 0px 20px;
   text-align: left;
   position: relative;
-  margin-top: 40px;
+  margin-top: 0px;
   overflow-y: auto;
   z-index: 1;
   ::-webkit-scrollbar {
@@ -40,12 +40,8 @@ const ResponseContainer = styled.div`
 
 const ContainerHeader = styled.div`
   width: 100%;
-  position: absolute;
-  top: 16px;
   display: flex;
-  align-items: right;
-  justify-content: right;
-  right: 20px;
+  justify-content: space-between;
 `;
 
 const CopyButton = styled.button`
@@ -125,11 +121,9 @@ const DeleteButton = styled.button`
 `;
 
 const Gradient = styled.div`
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 2;
+  position: relative;
+  z-index: 2; 
+  margin-top: -50px;
   height: 50px; /* 그라데이션의 높이 조정 */
   background: linear-gradient(
     to top,
@@ -155,6 +149,15 @@ const DivideLine = styled.div`
     margin-top: 20px;
 `
 
+const ScrollBox = styled.div`
+    min-height: 80px;
+    padding-bottom: 20px;
+    max-height: 245px;
+    width: 100%;
+    overflow-y: auto;
+    position: relative;
+`
+
 function OptionEssay({
   className,
   onClose,
@@ -165,7 +168,12 @@ function OptionEssay({
   setOverwriting,
 }) {
   const [oldResponse, setOldResponse] = useState("");
-  const [newResponse, setNewResponse] = useState("");
+  const [newResponse, setNewResponse] = useState(`
+  I usually plan my visit to the movie theater a few days in advance. I prefer to book tickets online so that I can get the best seats and avoid long queues. Before the movie starts, I like to explore the theater and buy snacks. I usually get popcorn, candy, and a soda. During the movie, I like to focus on the content and take notes of my thoughts and reactions. I also like to observe the audience and their reactions to the movie. After the movie, I like to talk about it with the people I came with and review the content. We usually discuss the plot, characters, and cinematography. We also talk about the music, special effects, and other elements of the movie. I usually like to stay in the theater for a few minutes after the movie ends to reflect on what I just watched. 
+  
+  Once I'm out of the theater, I usually go to a nearby cafe or restaurant to discuss the movie further. We usually talk about the movie some more and share our opinions. We also compare our reactions to the movie with those of the other people in the theater. We also talk about the actors, the director, and the production team. We also discuss the themes and messages of the movie and how it made us feel. 
+  
+  After the discussion, I usually like to take a walk and reflect on the movie. I think about the characters, the plot, and the cinematography. I also think about the themes and messages of the movie and how it made me feel. I usually end the movie-watching experience by going home and writing down my thoughts and reactions in a journal. `);
   const [waiting, setWaiting] = useState(false);
   const [addedCommand, setAddedCommand] = useState("");
 
@@ -195,43 +203,43 @@ function OptionEssay({
     setAddedCommand(command);
   }, [command]);
 
-  useEffect(() => {
-    (async () => {
-      if (addedCommand != "") {
-        setWaiting(true);
-        const response = await fetch(
-          `${process.env.REACT_APP_EC2_IP_ADDRESS}/ask`,
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              prompt: `${oldResponse}\n\n\n${addedCommand}\n\n(+ requirements : Your response script's form is '<START> {your OPIc test script} <END>'. )`,
-            }),
-          }
-        );
+  // useEffect(() => {
+  //   (async () => {
+  //     if (addedCommand != "") {
+  //       setWaiting(true);
+  //       const response = await fetch(
+  //         `${process.env.REACT_APP_EC2_IP_ADDRESS}/ask`,
+  //         {
+  //           method: "POST",
+  //           headers: {
+  //             "Content-Type": "application/json",
+  //           },
+  //           body: JSON.stringify({
+  //             prompt: `${oldResponse}\n\n\n${addedCommand}\n\n(+ requirements : Your response script's form is '<START> {your OPIc test script} <END>'. )`,
+  //           }),
+  //         }
+  //       );
 
-        const data = await response.json();
-        if (response.status !== 200) {
-          throw (
-            data.error ||
-            new Error(`request failed with status ${response.status}`)
-          );
-        }
+  //       const data = await response.json();
+  //       if (response.status !== 200) {
+  //         throw (
+  //           data.error ||
+  //           new Error(`request failed with status ${response.status}`)
+  //         );
+  //       }
 
-        console.log(data.response);
-        const text = data.response;
-        const regex = /<START>(.*?)<END>/s;
-        const parsedText = text.match(regex)[1];
-        console.log(parsedText);
-        setNewResponse(parsedText);
+  //       console.log(data.response);
+  //       const text = data.response;
+  //       const regex = /<START>(.*?)<END>/s;
+  //       const parsedText = text.match(regex)[1];
+  //       console.log(parsedText);
+  //       setNewResponse(parsedText);
 
-        setAddedCommand("");
-        setWaiting(false);
-      }
-    })();
-  }, [addedCommand]);
+  //       setAddedCommand("");
+  //       setWaiting(false);
+  //     }
+  //   })();
+  // }, [addedCommand]);
 
   const onMaskClick = (e) => {
     if (e.target === e.currentTarget) {
@@ -260,7 +268,12 @@ function OptionEssay({
   };
 
   const copyOnClick = () => {
-    navigator.clipboard.writeText(text);
+    navigator.clipboard.writeText(oldResponse);
+    toast.success("복사완료!");
+  };
+
+  const copyEditOnClick = () => {
+    navigator.clipboard.writeText(newResponse);
     toast.success("복사완료!");
   };
 
@@ -282,23 +295,31 @@ function OptionEssay({
                 </>
               ) : (
                 <>
-                  <ContainerHeader>
+                  <ContainerHeader style={{justifyContent:"right", marginBottom:"20px"}}>
                     <CloseButton onClick={onClose} />
                   </ContainerHeader>
                   <div style={{ position: "relative", width: "!00%" }}>
                     <ResponseContainer>
                       <ContainerHeader>
+                        <Content1>원본</Content1>
                         <CopyButton onClick={copyOnClick} />
                       </ContainerHeader>
-                      <Content1>원본</Content1>
+                      <ScrollBox>
                       {oldResponse}
-                      <br />
+                      </ScrollBox>
+                      <Gradient />
                       <DivideLine />
                       <br />
+                      <ContainerHeader>
                       <Content1>수정본</Content1>
+                      <CopyButton onClick={copyEditOnClick} />
+                      </ContainerHeader>
+                      <ScrollBox>
                       {newResponse}
+                      </ScrollBox>
+                      <Gradient />
                     </ResponseContainer>
-                    <Gradient />
+                    
                   </div>
                   <OptionBox>
                     {OptionList.map((item, index) => (
@@ -354,7 +375,7 @@ const ModalInner = styled.div`
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
   background: rgba(0, 0, 0, 1);
   width: 100%;
-  height: 750px;
+  min-height: 750px;
   max-width: 600px;
   // max-height: 300px;
   padding: 16px;

@@ -7,7 +7,7 @@ import OutputEssay from "./OutputEssay";
 import Loading from "./Loading";
 import DetailOptions from "./DetailOptions";
 import HelpIcon from "../../../assets/icons/help.svg";
-import Help from "../components/Help";
+import Help from "./Help";
 
 const Container = styled.div`
   width: 100%;
@@ -136,16 +136,14 @@ const HelpButton = styled.button`
   right: 0px;
 `
 
-const SurveyBox = ({ questions, setSelectedMainQuestionIdx }) => {
-  const [currentQuestionIdx, setCurrentQuestionIdx] = useState(0);
-  const [listAnswerIdx, setListAnswerIdx] = useState(-1);
-  const [descriptionAnswer, setDescriptionAnswer] = useState("");
+const SurveyListBox = ({ questions, answers, setSelectedMainQuestionIdx }) => {
   const [descriptionAnswerList, setDescriptionAnswerList] = useState([]);
   const [qnaMerge, setQnaMerge] = useState("");
   const [gptResult, setGptResult] = useState("");
   const [waiting, setWaiting] = useState(false);
   const [detailOptions, setDetailOptions] = useState({});
   const [helpOn, setHelpOn] = useState(false);
+  const [detailOptionsOn, setDetailOptionsOn] = useState(false);
 
   useEffect(() => {
     if (detailOptions?.length) {
@@ -169,19 +167,9 @@ const SurveyBox = ({ questions, setSelectedMainQuestionIdx }) => {
 
   useEffect(() => {
     if (questions?.length > 0) {
-      let questionNum = questions?.length;
-      let arr;
-      (arr = []).length = questionNum;
-      arr.fill("");
-      setDescriptionAnswerList(arr);
+      setDescriptionAnswerList(answers);
     }
   }, [questions]);
-
-  useEffect(() => {
-    if (currentQuestionIdx > -1) {
-      descriptionAnswerList[currentQuestionIdx] = descriptionAnswer;
-    }
-  }, [descriptionAnswer]);
 
   const SubmitOnClick = async (e) => {
     setGptResult("");
@@ -302,86 +290,38 @@ const SurveyBox = ({ questions, setSelectedMainQuestionIdx }) => {
             <OutputEssay response={gptResult} questions={questions} answers={descriptionAnswerList}/>
           ) : (
             <>
-              {currentQuestionIdx == questions?.length ? (
+              {detailOptionsOn ? (
                 <DetailOptions setDetailOptions={setDetailOptions} />
               ) : (
                 <>
                   <HeaderBox>
-                    <NumStatus>
-                        {currentQuestionIdx + 1} of {questions?.length}
-                      </NumStatus>
                       <HelpButton onClick={()=>setHelpOn(true)}/>
                   </HeaderBox>
-                  <QuestionSentence>
-                    {questions[currentQuestionIdx]?.question}
-                  </QuestionSentence>
-                  {questions[currentQuestionIdx]?.type == "descriptive_form" ? (
+                  {questions?.map((ques, idx) => (
                     <>
-                      <AnswerTextArea
-                        placeholder={questions[currentQuestionIdx]?.placeholder}
-                        onChange={(e) => {
-                          setDescriptionAnswer(e.target.value);
-                        }}
-                        value={descriptionAnswer}
-                      />
-                      <QuestionSubSentence>
-                        (자세히 설명해주세요, 해당 되지않은 질문은 “건너뛰기”
-                        하시면 됩니다)
-                      </QuestionSubSentence>
+                    <QuestionSentence>
+                      {ques?.question}
+                    </QuestionSentence>
+                    {ques?.type == "descriptive_form" ? (
+                      <>
+                        <AnswerTextArea
+                          onChange={(e) => {
+                            setDescriptionAnswerList(prevList => {
+                              const updatedList = [...prevList];
+                              updatedList[idx] = e.target.value;
+                              return updatedList;
+                            });
+                          }}
+                          value={descriptionAnswerList[idx]}
+                        />
+                      </>
+                    ):<></>}
                     </>
-                  ) : (
-                    <></>
-                  )}
+                  ))}
                   <BottomBar>
-                    <LeftButton
-                      onClick={
-                        currentQuestionIdx == 0
-                          ? () => {
-                              setSelectedMainQuestionIdx(-1);
-                            }
-                          : () => {
-                              setCurrentQuestionIdx(currentQuestionIdx - 1);
-                              setDescriptionAnswer(
-                                descriptionAnswerList[currentQuestionIdx - 1]
-                              );
-                            }
-                      }
-                    >
-                      <ArrowIcon src={LeftArrow} />
-                    </LeftButton>
-                    <CenterButton
-                      onClick={(e) => {
-                        // currentQuestionIdx == questions?.length - 1
-                        //   ? SubmitOnClick(e)
-                          // : 
-                          setCurrentQuestionIdx(currentQuestionIdx + 1);
-                        setDescriptionAnswer(
-                          descriptionAnswerList[currentQuestionIdx + 1]
-                        );
-                      }}
-                    >
-                      건너뛰기
-                    </CenterButton>
-                    <LeftButton
-                      onClick={(e) => {
-                        // currentQuestionIdx == questions?.length - 1
-                        //   ? SubmitOnClick(e)
-                        //     :
-                        setCurrentQuestionIdx(currentQuestionIdx + 1);
-                        setDescriptionAnswer(
-                          descriptionAnswerList[currentQuestionIdx + 1]
-                        );
-                      }}
-                    >
-                      <ButtonText>
-                        {currentQuestionIdx == questions?.length - 1
-                          ? "완료"
-                          : "다음"}
-                      </ButtonText>
-                      <ArrowIcon src={RightArrow} />
-                    </LeftButton>
+                          <button onClick={()=>setDetailOptionsOn(true)}>생성하기</button>
                   </BottomBar>
-                </>
+                  </>
               )}
             </>
           )}
@@ -391,4 +331,4 @@ const SurveyBox = ({ questions, setSelectedMainQuestionIdx }) => {
   );
 };
 
-export default SurveyBox;
+export default SurveyListBox;
