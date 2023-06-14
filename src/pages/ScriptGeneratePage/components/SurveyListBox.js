@@ -29,11 +29,12 @@ const NumStatus = styled.div`
 const QuestionSentence = styled.div`
   width: 100%;
   font-family: Noto Sans KR;
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 700;
   line-height: 32px;
+  letter-spacing: 0em;
   text-align: center;
-  margin-top: 150px;
+  margin-top: 22px;
   color: ${palette.darkest_green};
 `;
 
@@ -49,9 +50,9 @@ const QuestionSubSentence = styled.div`
 
 const AnswerTextArea = styled.textarea`
   font-family: Noto Sans KR;
-  font-size: 18px;
+  font-size: 12px;
   font-weight: 400;
-  line-height: 29px;
+  line-height: 18px;
   letter-spacing: 0em;
   text-align: center;
   color: ${palette.black};
@@ -124,8 +125,9 @@ const HeaderBox = styled.div`
   height: 24px;
   position: relative;
   display: flex;
-  justify-content: center;
-`
+  justify-content: space-between;
+  margin-bottom: 50px;
+`;
 
 const HelpButton = styled.button`
   width: 24px;
@@ -134,9 +136,27 @@ const HelpButton = styled.button`
   border: hidden;
   position absolute;
   right: 0px;
-`
+`;
 
-const SurveyListBox = ({ questions, answers, setSelectedMainQuestionIdx }) => {
+const CreateButton = styled.button`
+  width: 167px;
+  height: 41px;
+  border: hidden;
+  background-color: ${palette.darker_green};
+  color: ${palette.white};
+  border-radius: 16px;
+  font-family: Noto Sans KR;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin: 30px auto;
+  box-shadow: 0.9120142459869385px 0.9120142459869385px 7.296113967895508px 0px
+    #02362a40;
+`;
+
+const SurveyListBox = ({ questions, answers, setSurveyListBoxShow }) => {
   const [descriptionAnswerList, setDescriptionAnswerList] = useState([]);
   const [qnaMerge, setQnaMerge] = useState("");
   const [gptResult, setGptResult] = useState("");
@@ -147,8 +167,8 @@ const SurveyListBox = ({ questions, answers, setSelectedMainQuestionIdx }) => {
 
   useEffect(() => {
     if (detailOptions?.length) {
-      console.log("hihi")
-      console.log(detailOptions)
+      console.log("hihi");
+      console.log(detailOptions);
       const fetchData = async () => {
         try {
           await SubmitOnClick(); // SubmitOnClick 함수 호출
@@ -190,11 +210,17 @@ const SurveyListBox = ({ questions, answers, setSelectedMainQuestionIdx }) => {
     setQnaMerge(mergeSentence);
     console.log(mergeSentence);
 
-    var detailOptionStr = (detailOptions?.length?.prompt + "\n"
-    + detailOptions?.level?.prompt + "\n"
-    + detailOptions?.speech?.prompt + "\n"
-    + detailOptions?.style + "\n").toString()
-    console.log(detailOptionStr)
+    var detailOptionStr = (
+      detailOptions?.length?.prompt +
+      "\n" +
+      detailOptions?.level?.prompt +
+      "\n" +
+      detailOptions?.speech?.prompt +
+      "\n" +
+      detailOptions?.style +
+      "\n"
+    ).toString();
+    console.log(detailOptionStr);
 
     try {
       const response = await fetch(
@@ -208,9 +234,7 @@ const SurveyListBox = ({ questions, answers, setSelectedMainQuestionIdx }) => {
             prompt:
               "Please translate these questions and responses to these questions to **English** . They are the following: \n\n" +
               mergeSentence +
-              "\n\n\n(+ requirements : Your response script's form is '<START> {your **full** translate result including all questions and answers} <END>'. )"
-              
-              ,
+              "\n\n\n(+ requirements : Your response script's form is '<START> {your **full** translate result including all questions and answers} <END>'. )",
           }),
         }
       );
@@ -237,9 +261,10 @@ const SurveyListBox = ({ questions, answers, setSelectedMainQuestionIdx }) => {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            prompt: `Can you write a script for interviewee's OPIc Test? In a speech format, not in a dialogue format. He wants to get an IM score. Using the information obtained from this question and answer at below.\n\n\n\n${parsedText}\n\n (+ requirements : formulate a 200-300 word script in the form of an essay that aims to obtain IH level in an OPIC test. You are free to add your own creative information and make sure the resulting paragraph is concise, logically correct, grammatically correct, unique and mostly engaging to the reader. Your response OPIC test script's form must be '<START> {your OPIC test script} <END>'. )`
-            + "\n\n"
-              + detailOptionStr,
+            prompt:
+              `Can you write a script for interviewee's OPIc Test? In a speech format, not in a dialogue format. He wants to get an IM score. Using the information obtained from this question and answer at below.\n\n\n\n${parsedText}\n\n (+ requirements : formulate a 200-300 word script in the form of an essay that aims to obtain IH level in an OPIC test. You are free to add your own creative information and make sure the resulting paragraph is concise, logically correct, grammatically correct, unique and mostly engaging to the reader. Your response OPIC test script's form must be '<START> {your OPIC test script} <END>'. )` +
+              "\n\n" +
+              detailOptionStr,
           }),
         }
       );
@@ -271,15 +296,17 @@ const SurveyListBox = ({ questions, answers, setSelectedMainQuestionIdx }) => {
 
   return (
     <Container>
-      {helpOn?
-        <Help 
+      {helpOn ? (
+        <Help
           visible={setHelpOn}
           maskClosable={true}
-          onClose={()=>{
-            setHelpOn(false)
+          onClose={() => {
+            setHelpOn(false);
           }}
         />
-        :<></>}
+      ) : (
+        <></>
+      )}
       {waiting && gptResult == "" ? (
         <>
           <Loading />
@@ -287,7 +314,11 @@ const SurveyListBox = ({ questions, answers, setSelectedMainQuestionIdx }) => {
       ) : (
         <>
           {gptResult ? (
-            <OutputEssay response={gptResult} questions={questions} answers={descriptionAnswerList}/>
+            <OutputEssay
+              response={gptResult}
+              questions={questions}
+              answers={descriptionAnswerList}
+            />
           ) : (
             <>
               {detailOptionsOn ? (
@@ -295,33 +326,38 @@ const SurveyListBox = ({ questions, answers, setSelectedMainQuestionIdx }) => {
               ) : (
                 <>
                   <HeaderBox>
-                      <HelpButton onClick={()=>setHelpOn(true)}/>
+                    <LeftButton onClick={() => setSurveyListBoxShow(false)}>
+                      <ArrowIcon src={LeftArrow} />
+                    </LeftButton>
+                    <HelpButton onClick={() => setHelpOn(true)} />
                   </HeaderBox>
                   {questions?.map((ques, idx) => (
                     <>
-                    <QuestionSentence>
-                      {ques?.question}
-                    </QuestionSentence>
-                    {ques?.type == "descriptive_form" ? (
-                      <>
-                        <AnswerTextArea
-                          onChange={(e) => {
-                            setDescriptionAnswerList(prevList => {
-                              const updatedList = [...prevList];
-                              updatedList[idx] = e.target.value;
-                              return updatedList;
-                            });
-                          }}
-                          value={descriptionAnswerList[idx]}
-                        />
-                      </>
-                    ):<></>}
+                      <QuestionSentence>
+                        {idx + 1}. {ques?.question}
+                      </QuestionSentence>
+                      {ques?.type == "descriptive_form" ? (
+                        <>
+                          <AnswerTextArea
+                            onChange={(e) => {
+                              setDescriptionAnswerList((prevList) => {
+                                const updatedList = [...prevList];
+                                updatedList[idx] = e.target.value;
+                                return updatedList;
+                              });
+                            }}
+                            value={descriptionAnswerList[idx]}
+                          />
+                        </>
+                      ) : (
+                        <></>
+                      )}
                     </>
                   ))}
-                  <BottomBar>
-                          <button onClick={()=>setDetailOptionsOn(true)}>생성하기</button>
-                  </BottomBar>
-                  </>
+                  <CreateButton onClick={() => setDetailOptionsOn(true)}>
+                    생성하기
+                  </CreateButton>
+                </>
               )}
             </>
           )}

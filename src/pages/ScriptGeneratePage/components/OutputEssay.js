@@ -7,11 +7,13 @@ import OptionEssay from "./OptionEssay";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import SurveyListBox from "./SurveyListBox";
+import HelpIcon from "../../../assets/icons/help.svg";
+import ListIcon from "../../../assets/icons/list.svg";
 
 const PageHeader = styled.div`
   width: 100%;
   display: flex;
-  justify-content: left;
+  justify-content: space-between;
 `;
 
 const LogoContainer = styled.img`
@@ -119,9 +121,22 @@ const InfoDivide = styled.div`
   margin: 8px;
 `;
 
+const IconButton = styled.button`
+  width: 24px;
+  height: 24px;
+  border: hidden;
+  margin-right: 3px;
+  background-color: transparent;
+`;
+
+const IconButtonBox = styled.div`
+  display: flex;
+  margin: auto 0px;
+`;
+
 const OutputEssay = ({ response, questions, answers }) => {
   const [text, setText] = useState("");
-  const [surveyListBoxShow, setSurveyListBoxShow] = useState(false)
+  const [surveyListBoxShow, setSurveyListBoxShow] = useState(false);
   const [optionModalShow, setOptionModalShow] = useState(false);
   const [command, setCommand] = useState("");
   const [wordCount, setWordCount] = useState(0);
@@ -162,52 +177,65 @@ const OutputEssay = ({ response, questions, answers }) => {
   };
 
   return (
-    <>{
-      surveyListBoxShow ? <SurveyListBox questions={questions} answers={answers}/>:<>
-    
-      {optionModalShow ? (
-        <OptionEssay
-          visible={setOptionModalShow}
-          maskClosable={true}
-          onClose={() => {
-            setOptionModalShow(false);
-          }}
-          text={text}
-          command={command}
-          setOverwriting={setText}
+    <>
+      {surveyListBoxShow ? (
+        <SurveyListBox
+          questions={questions}
+          answers={answers}
+          setSurveyListBoxShow={setSurveyListBoxShow}
         />
       ) : (
-        <></>
+        <>
+          {optionModalShow ? (
+            <OptionEssay
+              visible={setOptionModalShow}
+              maskClosable={true}
+              onClose={() => {
+                setOptionModalShow(false);
+              }}
+              text={text}
+              command={command}
+              setOverwriting={setText}
+            />
+          ) : (
+            <></>
+          )}
+          <PageHeader>
+            <LogoContainer
+              src={Logo}
+              onClick={() => (window.location.href = "/")}
+            />
+            <IconButtonBox>
+              {/* <IconButton style={{ backgroundImage: `url(${HelpIcon})` }} /> */}
+              <IconButton
+                onClick={() => setSurveyListBoxShow(true)}
+                style={{ backgroundImage: `url(${ListIcon})` }}
+              />
+            </IconButtonBox>
+          </PageHeader>
+          <ResponseContainer>
+            <ContainerHeader>
+              <CopyButton onClick={copyOnClick} />
+            </ContainerHeader>
+            {text}
+          </ResponseContainer>
+          <TextInfoBox>
+            <TextInfoTitle>Word : </TextInfoTitle>
+            <TextInfoValue>{wordCount}</TextInfoValue>
+            <InfoDivide />
+            <TextInfoTitle>예상 수준 : </TextInfoTitle>
+            <TextInfoValue>NH</TextInfoValue>
+          </TextInfoBox>
+          <OptionBox>
+            {OptionList.map((item, index) => (
+              <OptionButton onClick={() => optionButtonOnClick(index)}>
+                {item.title}
+              </OptionButton>
+            ))}
+          </OptionBox>
+          <ToastContainer position="top-center" autoClose={1000} />
+        </>
       )}
-      <PageHeader>
-        <LogoContainer
-          src={Logo}
-          onClick={() => (window.location.href = "/")}
-        />
-        <button onClick={()=>setSurveyListBoxShow(true)}>목록보기</button>
-      </PageHeader>
-      <ResponseContainer>
-        <ContainerHeader>
-          <CopyButton onClick={copyOnClick} />
-        </ContainerHeader>
-        {text}
-      </ResponseContainer>
-      <TextInfoBox>
-        <TextInfoTitle>Word : </TextInfoTitle>
-        <TextInfoValue>{wordCount}</TextInfoValue>
-        <InfoDivide />
-        <TextInfoTitle>예상 수준 : </TextInfoTitle>
-        <TextInfoValue>NH</TextInfoValue>
-      </TextInfoBox>
-      <OptionBox>
-        {OptionList.map((item, index) => (
-          <OptionButton onClick={() => optionButtonOnClick(index)}>
-            {item.title}
-          </OptionButton>
-        ))}
-      </OptionBox>
-      <ToastContainer position="top-center" autoClose={1000} />
-    </>}
     </>
   );
 };
