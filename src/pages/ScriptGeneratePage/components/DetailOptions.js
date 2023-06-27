@@ -230,7 +230,7 @@ const DetailOptions = ({ setDetailOptions }) => {
 
   const speechList = [
     {
-      name: "캐쥬얼",
+      name: "OPIc 캐쥬얼(기본)",
       id: "casual",
       prompt: `+Write casually but adult casual.`
     },
@@ -258,7 +258,12 @@ const DetailOptions = ({ setDetailOptions }) => {
       name: "MZ힙스터",
       id: "MZhipster",
       prompt: `+Write like a MZ hipster.`
-    },
+      },
+      {
+        name: "MZ캐주얼",
+        id: "MZhipster",
+        prompt: `+Write casually.`
+      },
   ];
 
   const createOnClick = () => {

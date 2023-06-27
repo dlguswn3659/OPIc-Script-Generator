@@ -122,7 +122,7 @@ const DeleteButton = styled.button`
 
 const Gradient = styled.div`
   position: relative;
-  z-index: 2; 
+  z-index: 2;
   margin-top: -50px;
   height: 50px; /* 그라데이션의 높이 조정 */
   background: linear-gradient(
@@ -140,23 +140,23 @@ const Content1 = styled.div`
   letter-spacing: 0em;
   text-align: left;
   color: ${palette.darkest_green};
-`
+`;
 
 const DivideLine = styled.div`
-    height: 1px;
-    width: 100%;
-    background-color: ${palette.darkest_green};
-    margin-top: 20px;
-`
+  height: 1px;
+  width: 100%;
+  background-color: ${palette.darkest_green};
+  margin-top: 20px;
+`;
 
 const ScrollBox = styled.div`
-    min-height: 80px;
-    padding-bottom: 20px;
-    max-height: 245px;
-    width: 100%;
-    overflow-y: auto;
-    position: relative;
-`
+  min-height: 80px;
+  padding-bottom: 20px;
+  max-height: 245px;
+  width: 100%;
+  overflow-y: auto;
+  position: relative;
+`;
 
 function OptionEssay({
   className,
@@ -178,19 +178,30 @@ function OptionEssay({
   const [addedCommand, setAddedCommand] = useState("");
 
   const OptionList = [
-    { title: "더 짧게", command: "Can you make the above script shorter?" },
-    { title: "더 길게", command: "Can you make the above script longer?" },
-    { title: "더 쉽게", command: "Can you make the above script easier?" },
+    {
+      title: "더 짧게",
+      command: "+rewrite but with 15 less words in total word count.",
+    },
+    {
+      title: "더 길게",
+      command:
+        "+rewrite but with 15 more words in total word count. +Feel free to add details that are not in the previous text. +Do not make the vocabulary or grammar any harder.",
+    },
+    {
+      title: "더 쉽게",
+      command:
+        "+rewrite easier +Do not make longer or shorter. +Do not add new details. ",
+    },
     {
       title: "더 어렵게",
       command:
-        "Can you make the above script more challenging, at an advanced level?",
+        "+rewrite just a tiny bit harder in terms of sentence structure. +Do not make longer. +Do not add new details. +write in adult casual ton",
     },
-    {
-      title: "더 창의적이게",
-      command:
-        "Can you make the above script more creative? I don't mind adding supplementary explanations or expressions based on the information I gave you, or adding your imagination to some extent.",
-    },
+    // {
+    //   title: "더 창의적이게",
+    //   command:
+    //     "Can you make the above script more creative? I don't mind adding supplementary explanations or expressions based on the information I gave you, or adding your imagination to some extent.",
+    // },
   ];
 
   useEffect(() => {}, [oldResponse]);
@@ -295,7 +306,9 @@ function OptionEssay({
                 </>
               ) : (
                 <>
-                  <ContainerHeader style={{justifyContent:"right", marginBottom:"20px"}}>
+                  <ContainerHeader
+                    style={{ justifyContent: "right", marginBottom: "20px" }}
+                  >
                     <CloseButton onClick={onClose} />
                   </ContainerHeader>
                   <div style={{ position: "relative", width: "!00%" }}>
@@ -304,22 +317,17 @@ function OptionEssay({
                         <Content1>원본</Content1>
                         <CopyButton onClick={copyOnClick} />
                       </ContainerHeader>
-                      <ScrollBox>
-                      {oldResponse}
-                      </ScrollBox>
+                      <ScrollBox>{oldResponse}</ScrollBox>
                       <Gradient />
                       <DivideLine />
                       <br />
                       <ContainerHeader>
-                      <Content1>수정본</Content1>
-                      <CopyButton onClick={copyEditOnClick} />
+                        <Content1>수정본</Content1>
+                        <CopyButton onClick={copyEditOnClick} />
                       </ContainerHeader>
-                      <ScrollBox>
-                      {newResponse}
-                      </ScrollBox>
+                      <ScrollBox>{newResponse}</ScrollBox>
                       <Gradient />
                     </ResponseContainer>
-                    
                   </div>
                   <OptionBox>
                     {OptionList.map((item, index) => (

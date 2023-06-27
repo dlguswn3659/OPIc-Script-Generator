@@ -141,19 +141,30 @@ const OutputEssay = ({ response, questions, answers }) => {
   const [command, setCommand] = useState("");
   const [wordCount, setWordCount] = useState(0);
   const OptionList = [
-    { title: "더 짧게", command: "Can you make the above script shorter?" },
-    { title: "더 길게", command: "Can you make the above script longer?" },
-    { title: "더 쉽게", command: "Can you make the above script easier?" },
+    {
+      title: "더 짧게",
+      command: "+rewrite but with 15 less words in total word count.",
+    },
+    {
+      title: "더 길게",
+      command:
+        "+rewrite but with 15 more words in total word count. +Feel free to add details that are not in the previous text. +Do not make the vocabulary or grammar any harder.",
+    },
+    {
+      title: "더 쉽게",
+      command:
+        "+rewrite easier +Do not make longer or shorter. +Do not add new details. ",
+    },
     {
       title: "더 어렵게",
       command:
-        "Can you make the above script more challenging, at an advanced level?",
+        "+rewrite just a tiny bit harder in terms of sentence structure. +Do not make longer. +Do not add new details. +write in adult casual ton",
     },
-    {
-      title: "더 창의적이게",
-      command:
-        "Can you make the above script more creative? I don't mind adding supplementary explanations or expressions based on the information I gave you, or adding your imagination to some extent.",
-    },
+    // {
+    //   title: "더 창의적이게",
+    //   command:
+    //     "Can you make the above script more creative? I don't mind adding supplementary explanations or expressions based on the information I gave you, or adding your imagination to some extent.",
+    // },
   ];
 
   useEffect(() => {

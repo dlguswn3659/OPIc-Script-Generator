@@ -26,6 +26,7 @@ const LogoImage = styled.img`
 
 const StartButton = styled.button`
   height: 41px;
+  width: 167px;
   border: hidden;
   background-color: ${palette.darker_green};
   color: ${palette.white};
@@ -38,7 +39,8 @@ const StartButton = styled.button`
   text-align: center;
   box-shadow: 0.9120142459869385px 0.9120142459869385px 7.296113967895508px 0px
     #02362a40;
-  margin-top: 160px;
+  margin: 0px auto;
+  margin-top: 14.5px;
 `;
 
 const Content1 = styled.div`
@@ -53,16 +55,30 @@ const Content1 = styled.div`
 
 const TutorialButton = styled.button`
   background-color: transparent;
-  border: hidden;
-  text-decoration-line: underline;
+  border: 1px solid ${palette.darker_green};
+  border-radius: 12px;
+  width: 111px;
+  height: 34.5px;
   font-family: Noto Sans KR;
-  font-size: 12px;
+  font-size: 15px;
+  font-weight: 400;
+  text-align: center;
+  color: ${palette.darker_green};
+  margin: 0px auto;
+  margin-top: 223px;
+  box-shadow: 1.1248176097869873px 1.1248176097869873px 8.998540878295898px 0px
+    #02362a40;
+`;
+
+const VersionText = styled.div`
+  font-family: Noto Sans KR;
+  font-size: 8px;
   font-weight: 500;
   line-height: 32px;
   letter-spacing: 0em;
   text-align: center;
+  margin-top: 0px;
   color: ${palette.darkest_green};
-  margin-top: 3px;
 `;
 
 const IntroPage = () => {
@@ -83,16 +99,10 @@ const IntroPage = () => {
         <Container>
           <CenterBox>
             <LogoImage src={Logo} />
-            <Content1>
-              Opicscript는 간단한 설문을 통해 개인에게 커스터마이징 된 OPIC
-              대본을 작성해 줍니다.
-            </Content1>
-            <Content1>
-              Chat-GPT 기술을 통해 대본이 생성되면 다양한 버튼들을 통해 내 영어
-              실력과 목표 성적에 맞는 대본을 완성하세요!
-            </Content1>
+            <Content1>Chat GPT로 작성하는 내 오픽대본</Content1>
+            <TutorialButton onClick={tutorialOnClick}>tutorial</TutorialButton>
             <StartButton onClick={startOnClick}>시작</StartButton>
-            <TutorialButton onClick={tutorialOnClick}>TUTORIAL</TutorialButton>
+            <VersionText>v0.1</VersionText>
           </CenterBox>
         </Container>
       )}

@@ -4,6 +4,10 @@ import { COLORS as palette } from "../../../utils/style/Color/colors";
 import Logo from "../../../assets/icons/logo.svg";
 import Tutorial1 from "../../../assets/images/tutorial1.png";
 import Tutorial2 from "../../../assets/images/tutorial2.png";
+import Tuto2 from "../../../assets/images/tuto2.png";
+import Tuto3 from "../../../assets/images/tuto3.png";
+import Tuto5 from "../../../assets/images/tuto5.png";
+import Tuto6 from "../../../assets/images/tuto6.png";
 import LeftArrow from "../../../assets/icons/left-arrow.svg";
 import RightArrow from "../../../assets/icons/right-arrow.svg";
 
@@ -65,27 +69,30 @@ const Content1 = styled.div`
 `;
 
 const Content2 = styled.div`
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    font-family: Noto Sans KR;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 17px;
-    letter-spacing: 0em;
-    text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: Noto Sans KR;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: center;
   margin-bottom: 20px;
 `;
 
 const ImageBox = styled.div`
-    width: 100%;
-    height: 352px;
+  width: 100%;
+  min-height: 352px;
   margin-top: 70px;
   margin-bottom: 50px;
+`;
+
+const ImageInner = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-`
+`;
 
 const ExampleImageContainer = styled.div`
   width: 100%;
@@ -93,7 +100,7 @@ const ExampleImageContainer = styled.div`
   justify-content: center;
   border: 2px dashed ${palette.background};
   border-radius: 18px;
-  margin: auto 0px;
+  margin: 15px 0px;
 `;
 
 const ExampleImage = styled.img`
@@ -158,23 +165,63 @@ const CenterText = styled.div`
   margin: auto 0px;
 `;
 
-const TutorialCard = () => {
-    const [step, setStep] = useState(0);
+const FirstText = styled.div`
+  font-family: Noto Sans KR;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 46px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin-top: 200px;
+  margin-bottom: 59px;
+  height: 230px;
+`;
 
-    const steps = [
-        {
-            img: <ExampleImage src={Tutorial1} />,
-            content1: "답변은 간단하게 작성해도 괜찮지만, IH 레벨 이상의 대본에서는 성실하게 작성하는걸 추천해 드립니다."
-        },
-        {
-            img: <ExampleImage src={Tutorial2} />,
-            content1: "본인에게 해당이 안되는 질문은 건너뛰셔도 됩니다"
-        },
-        {
-            img: <Tutorial3>"남산타워" "New Jeans" "홍대"</Tutorial3>,
-            content1: "답했을때 정확한 위치 또 이름 다움표로 표시해주세요"
-        }
-    ]
+const TutorialCard = () => {
+  const [step, setStep] = useState(0);
+
+  const steps = [
+    {
+      img: null,
+      content1: (
+        <>
+          <FirstText>
+            <div style={{ fontWeight: "700" }}>
+              안녕하세요! <br />
+              Opicscript는
+            </div>
+            Chat GPT를 통해 여러분들의 오픽 답변을 작성하는 툴입니다.
+          </FirstText>
+        </>
+      ),
+    },
+    {
+      img: [<ExampleImage src={Tuto2} />],
+      content1: "먼저 본인이 관심있는 OPIc 설문 주제를 선택합니다.",
+    },
+    {
+      img: [<ExampleImage src={Tuto3} />],
+      content1: "다음, 기출 질문들 중 대본을 생성하고 싶은 질문을 선택합니다.",
+    },
+    {
+      img: [
+        <ExampleImage src={Tutorial1} />,
+        <ExampleImage src={Tutorial2} />,
+        <Tutorial3>"남산타워" "New Jeans" "홍대"</Tutorial3>,
+      ],
+      content1:
+        "맞춤식 답변 제작을 위해 5~10개 정도의 질문에 대해 한국어로 대답합니다. (답변이 구체적일수록 더 좋은 대본이 생성됩니다) (내 답변에 해당이 안되는 질문은 건너뛰기)",
+    },
+    {
+      img: [<ExampleImage src={Tuto5} />],
+      content1:
+        "마지막으로 글 길이, 목표 성적, 그리고 내가 추구하는 말투를 설정하시면",
+    },
+    {
+      img: [<ExampleImage src={Tuto6} />],
+      content1: "원하는 대본이 완성!",
+    },
+  ];
 
   const startOnClick = () => {
     window.location.href = "/generate";
@@ -183,36 +230,38 @@ const TutorialCard = () => {
   return (
     <Container>
       <ContentBox>
-        <ImageBox>
-            <ExampleImageContainer>
-                {steps[step].img}
-            </ExampleImageContainer>
-        </ImageBox>
-        <Content2>
-            {steps[step].content1}
-        </Content2>
+        {steps[step].img ? (
+          <ImageBox>
+            {steps[step].img.map((item, idx) => (
+              <ImageInner>
+                <ExampleImageContainer>{item}</ExampleImageContainer>
+              </ImageInner>
+            ))}
+          </ImageBox>
+        ) : (
+          <></>
+        )}
+        <Content2>{steps[step].content1}</Content2>
       </ContentBox>
       <BottomBar>
         <LeftButton
-            style={step < 1 ? {visibility: "collapse"} : {}}
-            onClick={()=>setStep(step-1)}
+          style={step < 1 ? { visibility: "collapse" } : {}}
+          onClick={() => setStep(step - 1)}
         >
-            <ArrowIcon src={LeftArrow} />
+          <ArrowIcon src={LeftArrow} />
         </LeftButton>
         <CenterText>
-            {step+1} of {steps.length}
+          {step + 1} of {steps.length}
         </CenterText>
         <LeftButton
-            onClick={() => {step == steps?.length - 1 ? startOnClick() : setStep(step+1)}}
+          onClick={() => {
+            step == steps?.length - 1 ? startOnClick() : setStep(step + 1);
+          }}
         >
-            <ButtonText>
-            {step == steps?.length - 1
-                ? "시작"
-                : "다음"}
-            </ButtonText>
-            <ArrowIcon src={RightArrow} />
+          <ButtonText>{step == steps?.length - 1 ? "시작" : "다음"}</ButtonText>
+          <ArrowIcon src={RightArrow} />
         </LeftButton>
-        </BottomBar>
+      </BottomBar>
     </Container>
   );
 };
