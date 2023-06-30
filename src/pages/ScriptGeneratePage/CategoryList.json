@@ -8,6 +8,7 @@
       "mainQuestions": [
         {
           "mainQuestion": "Many students become friends with their classmates. I’d like to know about a classmate you are close to. Tell me about how and when you met him or her.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "당신은 학급에서 친한 친구를 사귄 적이 있나요? 있다면, 그들을 어떻게 만나게 되었는지, 그 때와 그들과의 만남에 대해 이야기해 주실 수 있나요?",
@@ -73,6 +74,7 @@
         },
         {
           "mainQuestion": "Tell me about your first visit to your school. When was it and who were you with? What did you do and what was your first impression of the school?",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "처음 학교를 방문한 날짜는 언제였나요? 그때 누구와 함께 했나요?",
@@ -138,6 +140,7 @@
         },
         {
           "mainQuestion": "Tell me about a special event that took place at your university, such as a graduation ceremony or a school trip. What were some memorable things that happened during that event?",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "당신이 대학교에서 참여한 특별한 행사는 무엇이었나요? 언제 어디에서 열렸나요?",
@@ -199,6 +202,7 @@
       "mainQuestions": [
         {
           "mainQuestion": "Tell me about your home. What does it look like? What types of rooms does it have? Please describe it in detail.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "거주 형태가 어떻게 되시나요?",
@@ -294,6 +298,7 @@
         },
         {
           "mainQuestion": "Tell me about your bedroom. What does it look like and what do you keep in it? Use as many details as possible to describe it.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "당신의 침실은 어떤 모습인가요? 색상, 가구, 장식 등에 대해 설명해주세요.",
@@ -359,6 +364,7 @@
         },
         {
           "mainQuestion": "It’s important for a family to spend time together. When do you spend time at home with your family? What does your family usually do at home?",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "당신의 가족과 함께 집에서 시간을 보내는 가장 일반적인 시간대는 언제인가요?",
@@ -424,6 +430,7 @@
         },
         {
           "mainQuestion": "Have you made any changes to your house within the last few years? If so, what kinds of changes have you made to your home? Are you satisfied with the changes?",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "지난 몇 년 동안 집에 어떤 변화를 주셨나요? 집에서 어떤 종류의 변경사항을 만들었나요?",
@@ -497,6 +504,7 @@
       "mainQuestions": [
         {
           "mainQuestion": "You indicated in survey that you enjoy watching a performance. Tell me the performance hall you like to go. Where is it located? Why do you like to go there? I’d like to know about in and out of the performance hall.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "어떤 공연장을 가장 좋아하고 있나요? 그 공연장은 어디에 위치해 있나요?",
@@ -562,6 +570,7 @@
         },
         {
           "mainQuestion": "Do you remember the first performance you watched? What was it? When was it? Tell me in as much detail as you can.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "여러분이 처음으로 관람한 공연을 기억하고 있나요? 그 공연은 무엇이었나요?",
@@ -627,6 +636,7 @@
         },
         {
           "mainQuestion": "I’d like to know the most memorable performance you have ever seen. When was it? What kind of performance was it? Why was it so memorable to you? Tell me about it in as much detail as possible.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "여러분이 지금까지 본 공연 중에서 가장 기억에 남는 공연은 무엇인가요?",
@@ -700,6 +710,7 @@
       "mainQuestions": [
         {
           "mainQuestion": "You said you like jogging. I would like to know why you like jogging. Tell me about the reasons in detail.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "당신이 조깅을 좋아하는 이유는 무엇인가요? ",
@@ -765,6 +776,7 @@
         },
         {
           "mainQuestion": "How did you first become interested in jogging? When did you start jogging? Where did you go to start learning how to jog? How has your jogging developed?",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "조깅에 관심을 가지게 된 계기가 있나요? 어떤 이유로 조깅에 흥미를 느끼게 되었는지 알려주세요.",
@@ -830,6 +842,7 @@
         },
         {
           "mainQuestion": "Do you have any memorable experience while jogging? When was it? What happened? Why was it so memorable? Tell me everything in as much detail as possible.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "조깅을 하면서 가장 기억에 남는 경험이 있나요? 언제였고, 어떤 일이 벌어졌나요? 가능한 한 자세히 설명해주세요.",
@@ -903,6 +916,7 @@
       "mainQuestions": [
         {
           "mainQuestion": "In your background survey, you indicated that you enjoy listening to music. What kind of music do you like? Who is your favorite singer or composer?",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "어떤 장르의 음악을 좋아하시나요? 팝, 록, 재즈, 클래식, 힙합, EDM 등 어떤 음악 스타일을 선호하시는지 알려주세요. ",
@@ -968,6 +982,7 @@
         },
         {
           "mainQuestion": "Where and when do you usually listen to music? What do you use to listen to music? Provide as many details as possible in your response",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "일상 생활에서 어디에서 주로 음악을 듣나요? 집 안에서, 외출 중이거나 이동 중에도 음악을 감상하시나요?",
@@ -1015,6 +1030,7 @@
         },
         {
           "mainQuestion": "What first interested you in music? When you first heard your favorite singer or composer, how did you feel? Has your taste in music changed at all?",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "음악에 대한 흥미를 처음 느끼게 된 동기가 있나요? 그 때 어떤 일이 있었고, 왜 그런 영향을 받았는지 자세히 말해주세요.",
@@ -1080,6 +1096,7 @@
         },
         {
           "mainQuestion": "What is your favorite song? What makes it so special? Do you have a special memory associated with the song?",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "가장 좋아하는 노래는 무엇인가요? 그 노래를 특별하게 만드는 이유가 있나요?",
@@ -1153,6 +1170,7 @@
       "mainQuestions": [
         {
           "mainQuestion": "\bYou indicated in the survey that you live in an apartment. Tell me about your neighborhood. What does you neighborhood look like? Where is it located?",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "어느 동네에 거주하고 계십니까?",
@@ -1218,6 +1236,7 @@
         },
         {
           "mainQuestion": "Tell me about your neighbors. What do you do with them? Who are they? How often do you interact with them? Give as many details as you can.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "이웃과의 관계를 어떻게 설명하시겠어요?",
@@ -1271,6 +1290,7 @@
         },
         {
           "mainQuestion": "\bCan you tell me about an interesting or memorable experience you have had in your neighborhood? Tell me about the experience in detail. Explain what happened and what made it so memorable.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "동네에서 특히 흥미로웠거나 기억에 남는 경험 중 하나를 구체적으로 공유해 주실 수 있나요?",
@@ -1320,6 +1340,7 @@
       "mainQuestions": [
         {
           "mainQuestion": "You indicated in the survey that you are employed. Tell me about the company you work for. Where is it located and when was it established? What services or products does it provide to the customers? ",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "근무하는 회사의 이름이 어떻게 되시나요?",
@@ -1379,6 +1400,7 @@
         },
         {
           "mainQuestion": "Please describe your office or workplace in detail. What does it look like? What can be found in your place of work?",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "귀하의 사무실이나 직장의 전반적인 배치와 디자인을 어떻게 설명하시겠어요?",
@@ -1444,6 +1466,7 @@
         },
         {
           "mainQuestion": "Tell me about the technology or equipment in your office or workplace. Which devices do you use regulary? What do you use them for?",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "일상적인 업무에서 귀하가 정기적으로 사용하는 장치나 가젯의 종류에 대해 설명해 주실 수 있나요?",
@@ -1485,6 +1508,7 @@
         },
         {
           "mainQuestion": "\bDifferent people enjoy doing different things during their lunch breaks. What do you do during your lunch break? Give as many details as you can.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "일반적으로 귀하는 점심 시간에 어떻게 보내시나요?",
@@ -1546,6 +1570,7 @@
       "mainQuestions": [
         {
           "mainQuestion": "In your backgroun survey, you indicated in the survey that you have a job. Describe the most memorable project that you've worked on for your company. Why was it so memorable? ",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "귀하가 귀사에서 진행한 가장 기억에 남는 프로젝트에 대한 세부 내용을 공유해 주실 수 있나요?",
@@ -1593,6 +1618,7 @@
         },
         {
           "mainQuestion": "What is your position? What are your duties and responsibilities? Give as many details as you can. ",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "귀하의 사무실이나 직장의 전반적인 배치와 디자인을 어떻게 설명하시겠어요?",
@@ -1658,6 +1684,7 @@
         },
         {
           "mainQuestion": "Tell me about the technology or equipment in your office or workplace. Which devices do you use regulary? What do you use them for?",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "일상적인 업무에서 귀하가 정기적으로 사용하는 장치나 가젯의 종류에 대해 설명해 주실 수 있나요?",
@@ -1699,6 +1726,7 @@
         },
         {
           "mainQuestion": "\bDifferent people enjoy doing different things during their lunch breaks. What do you do during your lunch break? Give as many details as you can.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "일반적으로 귀하는 점심 시간에 어떻게 보내시나요?",
@@ -1760,6 +1788,7 @@
       "mainQuestions": [
         {
           "mainQuestion": "\bYou indicated that you like to go to the movies. What kind of movies do you like to watch? Why do you like those kinds of movies?",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "가장 좋아하는 영화 장르가 무엇이고 좋아하는 이유가 무엇인가요?",
@@ -1801,6 +1830,7 @@
         },
         {
           "mainQuestion": "Who is your favorite movie actor or actress? Tell me a specific story about something this actor did that you heard about in the news. Begins the story with some details about the actor or actress and then tell me all the detail of what happened.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "귀하의 가장 좋아하는 영화 배우는 누구이며, 그들의 연기에 무엇이 귀하를 끌어들이나요?",
@@ -1866,6 +1896,7 @@
         },
         {
           "mainQuestion": "What is your routine when you to the theater? What do you do before the movie and after? Please describe your routine in as much detail as possible.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "영화관에 가실 때 일반적으로 어떤 루틴을 따르시는지 설명해주실 수 있나요? 영화를 보기 전과 후에 어떤 절차를 거치시나요?",
@@ -1901,6 +1932,7 @@
         },
         {
           "mainQuestion": "How has your interest in movies changed over the last few years? What kind of movies did you like in the past? What about now?",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "지난 몇 년 동안 귀하의 영화에 대한 흥미는 어떻게 변화했나요? 과거에 어떤 종류의 영화를 좋아했나요? 현재는 어떤가요?",
@@ -1950,6 +1982,7 @@
       "mainQuestions": [
         {
           "mainQuestion": "You indicated that you like to go to parks. Tell me about one of the parks that you often visit. What does it look like? What makes it so special?",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "귀하께서 자주 방문하시는 공원의 이름을 알려주실 수 있나요?",
@@ -2009,6 +2042,7 @@
         },
         {
           "mainQuestion": "Tell me about a memorable incident that have happened at the park.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "기억에 남는 공원에서 발생한 특별한 사건이 있나요? 있다면 간단히 설명해 주세요. ",
@@ -2044,6 +2078,7 @@
         },
         {
           "mainQuestion": "Tell me about the activities people do at the park you often visit. What do children do? How are they similar or different to adults? ",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "귀하께서 자주 방문하는 공원에서 사람들, 특히 어린이들이 자주 하는 활동에 대해 말씀해 주실 수 있나요?",
@@ -2085,6 +2120,7 @@
         },
         {
           "mainQuestion": "Please compare two different parks that you have been to. Tell me about their similarities and differences. Which one do you prefer and why?",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "방문하고 흥미로웠던 두 개의 다른 공원을 설명해주실 수 있나요?",
@@ -2146,6 +2182,7 @@
       "mainQuestions": [
         {
           "mainQuestion": "In your background survey, you indicated that you like going out for coffee. When do you usually go to coffee shops? What do you typically order, and what do you do while you are there?",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "카페를 자주 방문하시나요?",
@@ -2187,6 +2224,7 @@
         },
         {
           "mainQuestion": "Tell me about your favorite coffee shop. Where is it located? What does it look like? Describe it in as much detail as possible.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "가장 좋아하는 카페의 이름은 무엇인가요?",
@@ -2240,6 +2278,7 @@
         },
         {
           "mainQuestion": "Tell me about a memorable experience you have had at a coffee shop. When and where was it? Who were you with? What happened? Talk about the experience in detail, and explain why it was so memorable.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "먼저 커피숍에서의 기억에 남는 경험에 대해 간단히 이야기해 주실 수 있나요?",
@@ -2289,6 +2328,7 @@
       "mainQuestions": [
         {
           "mainQuestion": " In your background survey, you indicated that you enjoy domestic travel. Where do you like to visit? Which do you prefer, mountains or beaches? Describe the place you like to visit and why you like to go there.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "국내 여행을 즐기신다고 밝히셨는데, 좋아하는 여행지 중 한 곳을 정해서 추천해주세요. ",
@@ -2336,6 +2376,7 @@
         },
         {
           "mainQuestion": "Unexpected things can happen on trips. Talk about an unforgettable incident that happened on a trip. Why was the experience so memorable? Give me all the details.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "먼저 여행 중에 잊지 못할 사건에 대해 한 두 문장으로 간단하게 이야기해 주실 수 있나요?",
@@ -2383,6 +2424,7 @@
         },
         {
           "mainQuestion": "Talk about a trip you went on in your childhood. What do you remember about that trip? Where did you go, and whom did you go with? What made the trip special?",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "어린 시절에 가족과 여행을 자주 가셨나요?",
@@ -2432,6 +2474,7 @@
       "mainQuestions": [
         {
           "mainQuestion": " In your background survey, you indicated that you like to take vacations internationally. Describe for me one of the countries or cities you've visited recently. What does it look like? What are the people like there? Explain in detail.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "해외 여행을 즐기신다고 밝히셨는데, 다녀온 여행지 중 한 곳을 정해서 추천해주세요. ",
@@ -2473,6 +2516,7 @@
         },
         {
           "mainQuestion": "Unexpected things can happen on trips. Talk about an unforgettable incident that happened on a trip. Why was the experience so memorable? Give me all the details.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "먼저 여행 중에 잊지 못할 사건에 대해 한 두 문장으로 간단하게 이야기해 주실 수 있나요?",
@@ -2520,6 +2564,7 @@
         },
         {
           "mainQuestion": "Talk about a trip you went on in your childhood. What do you remember about that trip? Where did you go, and whom did you go with? What made the trip special?",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "어린 시절에 가족과 여행을 자주 가셨나요?",
@@ -2561,6 +2606,7 @@
         },
         {
           "mainQuestion": "\bWhich place do you want to travel to in the future? What activities do you want to do in that place? Why do you want to go there?",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "미래에 가보고 싶은 해외 여행지가 있나요? 그 곳은 어디인가요?",
@@ -2634,6 +2680,7 @@
       "mainQuestions": [
         {
           "mainQuestion": "You indicated in the survey that you prefer to stay at home during your vacation. Why do you like to stay at home? Please describe what activities you like to do during your vacations at home.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "집에서 휴가를 보내는 것을 좋아하는 이유가 뭔가요? 간단한 이유 한두개를 들어주세요.",
@@ -2687,6 +2734,7 @@
         },
         {
           "mainQuestion": "\bMost people want to travel during their vacations. Can you tell me why you prefer to stay at home during your vacation? What makes a vacation at home more enjoyable? ",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "밖에서 여행하는 휴가를 싫어하시나요? 그 이유가 뭔가요? (싫어하지 않으면 그 이야기를 하시면 됩니다)",
@@ -2734,6 +2782,7 @@
         },
         {
           "mainQuestion": "Describe one memorable experience you had during a vacation at home. What happened and how did you deal with it? Why was the vacation so unforgettable? Give me many details.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "집에서의 휴가 중에 특별한 경험을 한 줄로 설명해 주실 수 있나요? (힐링한 경험, 웃겼던 경험, 당황했던 경험) ",
@@ -2771,6 +2820,7 @@
       "mainQuestions": [
         {
           "mainQuestion": "Unexpected difficulties can occur while we are shopping. What was a problem you recently experienced while shopping? How did you resolve this issue? Provide as many details in your response as possible.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "어떤 물건을 구매하려고 했나요?",
@@ -2830,6 +2880,7 @@
         },
         {
           "mainQuestion": "Is there a particular store that you visit regularly? Tell me what the store sells and why you like going there.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "어떤 종류의 상점에 정기적으로 방문하시나요?",
@@ -2895,6 +2946,7 @@
         },
         {
           "mainQuestion": "Shopping is a popular activity. Tell me where you usually like to shop. When do you go there and who do you go with? What do you usually buy?",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "당신이 쇼핑을 주로 좋아하는 장소는 어디인가요? 백화점, 쇼핑몰, 전통시장, 온라인 등을 언급해주세요.",
@@ -2960,6 +3012,7 @@
         },
         {
           "mainQuestion": "Describe a memorable or interesting experience you once had when shopping. What made this experience so unforgettable? Provide as many details as possible.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "이 기억에 남는 쇼핑 경험은 언제 어디서 일어났나요? (장소와 시기를 언급해주세요.)",
@@ -3026,6 +3079,7 @@
       "mainQuestions": [
         {
           "mainQuestion": "Tell me about the TV programs you like to watch. Why do you like to watch them? How often do you usually watch them? Give me as many details as possible.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "어떤 종류의 TV 프로그램을 주로 시청하시나요? 예를 들어, 드라마, 예능, 다큐멘터리, 스포츠 등을 언급해주세요.",
@@ -3091,6 +3145,7 @@
         },
         {
           "mainQuestion": "Is there a TV show you used to watch that was particularly enjoyable? What was the title? Tellme what it was about and why you liked it so much",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "어떤 시기에 이 프로그램을 시청하셨나요? 과거의 몇 년 동안인지, 어느 연도에 특히 많이 시청했는지를 언급해주세요.",
@@ -3156,6 +3211,7 @@
         },
         {
           "mainQuestion": "When did you start watching TV and what made you interested in it? Describe in detail how TV shows have changed since you were young.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "텔레비전을 처음으로 시청하기 시작한 나이나 시점은 언제였나요? 어떤 프로그램에 매료되어 처음으로 텔레비전을 시청하게 된 이유가 있었나요?",
@@ -3221,6 +3277,7 @@
         },
         {
           "mainQuestion": "In your background survey, you indicated that you enjoy watching reality shows. Where did your favorite reality show take place? What did that place look like? Why was the show filmed in that place? Provide as many details as you can.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "어떤 현실 TV 프로그램을 가장 좋아하시나요?",
@@ -3292,6 +3349,7 @@
       "mainQuestions": [
         {
           "mainQuestion": "Everyone has to do housework on a regular basis. What kind of chores do you usually do at home? Tell me about them in detail.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "당신은 집에서 청소를 얼마나 자주 합니까? (매일, 매주, 매달, 기타)",
@@ -3333,6 +3391,7 @@
         },
         {
           "mainQuestion": "You and your family probably have different responsibilities at home. Tell me about which chores each family member is responsible for.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "당신 가족 구성원들은 집안에서 어떤 청소 업무를 맡고 있나요?",
@@ -3374,6 +3433,7 @@
         },
         {
           "mainQuestion": "Have you ever had chores that you weren't able to do? If so, explain why you weren't able to do them. Tell me using as many details as possible.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "지금까지 당신이 할 수 없었던 청소 업무가 있었나요? 있다면 그 이유를 상세히 설명해주세요.",
@@ -3423,6 +3483,7 @@
       "mainQuestions": [
         {
           "mainQuestion": "Is there a particular restaurant you often go to? What kind of food does it serve? Why do you like to go there?",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "당신은 특정한 음식점을 자주 방문하나요?",
@@ -3464,6 +3525,7 @@
         },
         {
           "mainQuestion": "Many countries have special or unique foods. What are some of the traditional dishes in your country? Please describe them in detail.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "당신의 나라에서 어떤 전통 요리가 있나요? 그 요리에 대해 자세히 설명해주세요.",
@@ -3505,6 +3567,7 @@
         },
         {
           "mainQuestion": "What was the last restaurant you ate at? What did you have there? Who did you go with? Provide as many details in your response as possible.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "당신이 마지막으로 방문한 식당은 어떤 곳이었나요?",
@@ -3554,6 +3617,7 @@
       "mainQuestions": [
         {
           "mainQuestion": "When you work on projects, do you use the Internet? Please explain what you use it for and why it is useful. Provide as many details in your response as possible.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "프로젝트 작업을 할 때 어떤 사이트를 자주 사용하나요?",
@@ -3589,6 +3653,7 @@
         },
         {
           "mainQuestion": "There are many different types of computers and software available now. What kind of computer and software do you have? Please describe them in detail.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "당신이 사용하는 컴퓨터의 종류는 무엇인가요? (노트북, 데스크탑, 태블릿 등)",
@@ -3630,6 +3695,7 @@
         },
         {
           "mainQuestion": "Everyone uses the Internet regularly these days. When did you use the Internet for the first time? Do you use it a lot these days? How much time do you spend on the Internet each day?",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "당신이 처음으로 인터넷을 사용한 시기는 언제인가요?",
@@ -3673,6 +3739,7 @@
       "mainQuestions": [
         {
           "mainQuestion": "Can you tell me about a particularly memorable holiday you had when you were young? Describe what you did and what made it so memorable. Give me as many details as you can.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "어릴 적 가장 기억에 남는 명절이 어떤 것이었나요?",
@@ -3714,6 +3781,7 @@
         },
         {
           "mainQuestion": "Certain holidays are more important than others. What is the biggest holiday in your country? Tell me what you usually do on that holiday and how you celebrate it.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "당신의 나라에서 가장 중요한 연휴는 무엇인가요? (설날, 추석 등)",
@@ -3755,6 +3823,7 @@
         },
         {
           "mainQuestion": "There are many different ways to celebrate a holiday. How are holidays celebrated in your country and what kinds of special food are prepared?",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "당신의 나라에서는 명절을 어떻게 기념하나요?",
@@ -3798,6 +3867,7 @@
       "mainQuestions": [
         {
           "mainQuestion": "People go to the bank for many reasons. Why do people go to the bank? Please give me as many details as possible.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "사람들이 은행에 가는 이유는 무엇이라고 생각하나요? (예금, 대출, 투자, 환전 등)",
@@ -3839,6 +3909,7 @@
         },
         {
           "mainQuestion": "Tell me about the banks in your country. Where are they located? When do they open and close? What do they look like? Please describe in as much detail as possible.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "당신의 나라의 은행은 어디에 위치해 있나요? (도시 중심가, 상업지구, 주거지역 등)",
@@ -3880,6 +3951,7 @@
         },
         {
           "mainQuestion": "Tell me about the last time you went to a bank. What did you do at the bank? Please describe your experience in detail.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "가장 최근 은행을 방문한 경험에 대해 이야기해주세요.",
@@ -3929,6 +4001,7 @@
       "mainQuestions": [
         {
           "mainQuestion": "What is public transportation like in your country? Tell me which type of public transportation you prefer to use and why. Provide as many details in your response as possible.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "당신의 나라에서는 대중교통이 어떤 형태로 제공되나요? (지하철, 버스, 전철 등)",
@@ -3970,6 +4043,7 @@
         },
         {
           "mainQuestion": "Public transportation systems are constantly being improved. Have there been any changes to the public transportation system in your city since you were young? Please tell me about them in detail.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "당신이 어릴 적부터 현재까지 당신의 도시의 대중교통 시스템에 어떤 변화가 있었나요?",
@@ -4011,6 +4085,7 @@
         },
         {
           "mainQuestion": "Sometimes riding the subway or bus can be uncomfortable. Have you ever had any problems while taking public transportation? Please describe your experience in detail.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "대중교통을 이용하면서 겪은 불편한 경험이 있나요? 그 경험이 어떤 것이었는지 자세히 설명해주세요.",
@@ -4060,6 +4135,7 @@
       "mainQuestions": [
         {
           "mainQuestion": "There are many different ways to stay healthy. What do you think a person should do to stay healthy? Give me as many details as possible.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "건강을 유지하기 위해 사람들이 해야 할 것들은 무엇인가요? (운동, 영양, 수면 등)",
@@ -4101,6 +4177,7 @@
         },
         {
           "mainQuestion": "Going to the dentist can be stressful. Are you afraid to visit the dentist? Have you ever had an unpleasant experience at a dental clinic?",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "치과를 방문하는 것에 대해 불안한 감정을 가지고 있나요?",
@@ -4142,6 +4219,7 @@
         },
         {
           "mainQuestion": "Have you ever had to quit doing something for health reasons? What was it that you had to give up?",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "건강 상의 이유로 어떤 활동을 그만두어야 했던 적이 있나요? 그 활동이 무엇이었는지 자세히 알려주세요.",
@@ -4228,6 +4306,7 @@
         },
         {
           "mainQuestion": "What do you usually do when you arrive at a hotel? Describe the steps you take when you stay at a hotel.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "호텔에 도착하면 일반적으로 어떤 절차를 따르나요?",
@@ -4269,6 +4348,7 @@
         },
         {
           "mainQuestion": "Please describe a memorable experience you have had while staying at a hotel. What happened? What made the experience memorable?",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "호텔에서 머무는 동안 특별한 경험이 있었나요? 그 경험이 어떤 것이었는지 자세히 알려주세요.",
@@ -4312,6 +4392,7 @@
       "mainQuestions": [
         {
           "mainQuestion": "I'd like to know the kinds of clothes people typically wear in your country. What do they wear when they are relaxing at home? How is it different from what they wear at work?",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "귀하의 나라에서 과거에 사람들이 일반적으로 어떤 종류의 옷을 입었나요?",
@@ -4353,6 +4434,7 @@
         },
         {
           "mainQuestion": "Tell me about the changes in fashion trends in your country. What kind of clothes did people wear in the past? How is it different from what people wear these days?",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "가장 최근에 옷 쇼핑을 한 경험이 어떠셨나요?",
@@ -4394,6 +4476,7 @@
         },
         {
           "mainQuestion": "Tell me about the last time you went shopping for clothes. What did you buy and who did you go with?",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "가장 최근에 옷을 쇼핑하러 간 경험이 어떠셨나요?",
@@ -4443,6 +4526,7 @@
       "mainQuestions": [
         {
           "mainQuestion": "People make appointments for a variety of reasons. What kinds of appointments do you usually make with people? Who do you make them with?",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "귀하는 보통 어떤 종류의 약속을 잡으시나요? (의료 약속, 회의, 식사 등)",
@@ -4484,6 +4568,7 @@
         },
         {
           "mainQuestion": "Where do you like to meet your friends? Why do you prefer this place? Provide as many details as possible in your response.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "귀하는 친구들과 만날 때 주로 어디에서 만나시나요?",
@@ -4525,6 +4610,7 @@
         },
         {
           "mainQuestion": "Tell me about a particularly memorable appointment with your friends. What made this experience so unforgettable? Give me as many details as you can.",
+          "mainQuestionKor": "",
           "questions": [
             {
               "question": "가장 기억에 남는 친구와의 약속은 언제였나요?",
