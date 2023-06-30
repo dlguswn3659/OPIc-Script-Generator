@@ -6,6 +6,9 @@ import Logo from "../../../assets/icons/logo.svg";
 import OptionEssay from "./OptionEssay";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import LeftArrow from "../../../assets/icons/left-arrow.svg";
+import HelpIcon from "../../../assets/icons/help.svg";
+import Help from "./Help";
 
 const PageHeader = styled.div`
   width: 100%;
@@ -156,27 +159,61 @@ const CreateButton = styled.button`
   margin-top: 27px;
 `;
 
+const HeaderBox = styled.div`
+  width: 100%;
+  height: 24px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+`;
+
+const ArrowIcon = styled.img`
+  width: 24px;
+  height: 24px;
+  margin: auto 0px;
+`;
+
+const LeftButton = styled.button`
+  height: 30px;
+  background: transparent;
+  border: 0px;
+  display: flex;
+  margin: auto 0px;
+  width: 80px;
+`;
+
+const HelpButton = styled.button`
+  width: 24px;
+  height: 24px;
+  background-image: url(${HelpIcon});
+  border: hidden;
+  position absolute;
+  right: 0px;
+`;
+
 const DetailOptions = ({ setDetailOptions }) => {
   const [length, setLength] = useState(1);
   const [level, setLevel] = useState(5);
   const [speech, setSpeech] = useState(-1);
   const [style, setStyle] = useState("");
+  const [helpOn, setHelpOn] = useState(false);
 
   const lengthList = [
     {
       name: "짧게",
       id: "short",
-      prompt: `+Requirements: Write the response above to be within 40-80 words. Use the word "I". Do not change the vocabulary level.`
+      prompt: `+Requirements: Write the response above to be within 40-80 words. Use the word "I". Do not change the vocabulary level.`,
     },
     {
       name: "보통",
       id: "reg",
-      prompt: `+Requirements: Write the response above to be within 100-150 words. Use the word "I". You are free to add your own creative information if needed. Do not change the vocabulary level.`
+      prompt: `+Requirements: Write the response above to be within 100-150 words. Use the word "I". You are free to add your own creative information if needed. Do not change the vocabulary level.`,
     },
     {
       name: "길게",
       id: "long",
-      prompt: `+Requirements: Write the response above to be within 200-300 words. Use the word "I". You are free to add your own creative information if needed. Do not change the vocabulary level.`
+      prompt: `+Requirements: Write the response above to be within 200-300 words. Use the word "I". You are free to add your own creative information if needed. Do not change the vocabulary level.`,
     },
   ];
 
@@ -188,7 +225,7 @@ const DetailOptions = ({ setDetailOptions }) => {
       Vocabulary: stick to a vocabulary pool of a foreigner who barely knows how to speak english.
       Fluency:  Can only respond in short sentences.
       Comprehension: Sometimes doesn't understand the question too clearly. About 70% comprehension.
-      Word count: Limit the script again to 50 words.`
+      Word count: Limit the script again to 50 words.`,
     },
     {
       name: "IL",
@@ -197,7 +234,7 @@ const DetailOptions = ({ setDetailOptions }) => {
       Vocabulary: stick to a vocabulary pool of a 2nd grader
       Fluency: A foreign adult student who has been learning english for about 2 years.
       Comprehension: Understand and respond to straightforward questions, statements, and short conversations on familiar topics.
-      Word count: Limit the script again to 100 words.`
+      Word count: Limit the script again to 100 words.`,
     },
     {
       name: "IM",
@@ -206,7 +243,7 @@ const DetailOptions = ({ setDetailOptions }) => {
       Vocabulary: stick to a vocabulary pool of a 4th grader.
       Fluency: A foreign adult student who has been learning english for about 3 years.
       Comprehension: Understand and respond to straightforward questions, statements, and short conversations on familiar topics.
-      Word count: Limit the script again to 150 words.`
+      Word count: Limit the script again to 150 words.`,
     },
     {
       name: "IH",
@@ -215,7 +252,7 @@ const DetailOptions = ({ setDetailOptions }) => {
       Vocabulary: stick to a vocabulary pool of a 6th grader.
       Fluency: A foreign adult student who has been learning english for about 5 years.
       Comprehension: Understand and respond to questions well in most cases.
-      Word count: Limit the script again to 250 words.`
+      Word count: Limit the script again to 250 words.`,
     },
     {
       name: "AL",
@@ -224,7 +261,7 @@ const DetailOptions = ({ setDetailOptions }) => {
       Vocabulary: stick to a vocabulary pool of an adult conversation.
       Fluency: quite fluent
       Comprehension: Understand and respond to questions well.
-      Word count: Limit the script again to 250 words.`
+      Word count: Limit the script again to 250 words.`,
     },
   ];
 
@@ -232,38 +269,38 @@ const DetailOptions = ({ setDetailOptions }) => {
     {
       name: "OPIc 캐쥬얼(기본)",
       id: "casual",
-      prompt: `+Write casually but adult casual.`
+      prompt: `+Write casually but adult casual.`,
     },
     {
       name: "포멀",
       id: "formal",
-      prompt: `+Write formally like you are talking in an interview.`
+      prompt: `+Write formally like you are talking in an interview.`,
     },
     {
       name: "담백하게",
       id: "plainly",
-      prompt: `+Write in easy simple clean sentences.`
+      prompt: `+Write in easy simple clean sentences.`,
     },
     {
       name: "콩글리쉬",
       id: "konlish",
-      prompt: `+Write like a Korean with broken English.`
+      prompt: `+Write like a Korean with broken English.`,
     },
     {
       name: "유치원생",
       id: "preschooler",
-      prompt: `+Write like a preschooler`
+      prompt: `+Write like a preschooler`,
     },
     {
       name: "MZ힙스터",
       id: "MZhipster",
-      prompt: `+Write like a MZ hipster.`
-      },
-      {
-        name: "MZ캐주얼",
-        id: "MZhipster",
-        prompt: `+Write casually.`
-      },
+      prompt: `+Write like a MZ hipster.`,
+    },
+    {
+      name: "MZ캐주얼",
+      id: "MZhipster",
+      prompt: `+Write casually.`,
+    },
   ];
 
   const createOnClick = () => {
@@ -271,13 +308,19 @@ const DetailOptions = ({ setDetailOptions }) => {
       length: lengthList[length],
       level: levelList[level],
       speech: speechList[speech],
-      style: "write like a/an '"+style+"', but limit to 200 words.",
+      style: "write like a/an '" + style + "', but limit to 200 words.",
     });
   };
 
   return (
     <>
       <ResponseContainer>
+        <HeaderBox>
+          <LeftButton onClick={() => "이전창으로 가는 함수"}>
+            <ArrowIcon src={LeftArrow} />
+          </LeftButton>
+          <HelpButton onClick={() => setHelpOn(true)} />
+        </HeaderBox>
         <ContainerHeader></ContainerHeader>
         <Content1>길이</Content1>
         <Container>
