@@ -8,7 +8,7 @@
       "mainQuestions": [
         {
           "mainQuestion": "Many students become friends with their classmates. I’d like to know about a classmate you are close to. Tell me about how and when you met him or her.",
-          "mainQuestionKor": "",
+          "mainQuestionKor": "많은 학생들이 반 친구들과 친구가 됩니다. 저는 당신이 친한 반 친구에 대해 알고 싶습니다. 그 사람을 언제 어떻게 만났는지 말씀해 주세요.",
           "questions": [
             {
               "question": "당신은 학급에서 친한 친구를 사귄 적이 있나요? 있다면, 그들을 어떻게 만나게 되었는지, 그 때와 그들과의 만남에 대해 이야기해 주실 수 있나요?",

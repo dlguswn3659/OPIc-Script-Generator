@@ -9,6 +9,7 @@ import "react-toastify/dist/ReactToastify.css";
 import SurveyListBox from "./SurveyListBox";
 import HelpIcon from "../../../assets/icons/help.svg";
 import ListIcon from "../../../assets/icons/list.svg";
+import LeftArrow from "../../../assets/icons/left-arrow.svg";
 
 const PageHeader = styled.div`
   width: 100%;
@@ -18,7 +19,6 @@ const PageHeader = styled.div`
 
 const LogoContainer = styled.img`
   width: 106px;
-  margin-top: 25px;
   align-items: left;
 `;
 
@@ -44,13 +44,13 @@ const ResponseContainer = styled.div`
 `;
 
 const ContainerHeader = styled.div`
-  width: 100%;
+  width: calc(100% - 40px);
   position: absolute;
   top: 16px;
   display: flex;
   align-items: right;
-  justify-content: right;
-  right: 20px;
+  justify-content: space-between;
+  // right: 20px;
 `;
 
 const CopyButton = styled.button`
@@ -134,12 +134,61 @@ const IconButtonBox = styled.div`
   margin: auto 0px;
 `;
 
-const OutputEssay = ({ response, questions, answers }) => {
+const ArrowIcon = styled.img`
+  width: 24px;
+  height: 24px;
+  margin: auto 0px;
+`;
+
+const LeftButton = styled.button`
+  height: 30px;
+  background: transparent;
+  border: 0px;
+  display: flex;
+  margin: auto 0px;
+  width: 45px;
+`;
+
+const HeaderLeft = styled.div`
+  display: flex;
+`;
+
+const LanguageSwitchBox = styled.div`
+  width: 66px;
+  height: 20px;
+  display: flex;
+  border: 0.7px solid ${palette.darker_green};
+`;
+
+const LanSwitchButton = styled.button`
+  width: 33px;
+  height: 100%;
+  background-color: ${palette.darker_green};
+  color: ${palette.white};
+  text-align: center;
+  font-size: 8px;
+  font-family: Noto Sans KR;
+  font-style: normal;
+  font-weight: 400;
+  border: hidden;
+`;
+
+const OutputEssay = ({
+  response,
+  responseKor,
+  questions,
+  answers,
+  setGptResult,
+  setGptResultKor,
+}) => {
   const [text, setText] = useState("");
+  const [textKor, setTextKor] = useState("");
   const [surveyListBoxShow, setSurveyListBoxShow] = useState(false);
   const [optionModalShow, setOptionModalShow] = useState(false);
   const [command, setCommand] = useState("");
   const [wordCount, setWordCount] = useState(0);
+  const [langStatus, setLangStatus] = useState(0); // 0:eng, 1:kor;
+  const languageList = [{ title: "ENG" }, { title: "한" }];
   const OptionList = [
     {
       title: "더 짧게",
@@ -175,6 +224,7 @@ const OutputEssay = ({ response, questions, answers }) => {
   }, [optionModalShow, text]);
   useEffect(() => {
     setText(response);
+    setTextKor(responseKor);
   }, [response]);
 
   const optionButtonOnClick = (idx) => {
@@ -205,17 +255,24 @@ const OutputEssay = ({ response, questions, answers }) => {
                 setOptionModalShow(false);
               }}
               text={text}
+              textKor={textKor}
               command={command}
               setOverwriting={setText}
+              setTextKor={setTextKor}
             />
           ) : (
             <></>
           )}
           <PageHeader>
-            <LogoContainer
-              src={Logo}
-              onClick={() => (window.location.href = "/")}
-            />
+            <HeaderLeft>
+              <LeftButton onClick={() => setGptResult("")}>
+                <ArrowIcon src={LeftArrow} />
+              </LeftButton>
+              <LogoContainer
+                src={Logo}
+                onClick={() => (window.location.href = "/")}
+              />
+            </HeaderLeft>
             <IconButtonBox>
               {/* <IconButton style={{ backgroundImage: `url(${HelpIcon})` }} /> */}
               <IconButton
@@ -226,9 +283,28 @@ const OutputEssay = ({ response, questions, answers }) => {
           </PageHeader>
           <ResponseContainer>
             <ContainerHeader>
+              <LanguageSwitchBox>
+                {languageList.map((val, idx) => (
+                  <>
+                    {idx == langStatus ? (
+                      <LanSwitchButton>{val.title}</LanSwitchButton>
+                    ) : (
+                      <LanSwitchButton
+                        style={{
+                          backgroundColor: palette.white,
+                          color: palette.darker_green,
+                        }}
+                        onClick={() => setLangStatus(idx)}
+                      >
+                        {val.title}
+                      </LanSwitchButton>
+                    )}
+                  </>
+                ))}
+              </LanguageSwitchBox>
               <CopyButton onClick={copyOnClick} />
             </ContainerHeader>
-            {text}
+            <>{langStatus == 0 ? <>{text}</> : <>{textKor}</>}</>
           </ResponseContainer>
           <TextInfoBox>
             <TextInfoTitle>Word : </TextInfoTitle>

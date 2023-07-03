@@ -164,18 +164,16 @@ function OptionEssay({
   maskClosable,
   visible,
   text,
+  textKor,
   command,
   setOverwriting,
+  setTextKor,
 }) {
   const [oldResponse, setOldResponse] = useState("");
-  const [newResponse, setNewResponse] = useState(`
-  I usually plan my visit to the movie theater a few days in advance. I prefer to book tickets online so that I can get the best seats and avoid long queues. Before the movie starts, I like to explore the theater and buy snacks. I usually get popcorn, candy, and a soda. During the movie, I like to focus on the content and take notes of my thoughts and reactions. I also like to observe the audience and their reactions to the movie. After the movie, I like to talk about it with the people I came with and review the content. We usually discuss the plot, characters, and cinematography. We also talk about the music, special effects, and other elements of the movie. I usually like to stay in the theater for a few minutes after the movie ends to reflect on what I just watched. 
-  
-  Once I'm out of the theater, I usually go to a nearby cafe or restaurant to discuss the movie further. We usually talk about the movie some more and share our opinions. We also compare our reactions to the movie with those of the other people in the theater. We also talk about the actors, the director, and the production team. We also discuss the themes and messages of the movie and how it made us feel. 
-  
-  After the discussion, I usually like to take a walk and reflect on the movie. I think about the characters, the plot, and the cinematography. I also think about the themes and messages of the movie and how it made me feel. I usually end the movie-watching experience by going home and writing down my thoughts and reactions in a journal. `);
+  const [newResponse, setNewResponse] = useState(``);
   const [waiting, setWaiting] = useState(false);
   const [addedCommand, setAddedCommand] = useState("");
+  const [tmpKor, setTmpKor] = useState("");
 
   const OptionList = [
     {
@@ -214,43 +212,49 @@ function OptionEssay({
     setAddedCommand(command);
   }, [command]);
 
-  // useEffect(() => {
-  //   (async () => {
-  //     if (addedCommand != "") {
-  //       setWaiting(true);
-  //       const response = await fetch(
-  //         `${process.env.REACT_APP_EC2_IP_ADDRESS}/ask`,
-  //         {
-  //           method: "POST",
-  //           headers: {
-  //             "Content-Type": "application/json",
-  //           },
-  //           body: JSON.stringify({
-  //             prompt: `${oldResponse}\n\n\n${addedCommand}\n\n(+ requirements : Your response script's form is '<START> {your OPIc test script} <END>'. )`,
-  //           }),
-  //         }
-  //       );
+  useEffect(() => {
+    (async () => {
+      if (addedCommand != "") {
+        setWaiting(true);
+        const response = await fetch(
+          `${process.env.REACT_APP_EC2_IP_ADDRESS}/ask`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              prompt: `${oldResponse}\n\n\n${addedCommand}\n\n(+ requirements : Your response script's form is '<START> {your OPIc test script} <END> <START2> {The same OPIc test script translated into Korean} <END2>'. )`,
+            }),
+          },
+        );
 
-  //       const data = await response.json();
-  //       if (response.status !== 200) {
-  //         throw (
-  //           data.error ||
-  //           new Error(`request failed with status ${response.status}`)
-  //         );
-  //       }
+        const data = await response.json();
+        if (response.status !== 200) {
+          throw (
+            data.error ||
+            new Error(`request failed with status ${response.status}`)
+          );
+        }
 
-  //       console.log(data.response);
-  //       const text = data.response;
-  //       const regex = /<START>(.*?)<END>/s;
-  //       const parsedText = text.match(regex)[1];
-  //       console.log(parsedText);
-  //       setNewResponse(parsedText);
+        console.log(data.response);
+        const text = data.response;
+        const regex = /<START>(.*?)<END>/s;
+        const parsedText = text.match(regex)[1];
+        console.log(parsedText);
+        setNewResponse(parsedText);
 
-  //       setAddedCommand("");
-  //       setWaiting(false);
-  //     }
-  //   })();
-  // }, [addedCommand]);
+        const regexKor = /<START2>(.*?)<END2>/s;
+        const parsedText3 = text.match(regexKor)[1];
+        console.log(parsedText3);
+
+        setTmpKor(parsedText3);
+
+        setAddedCommand("");
+        setWaiting(false);
+      }
+    })();
+  }, [addedCommand]);
 
   const onMaskClick = (e) => {
     if (e.target === e.currentTarget) {
@@ -269,6 +273,7 @@ function OptionEssay({
 
   const overwriteOnClick = () => {
     setOverwriting(newResponse);
+    setTextKor(tmpKor);
     setOldResponse(newResponse);
     setNewResponse("");
   };

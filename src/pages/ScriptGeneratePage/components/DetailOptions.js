@@ -192,10 +192,15 @@ const HelpButton = styled.button`
   right: 0px;
 `;
 
-const DetailOptions = ({ setDetailOptions }) => {
+const DetailOptions = ({
+  setDetailOptions,
+  setCurrentQuestionIdx,
+  questionLength,
+  setDetailOptionsOn,
+}) => {
   const [length, setLength] = useState(1);
   const [level, setLevel] = useState(5);
-  const [speech, setSpeech] = useState(-1);
+  const [speech, setSpeech] = useState(0);
   const [style, setStyle] = useState("");
   const [helpOn, setHelpOn] = useState(false);
 
@@ -267,7 +272,7 @@ const DetailOptions = ({ setDetailOptions }) => {
 
   const speechList = [
     {
-      name: "OPIc 캐쥬얼(기본)",
+      name: "OPIc 캐쥬얼",
       id: "casual",
       prompt: `+Write casually but adult casual.`,
     },
@@ -312,15 +317,34 @@ const DetailOptions = ({ setDetailOptions }) => {
     });
   };
 
+  const prevOnClick = () => {
+    if (setDetailOptionsOn) {
+      setDetailOptionsOn(false);
+    } else {
+      setCurrentQuestionIdx(questionLength - 1);
+    }
+  };
+
   return (
     <>
+      {helpOn ? (
+        <Help
+          visible={setHelpOn}
+          maskClosable={true}
+          onClose={() => {
+            setHelpOn(false);
+          }}
+        />
+      ) : (
+        <></>
+      )}
+      <HeaderBox>
+        <LeftButton onClick={prevOnClick}>
+          <ArrowIcon src={LeftArrow} />
+        </LeftButton>
+        <HelpButton onClick={() => setHelpOn(true)} />
+      </HeaderBox>
       <ResponseContainer>
-        <HeaderBox>
-          <LeftButton onClick={() => "이전창으로 가는 함수"}>
-            <ArrowIcon src={LeftArrow} />
-          </LeftButton>
-          <HelpButton onClick={() => setHelpOn(true)} />
-        </HeaderBox>
         <ContainerHeader></ContainerHeader>
         <Content1>길이</Content1>
         <Container>

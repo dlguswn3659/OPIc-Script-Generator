@@ -125,7 +125,7 @@ const HeaderBox = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
-`
+`;
 
 const HelpButton = styled.button`
   width: 24px;
@@ -134,7 +134,7 @@ const HelpButton = styled.button`
   border: hidden;
   position absolute;
   right: 0px;
-`
+`;
 
 const SurveyBox = ({ questions, setSelectedMainQuestionIdx }) => {
   const [currentQuestionIdx, setCurrentQuestionIdx] = useState(0);
@@ -143,14 +143,15 @@ const SurveyBox = ({ questions, setSelectedMainQuestionIdx }) => {
   const [descriptionAnswerList, setDescriptionAnswerList] = useState([]);
   const [qnaMerge, setQnaMerge] = useState("");
   const [gptResult, setGptResult] = useState("");
+  const [gptResultKor, setGptResultKor] = useState("");
   const [waiting, setWaiting] = useState(false);
   const [detailOptions, setDetailOptions] = useState({});
   const [helpOn, setHelpOn] = useState(false);
 
   useEffect(() => {
     if (detailOptions?.length) {
-      console.log("hihi")
-      console.log(detailOptions)
+      console.log("hihi");
+      console.log(detailOptions);
       const fetchData = async () => {
         try {
           await SubmitOnClick(); // SubmitOnClick 함수 호출
@@ -202,11 +203,17 @@ const SurveyBox = ({ questions, setSelectedMainQuestionIdx }) => {
     setQnaMerge(mergeSentence);
     console.log(mergeSentence);
 
-    var detailOptionStr = (detailOptions?.length?.prompt + "\n"
-    + detailOptions?.level?.prompt + "\n"
-    + detailOptions?.speech?.prompt + "\n"
-    + detailOptions?.style + "\n").toString()
-    console.log(detailOptionStr)
+    var detailOptionStr = (
+      detailOptions?.length?.prompt +
+      "\n" +
+      detailOptions?.level?.prompt +
+      "\n" +
+      detailOptions?.speech?.prompt +
+      "\n" +
+      detailOptions?.style +
+      "\n"
+    ).toString();
+    console.log(detailOptionStr);
 
     try {
       const response = await fetch(
@@ -220,11 +227,9 @@ const SurveyBox = ({ questions, setSelectedMainQuestionIdx }) => {
             prompt:
               "Please translate these questions and responses to these questions to **English** . They are the following: \n\n" +
               mergeSentence +
-              "\n\n\n(+ requirements : Your response script's form is '<START> {your **full** translate result including all questions and answers} <END>'. )"
-              
-              ,
+              "\n\n\n(+ requirements : Your response script's form is '<START> {your **full** translate result including all questions and answers} <END>'. )",
           }),
-        }
+        },
       );
 
       const data = await response.json();
@@ -249,11 +254,12 @@ const SurveyBox = ({ questions, setSelectedMainQuestionIdx }) => {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            prompt: `Can you write a script for interviewee's OPIc Test? In a speech format, not in a dialogue format. He wants to get an IM score. Using the information obtained from this question and answer at below.\n\n\n\n${parsedText}\n\n (+ requirements : formulate a 200-300 word script in the form of an essay that aims to obtain IH level in an OPIC test. You are free to add your own creative information and make sure the resulting paragraph is concise, logically correct, grammatically correct, unique and mostly engaging to the reader. Your response OPIC test script's form must be '<START> {your OPIC test script} <END>'. )`
-            + "\n\n"
-              + detailOptionStr,
+            prompt:
+              `Can you write a script for interviewee's OPIc Test? In a speech format, not in a dialogue format. He wants to get an IM score. Using the information obtained from this question and answer at below.\n\n\n\n${parsedText}\n\n (+ requirements : formulate a 200-300 word script in the form of an essay that aims to obtain IH level in an OPIC test. You are free to add your own creative information and make sure the resulting paragraph is concise, logically correct, grammatically correct, unique and mostly engaging to the reader. Your response OPIC test script's form must be '<START> {your OPIC test script} <END> <START2> {The same OPIc test script translated into Korean} <END2>'. )` +
+              "\n\n" +
+              detailOptionStr,
           }),
-        }
+        },
       );
 
       const data2 = await response2.json();
@@ -270,7 +276,12 @@ const SurveyBox = ({ questions, setSelectedMainQuestionIdx }) => {
       const parsedText2 = text2.match(regex2)[1];
       console.log(parsedText2);
 
+      const regexKor = /<START2>(.*?)<END2>/s;
+      const parsedText3 = text2.match(regexKor)[1];
+      console.log(parsedText3);
+
       setGptResult(parsedText2);
+      setGptResultKor(parsedText3);
       setWaiting(false);
       // setQuestion("");
     } catch (error) {
@@ -283,15 +294,17 @@ const SurveyBox = ({ questions, setSelectedMainQuestionIdx }) => {
 
   return (
     <Container>
-      {helpOn?
-        <Help 
+      {helpOn ? (
+        <Help
           visible={setHelpOn}
           maskClosable={true}
-          onClose={()=>{
-            setHelpOn(false)
+          onClose={() => {
+            setHelpOn(false);
           }}
         />
-        :<></>}
+      ) : (
+        <></>
+      )}
       {waiting && gptResult == "" ? (
         <>
           <Loading />
@@ -299,18 +312,29 @@ const SurveyBox = ({ questions, setSelectedMainQuestionIdx }) => {
       ) : (
         <>
           {gptResult ? (
-            <OutputEssay response={gptResult} questions={questions} answers={descriptionAnswerList}/>
+            <OutputEssay
+              response={gptResult}
+              responseKor={gptResultKor}
+              questions={questions}
+              answers={descriptionAnswerList}
+              setGptResult={setGptResult}
+              setGptResultKor={setGptResultKor}
+            />
           ) : (
             <>
               {currentQuestionIdx == questions?.length ? (
-                <DetailOptions setDetailOptions={setDetailOptions} />
+                <DetailOptions
+                  setDetailOptions={setDetailOptions}
+                  setCurrentQuestionIdx={setCurrentQuestionIdx}
+                  questionLength={questions?.length}
+                />
               ) : (
                 <>
                   <HeaderBox>
                     <NumStatus>
-                        {currentQuestionIdx + 1} of {questions?.length}
-                      </NumStatus>
-                      <HelpButton onClick={()=>setHelpOn(true)}/>
+                      {currentQuestionIdx + 1} of {questions?.length}
+                    </NumStatus>
+                    <HelpButton onClick={() => setHelpOn(true)} />
                   </HeaderBox>
                   <QuestionSentence>
                     {questions[currentQuestionIdx]?.question}
@@ -342,7 +366,7 @@ const SurveyBox = ({ questions, setSelectedMainQuestionIdx }) => {
                           : () => {
                               setCurrentQuestionIdx(currentQuestionIdx - 1);
                               setDescriptionAnswer(
-                                descriptionAnswerList[currentQuestionIdx - 1]
+                                descriptionAnswerList[currentQuestionIdx - 1],
                               );
                             }
                       }
@@ -353,10 +377,10 @@ const SurveyBox = ({ questions, setSelectedMainQuestionIdx }) => {
                       onClick={(e) => {
                         // currentQuestionIdx == questions?.length - 1
                         //   ? SubmitOnClick(e)
-                          // : 
-                          setCurrentQuestionIdx(currentQuestionIdx + 1);
+                        // :
+                        setCurrentQuestionIdx(currentQuestionIdx + 1);
                         setDescriptionAnswer(
-                          descriptionAnswerList[currentQuestionIdx + 1]
+                          descriptionAnswerList[currentQuestionIdx + 1],
                         );
                       }}
                     >
@@ -369,7 +393,7 @@ const SurveyBox = ({ questions, setSelectedMainQuestionIdx }) => {
                         //     :
                         setCurrentQuestionIdx(currentQuestionIdx + 1);
                         setDescriptionAnswer(
-                          descriptionAnswerList[currentQuestionIdx + 1]
+                          descriptionAnswerList[currentQuestionIdx + 1],
                         );
                       }}
                     >

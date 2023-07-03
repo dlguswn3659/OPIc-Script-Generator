@@ -160,6 +160,7 @@ const SurveyListBox = ({ questions, answers, setSurveyListBoxShow }) => {
   const [descriptionAnswerList, setDescriptionAnswerList] = useState([]);
   const [qnaMerge, setQnaMerge] = useState("");
   const [gptResult, setGptResult] = useState("");
+  const [gptResultKor, setGptResultKor] = useState("");
   const [waiting, setWaiting] = useState(false);
   const [detailOptions, setDetailOptions] = useState({});
   const [helpOn, setHelpOn] = useState(false);
@@ -236,7 +237,7 @@ const SurveyListBox = ({ questions, answers, setSurveyListBoxShow }) => {
               mergeSentence +
               "\n\n\n(+ requirements : Your response script's form is '<START> {your **full** translate result including all questions and answers} <END>'. )",
           }),
-        }
+        },
       );
 
       const data = await response.json();
@@ -262,11 +263,11 @@ const SurveyListBox = ({ questions, answers, setSurveyListBoxShow }) => {
           },
           body: JSON.stringify({
             prompt:
-              `Can you write a script for interviewee's OPIc Test? In a speech format, not in a dialogue format. He wants to get an IM score. Using the information obtained from this question and answer at below.\n\n\n\n${parsedText}\n\n (+ requirements : formulate a 200-300 word script in the form of an essay that aims to obtain IH level in an OPIC test. You are free to add your own creative information and make sure the resulting paragraph is concise, logically correct, grammatically correct, unique and mostly engaging to the reader. Your response OPIC test script's form must be '<START> {your OPIC test script} <END>'. )` +
+              `Can you write a script for interviewee's OPIc Test? In a speech format, not in a dialogue format. He wants to get an IM score. Using the information obtained from this question and answer at below.\n\n\n\n${parsedText}\n\n (+ requirements : formulate a 200-300 word script in the form of an essay that aims to obtain IH level in an OPIC test. You are free to add your own creative information and make sure the resulting paragraph is concise, logically correct, grammatically correct, unique and mostly engaging to the reader. Your response OPIC test script's form must be '<START> {your OPIC test script} <END> <START2> {The same OPIc test script translated into Korean} <END2>'. )` +
               "\n\n" +
               detailOptionStr,
           }),
-        }
+        },
       );
 
       const data2 = await response2.json();
@@ -283,7 +284,12 @@ const SurveyListBox = ({ questions, answers, setSurveyListBoxShow }) => {
       const parsedText2 = text2.match(regex2)[1];
       console.log(parsedText2);
 
+      const regexKor = /<START2>(.*?)<END2>/s;
+      const parsedText3 = text2.match(regexKor)[1];
+      console.log(parsedText3);
+
       setGptResult(parsedText2);
+      setGptResultKor(parsedText3);
       setWaiting(false);
       // setQuestion("");
     } catch (error) {
@@ -316,13 +322,17 @@ const SurveyListBox = ({ questions, answers, setSurveyListBoxShow }) => {
           {gptResult ? (
             <OutputEssay
               response={gptResult}
+              responseKor={gptResultKor}
               questions={questions}
               answers={descriptionAnswerList}
             />
           ) : (
             <>
               {detailOptionsOn ? (
-                <DetailOptions setDetailOptions={setDetailOptions} />
+                <DetailOptions
+                  setDetailOptions={setDetailOptions}
+                  setDetailOptionsOn={setDetailOptionsOn}
+                />
               ) : (
                 <>
                   <HeaderBox>
