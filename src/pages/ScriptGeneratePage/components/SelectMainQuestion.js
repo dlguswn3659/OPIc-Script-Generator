@@ -34,7 +34,7 @@ const MainQuestionBox = styled.button`
   font-family: Noto Sans KR;
   font-size: 18px;
   font-weight: 400;
-  line-height: 29px;
+  line-height: 24px;
   text-align: left;
   &:hover {
     background-color: ${palette.darker_green};
@@ -66,6 +66,16 @@ const ArrowIcon = styled.img`
   margin: auto 0px;
 `;
 
+const EngQuestionBox = styled.div`
+  font-family: Noto Sans KR;
+  font-size: 10px;
+  font-weight: 400;
+  text-align: left;
+  line-height: 16px;
+  color: ${palette.gray};
+  margin-top: 3px;
+`;
+
 const SelectMainQuestion = ({ mainQuestionList, setSelectedCategoryId }) => {
   const [selectedMainQuestionIdx, setSelectedMainQuestionIdx] = useState(-1);
 
@@ -86,7 +96,8 @@ const SelectMainQuestion = ({ mainQuestionList, setSelectedCategoryId }) => {
                   setSelectedMainQuestionIdx(idx);
                 }}
               >
-                {item.mainQuestion}
+                {item.mainQuestionKor}
+                <EngQuestionBox>{item.mainQuestion}</EngQuestionBox>
               </MainQuestionBox>
             ))}
             <BottomBar>
