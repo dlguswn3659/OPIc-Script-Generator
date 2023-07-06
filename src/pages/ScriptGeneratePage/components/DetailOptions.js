@@ -199,7 +199,7 @@ const DetailOptions = ({
   setDetailOptionsOn,
 }) => {
   const [length, setLength] = useState(1);
-  const [level, setLevel] = useState(5);
+  const [level, setLevel] = useState(2);
   const [speech, setSpeech] = useState(0);
   const [style, setStyle] = useState("");
   const [helpOn, setHelpOn] = useState(false);

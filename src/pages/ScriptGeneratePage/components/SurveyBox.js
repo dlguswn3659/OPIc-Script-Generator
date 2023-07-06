@@ -270,18 +270,24 @@ const SurveyBox = ({ questions, setSelectedMainQuestionIdx }) => {
         );
       }
 
-      console.log(data2.response);
-      const text2 = data2.response;
-      const regex2 = /<START>(.*?)<END>/s;
-      const parsedText2 = text2.match(regex2)[1];
-      console.log(parsedText2);
+      try {
+        console.log(data2.response);
+        const text2 = data2.response;
+        const regex2 = /<START>(.*?)<END>/s;
+        const parsedText2 = text2.match(regex2)[1];
+        console.log(parsedText2);
 
-      const regexKor = /<START2>(.*?)<END2>/s;
-      const parsedText3 = text2.match(regexKor)[1];
-      console.log(parsedText3);
+        const regexKor = /<START2>(.*?)<END2>/s;
+        const parsedText3 = text2.match(regexKor)[1];
+        console.log(parsedText3);
 
-      setGptResult(parsedText2);
-      setGptResultKor(parsedText3);
+        setGptResult(parsedText2);
+        setGptResultKor(parsedText3);
+      } catch {
+        setGptResult("파싱에러가 발생했습니다! 다시 생성 버튼을 눌러주세요!");
+        setGptResultKor("파싱에러가 발생했습니다! 다시 생성 버튼을 눌러해주세요!");
+        alert("파싱에러가 발생했습니다! 다시 시도해주세요!");
+      }
       setWaiting(false);
       // setQuestion("");
     } catch (error) {
