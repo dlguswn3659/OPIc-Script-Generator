@@ -237,18 +237,22 @@ function OptionEssay({
           );
         }
 
-        console.log(data.response);
-        const text = data.response;
-        const regex = /<START>(.*?)<END>/s;
-        const parsedText = text.match(regex)[1];
-        console.log(parsedText);
-        setNewResponse(parsedText);
+        try {
+          console.log(data.response);
+          const text = data.response;
+          const regex = /<START>(.*?)<END>/s;
+          const parsedText = text.match(regex)[1];
+          console.log(parsedText);
+          setNewResponse(parsedText);
 
-        const regexKor = /<START2>(.*?)<END2>/s;
-        const parsedText3 = text.match(regexKor)[1];
-        console.log(parsedText3);
+          const regexKor = /<START2>(.*?)<END2>/s;
+          const parsedText3 = text.match(regexKor)[1];
+          console.log(parsedText3);
 
-        setTmpKor(parsedText3);
+          setTmpKor(parsedText3);
+        } catch {
+          alert("파싱에러가 발생했습니다! 다시 시도해주세요!");
+        }
 
         setAddedCommand("");
         setWaiting(false);
