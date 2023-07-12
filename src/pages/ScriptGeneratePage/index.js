@@ -29,7 +29,7 @@ const GategoryCardContainer = styled.div`
 
 const CategoryBox = styled.button`
   width: 100%;
-  height: 138px;
+  height: 78px;
   position: relative;
   border-radius: 16px;
   background-color: ${palette.white};
@@ -74,10 +74,11 @@ const Gradient = styled.div`
 
 const BackgroundImageArea = styled.div`
   background-repeat: no-repeat;
-  background-size: cover;
-  width: 175px;
-  height: 118px;
-  top: 20px;
+  background-position: bottom center;
+  background-size: fit;
+  width: 96px;
+  height: 96px;
+  bottom: 0px;
   position: absolute;
   right: 30px;
 `;

@@ -3,6 +3,7 @@
     {
       "title": "자기소개",
       "titleEng": "Self Introduction",
+      "img": "/images/self-introduction.svg",
       "id": 1,
       "mainQuestions": [
         {
@@ -1492,7 +1493,7 @@
     {
       "title": "TV 리얼리티 쇼 시청하기",
       "titleEng": "TV Shows",
-      "img": "/images/movie.jpeg",
+      "img": "/images/drama.svg",
       "id": 8,
       "mainQuestions": [
         {
@@ -2422,7 +2423,7 @@
     {
       "title": "카페 가기",
       "titleEng": "Cafe",
-      "img": "",
+      "img": "/images/drinks.svg",
       "id": 12,
       "mainQuestions": [
         {
@@ -2568,7 +2569,7 @@
     {
       "title": "국내 여행",
       "titleEng": "\bDomestic Trip",
-      "img": "",
+      "img": "/images/road-trip.svg",
       "id": 13,
       "mainQuestions": [
         {
@@ -2714,7 +2715,7 @@
     {
       "title": "해외 여행",
       "titleEng": "International Trip",
-      "img": "",
+      "img": "/images/airplane.svg",
       "id": 14,
       "mainQuestions": [
         {
@@ -2920,7 +2921,7 @@
     {
       "title": "집에서 보내는 휴가",
       "titleEng": "Vacation at home",
-      "img": "",
+      "img": "/images/double-bed.svg",
       "id": 15,
       "mainQuestions": [
         {
@@ -3266,7 +3267,7 @@
     {
       "title": "쇼핑하기",
       "titleEng": "Shopping",
-      "img": "/images/movie.jpeg",
+      "img": "/images/shopping-bags.svg",
       "id": 17,
       "mainQuestions": [
         {
@@ -3525,7 +3526,7 @@
     {
       "title": "게임",
       "titleEng": "Playing Games",
-      "img": "",
+      "img": "/images/game-controller.svg",
       "id": 18,
       "mainQuestions": [
         {
@@ -3665,7 +3666,7 @@
     {
       "title": "헬스",
       "titleEng": "Working Out",
-      "img": "",
+      "img": "/images/barbell.svg",
       "id": 19,
       "mainQuestions": [
         {
@@ -3823,7 +3824,7 @@
     {
       "title": "자원봉사",
       "titleEng": "\bVolunteer Work",
-      "img": "",
+      "img": "/images/volunteer.svg",
       "id": 20,
       "mainQuestions": [
         {
@@ -3927,7 +3928,7 @@
     {
       "title": "집안일 거들기",
       "titleEng": "Housework",
-      "img": "/images/movie.jpeg",
+      "img": "/images/vacuum-cleaner.svg",
       "id": 21,
       "mainQuestions": [
         {
@@ -4061,7 +4062,7 @@
     {
       "title": "외식",
       "titleEng": "Eating Out",
-      "img": "/images/movie.jpeg",
+      "img": "/images/dish.svg",
       "id": 22,
       "mainQuestions": [
         {
@@ -4195,7 +4196,7 @@
     {
       "title": "인터넷 서핑",
       "titleEng": "Internet Surfing",
-      "img": "/images/movie.jpeg",
+      "img": "/images/computer.svg",
       "id": 23,
       "mainQuestions": [
         {
@@ -4317,7 +4318,7 @@
     {
       "title": "명절",
       "titleEng": "Holiday",
-      "img": "/images/movie.jpeg",
+      "img": "/images/decoration.svg",
       "id": 24,
       "mainQuestions": [
         {
@@ -4445,7 +4446,7 @@
     {
       "title": "은행",
       "titleEng": "Bank",
-      "img": "/images/movie.jpeg",
+      "img": "/images/passbook.svg",
       "id": 25,
       "mainQuestions": [
         {
@@ -4579,7 +4580,7 @@
     {
       "title": "대중교통",
       "titleEng": "Public Transport",
-      "img": "/images/movie.jpeg",
+      "img": "/images/traffic-lights.svg",
       "id": 26,
       "mainQuestions": [
         {
@@ -4713,7 +4714,7 @@
     {
       "title": "건강 및 병원",
       "titleEng": "Health and Hospital visits",
-      "img": "/images/movie.jpeg",
+      "img": "/images/hospital.svg",
       "id": 27,
       "mainQuestions": [
         {
@@ -4847,7 +4848,7 @@
     {
       "title": "호텔",
       "titleEng": "Hotel",
-      "img": "/images/movie.jpeg",
+      "img": "/images/hotel.svg",
       "id": 28,
       "mainQuestions": [
         {
@@ -4975,7 +4976,7 @@
     {
       "title": "패션",
       "titleEng": "Fashion",
-      "img": "/images/movie.jpeg",
+      "img": "/images/dress.svg",
       "id": 29,
       "mainQuestions": [
         {
@@ -5109,7 +5110,7 @@
     {
       "title": "약속",
       "titleEng": "Appointments",
-      "img": "/images/movie.jpeg",
+      "img": "/images/pocket-watch.svg",
       "id": 30,
       "mainQuestions": [
         {
