@@ -18,7 +18,7 @@ const ContentBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 30px;s
+  margin-top: 30px;
 `;
 
 const LogoImage = styled.img`
@@ -110,12 +110,7 @@ const CloseButton = styled.button`
   background: url(${CloseIcon}) no-repeat center center/cover;
 `;
 
-const Help = ({
-  className,
-  onClose,
-  maskClosable,
-  visible,
-}) => {
+const Help = ({ className, onClose, maskClosable, visible }) => {
   const startOnClick = () => {
     window.location.href = "/generate";
   };
@@ -140,8 +135,8 @@ const Help = ({
             <ContentBox>
               <Header1>안녕하세요 Opicscript 입니다.</Header1>
               <Content1>
-                Opicscript는 간단한 설문을 통해 개인에게 커스터마이징 된 OPIC 대본을
-                작성해 줍니다.
+                Opicscript는 간단한 설문을 통해 개인에게 커스터마이징 된 OPIC
+                대본을 작성해 줍니다.
               </Content1>
               <Content2>
                 1. 답변은 간단하게 작성해도 괜찮지만, IH 레벨 이상의 대본에서는
@@ -163,13 +158,13 @@ const Help = ({
                 <Tutorial3>"남산타워" "New Jeans" "홍대"</Tutorial3>
               </ExampleImageContainer>
               <Content1 style={{ textAlign: "center" }}>
-                Chat-GPT 기술을 통해 대본이 생성되면 다양한 버튼들을 통해 내 영어
-                실력과 목표 성적에 맞는 대본을 완성하세요!
+                Chat-GPT 기술을 통해 대본이 생성되면 다양한 버튼들을 통해 내
+                영어 실력과 목표 성적에 맞는 대본을 완성하세요!
               </Content1>
               <StartButton onClick={startOnClick}>시작하기</StartButton>
             </ContentBox>
           </Container>
-          </ModalInner>
+        </ModalInner>
       </ModalWrapper>
     </React.Fragment>
   );
