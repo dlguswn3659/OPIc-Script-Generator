@@ -7,8 +7,10 @@ import OptionEssay from "./OptionEssay";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import SurveyListBox from "./SurveyListBox";
+import Feedback from "./Feedback";
 import HelpIcon from "../../../assets/icons/help.svg";
 import ListIcon from "../../../assets/icons/list.svg";
+import FeedbackIcon from "../../../assets/icons/feedback.svg";
 import LeftArrow from "../../../assets/icons/left-arrow.svg";
 
 const PageHeader = styled.div`
@@ -125,8 +127,9 @@ const IconButton = styled.button`
   width: 24px;
   height: 24px;
   border: hidden;
-  margin-right: 3px;
+  margin: 0px 3px;
   background-color: transparent;
+  background-size: cover;
 `;
 
 const IconButtonBox = styled.div`
@@ -184,6 +187,7 @@ const OutputEssay = ({
   const [text, setText] = useState("");
   const [textKor, setTextKor] = useState("");
   const [surveyListBoxShow, setSurveyListBoxShow] = useState(false);
+  const [feedbackBoxShow, setFeedbackBoxShow] = useState(false);
   const [optionModalShow, setOptionModalShow] = useState(false);
   const [command, setCommand] = useState("");
   const [wordCount, setWordCount] = useState(0);
@@ -261,7 +265,19 @@ const OutputEssay = ({
               setTextKor={setTextKor}
             />
           ) : (
-            <></>
+            <>
+              {feedbackBoxShow ? (
+                <Feedback
+                  visible={setFeedbackBoxShow}
+                  maskClosable={true}
+                  onClose={() => {
+                    setFeedbackBoxShow(false);
+                  }}
+                />
+              ) : (
+                <></>
+              )}
+            </>
           )}
           <PageHeader>
             <HeaderLeft>
@@ -275,6 +291,10 @@ const OutputEssay = ({
             </HeaderLeft>
             <IconButtonBox>
               {/* <IconButton style={{ backgroundImage: `url(${HelpIcon})` }} /> */}
+              <IconButton
+                onClick={() => setFeedbackBoxShow(true)}
+                style={{ backgroundImage: `url(${FeedbackIcon})` }}
+              />
               <IconButton
                 onClick={() => setSurveyListBoxShow(true)}
                 style={{ backgroundImage: `url(${ListIcon})` }}
