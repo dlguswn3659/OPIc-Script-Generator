@@ -41,13 +41,15 @@ const CategoryBox = styled.button`
   box-shadow: 0.9120142459869385px 0.9120142459869385px 7.296113967895508px 0px
     #02362a40;
   margin: 4px 0px;
-  font-family: Noto Sans KR;
-  font-size: 18px;
-  font-weight: 900;
-  line-height: 29px;
   text-align: left;
   background-repeat: no-repeat;
   background-size: cover;
+  color: var(--darkest-green, #02362a);
+  font-family: Noto Sans KR;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 29.184px;
   &:hover {
     // border: 5px solid ${palette.darker_green};
     box-shadow: inset 0 0 0 5px ${palette.darker_green},

@@ -79,6 +79,7 @@ const Content2 = styled.div`
   letter-spacing: 0em;
   text-align: center;
   margin-bottom: 20px;
+  padding: 0px 10px;
 `;
 
 const ImageBox = styled.div`
@@ -206,11 +207,19 @@ const TutorialCard = () => {
     {
       img: [
         <ExampleImage src={Tutorial1} />,
-        <ExampleImage src={Tutorial2} />,
-        <Tutorial3>"남산타워" "New Jeans" "홍대"</Tutorial3>,
+        // <ExampleImage src={Tutorial2} />,
+        // <Tutorial3>"남산타워" "New Jeans" "홍대"</Tutorial3>,
       ],
-      content1:
-        "맞춤식 답변 제작을 위해 5~10개 정도의 질문에 대해 한국어로 대답합니다. (답변이 구체적일수록 더 좋은 대본이 생성됩니다) (내 답변에 해당이 안되는 질문은 건너뛰기)",
+      content1: (
+        <>
+          맞춤식 OPIc 답변 제작을 위해 5~8개 정도의 질문에 대해 한국어로
+          대답합니다.
+          <br />
+          <br />
+          답변이 구체적일수록 더 구체적인 대본이 생성되고 나에게 해당 안되는
+          질문은 "건너뛰기"를 눌러주세요.
+        </>
+      ),
     },
     {
       img: [<ExampleImage src={Tuto5} />],
