@@ -263,7 +263,7 @@ const SurveyListBox = ({ questions, answers, setSurveyListBoxShow }) => {
           },
           body: JSON.stringify({
             prompt:
-              `Can you write a script for interviewee's OPIc Test? In a speech format, not in a dialogue format. He wants to get an IM score. Using the information obtained from this question and answer at below.\n\n\n\n${parsedText}\n\n (+ requirements : formulate a 200-300 word script in the form of an essay that aims to obtain IH level in an OPIC test. You are free to add your own creative information and make sure the resulting paragraph is concise, logically correct, grammatically correct, unique and mostly engaging to the reader. Your response OPIC test script's form must be '<START> {your OPIC test script} <END> <START2> {The same OPIc test script translated into Korean} <END2>'. )` +
+              `Can you write a script for interviewee's OPIc Test? In a speech format, not in a dialogue format. He wants to get an IM score. Using the information obtained from this question and answer at below.\n\n\n\n${parsedText}\n\n (+ requirements : formulate a 200-300 word script in the form of an essay that aims to obtain IH level in an OPIC test. You are free to add your own creative information and make sure the resulting paragraph is concise, logically correct, grammatically correct, unique and mostly engaging to the reader. +!!! A requirement that must be followed!!! : Your response script's form is '<START> {your OPIc test script} <END> <START2> {The same OPIc test script translated into Korean. Each sentence in the Korean translation should correspond one-on-one to the sentences in the English text. Therefore, it should be the same as the number of sentences in the English text.} <END2>'. )` +
               "\n\n" +
               detailOptionStr,
           }),
@@ -290,6 +290,12 @@ const SurveyListBox = ({ questions, answers, setSurveyListBoxShow }) => {
 
         setGptResult(parsedText2);
         setGptResultKor(parsedText3);
+        if (!sessionStorage.getItem("testNum")) {
+          sessionStorage.setItem("testNum", "0");
+        }
+        var tmpTestNum = Number(sessionStorage.getItem("testNum")) + 1;
+        console.log(tmpTestNum);
+        sessionStorage.setItem("testNum", tmpTestNum.toString());
       } catch {
         setGptResult("파싱에러가 발생했습니다! 다시 생성 버튼을 눌러주세요!");
         setGptResultKor(
@@ -332,6 +338,8 @@ const SurveyListBox = ({ questions, answers, setSurveyListBoxShow }) => {
               responseKor={gptResultKor}
               questions={questions}
               answers={descriptionAnswerList}
+              setGptResult={setGptResult}
+              setGptResultKor={setGptResultKor}
             />
           ) : (
             <>

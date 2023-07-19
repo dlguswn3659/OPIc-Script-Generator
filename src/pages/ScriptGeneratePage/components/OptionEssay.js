@@ -224,7 +224,7 @@ function OptionEssay({
               "Content-Type": "application/json",
             },
             body: JSON.stringify({
-              prompt: `${oldResponse}\n\n\n${addedCommand}\n\n(+ requirements : Your response script's form is '<START> {your OPIc test script} <END> <START2> {The same OPIc test script translated into Korean} <END2>'. )`,
+              prompt: `${oldResponse}\n\n\n${addedCommand}\n\n(+!!! A requirement that must be followed!!! : Your response script's form is '<START> {your OPIc test script} <END> <START2> {The same OPIc test script translated into Korean. Each sentence in the Korean translation should correspond one-on-one to the sentences in the English text. Therefore, it should be the same as the number of sentences in the English text.} <END2>'. )`,
             }),
           },
         );

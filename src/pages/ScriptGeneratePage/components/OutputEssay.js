@@ -12,6 +12,9 @@ import HelpIcon from "../../../assets/icons/help.svg";
 import ListIcon from "../../../assets/icons/list.svg";
 import FeedbackIcon from "../../../assets/icons/feedback.svg";
 import LeftArrow from "../../../assets/icons/left-arrow.svg";
+import QuizletIcon from "../../../assets/icons/quizlet.svg";
+import useWindowSize from "react-use/lib/useWindowSize";
+import Confetti from "react-confetti";
 
 const PageHeader = styled.div`
   width: 100%;
@@ -184,6 +187,7 @@ const OutputEssay = ({
   setGptResult,
   setGptResultKor,
 }) => {
+  const { width, height } = useWindowSize();
   const [text, setText] = useState("");
   const [textKor, setTextKor] = useState("");
   const [surveyListBoxShow, setSurveyListBoxShow] = useState(false);
@@ -192,6 +196,7 @@ const OutputEssay = ({
   const [command, setCommand] = useState("");
   const [wordCount, setWordCount] = useState(0);
   const [langStatus, setLangStatus] = useState(0); // 0:eng, 1:kor;
+  const [confettiVisible, setConfettiVisible] = useState(false);
   const languageList = [{ title: "ENG" }, { title: "한" }];
   const OptionList = [
     {
@@ -226,10 +231,21 @@ const OutputEssay = ({
     const words = str.split(/\s+/);
     setWordCount(words.length);
   }, [optionModalShow, text]);
+
   useEffect(() => {
     setText(response);
     setTextKor(responseKor);
   }, [response]);
+
+  useEffect(() => {
+    if (Number(sessionStorage.getItem("testNum")) % 5 == 4) {
+      setFeedbackBoxShow(true);
+    }
+  }, [sessionStorage.getItem("testNum")]);
+
+  useEffect(() => {
+    console.log("Width, height : ", width, height);
+  }, [confettiVisible]);
 
   const optionButtonOnClick = (idx) => {
     setOptionModalShow(true);
@@ -239,6 +255,55 @@ const OutputEssay = ({
   const copyOnClick = () => {
     navigator.clipboard.writeText(text);
     toast.success("복사완료!");
+  };
+
+  function combineSentences(englishText, koreanText) {
+    const sentenceRegex =
+      /[^\s][^.!?]*(?:[.!?](?!['"]?\s|$)[^\s][^.!?]*)*[.!?]?['"]?(?=\s|$)/g;
+
+    const englishSentences = englishText.match(sentenceRegex);
+    const koreanSentences = koreanText.match(sentenceRegex);
+
+    let combinedText = "";
+    const maxLength = Math.max(englishSentences.length, koreanSentences.length);
+
+    for (let i = 0; i < maxLength; i++) {
+      const englishSentence = englishSentences[i]?.trim();
+      const koreanSentence = koreanSentences[i]?.trim();
+
+      if (englishSentence && koreanSentence) {
+        combinedText += `${englishSentence}\t${koreanSentence}\n`;
+      }
+    }
+
+    return combinedText;
+  }
+
+  function copyToClipboard(text) {
+    const textarea = document.createElement("textarea");
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textarea);
+  }
+
+  const quizletButtonOnClick = () => {
+    const combinedTextResult = combineSentences(text, textKor);
+    console.log(combinedTextResult);
+
+    // combinedTextResult를 clipboard에 복사
+    copyToClipboard(combinedTextResult);
+    alert("클립보드에 자동복사된 단어장을 '불러오기' 클릭 후 붙여넣으세요!");
+    const url = "https://quizlet.com/create-set"; // 특정 링크 URL을 여기에 입력하세요
+    const newWindow = window.open(url, "_blank");
+    if (newWindow) {
+      // 팝업 차단 등의 이유로 팝업 창이 제대로 열리지 않은 경우
+      // 사용자가 클릭하여 수동으로 열 수 있도록 안내합니다.
+      newWindow.focus();
+    } else {
+      alert("팝업이 차단되었습니다. 팝업 차단을 해제하고 다시 시도해주세요.");
+    }
   };
 
   return (
@@ -273,12 +338,27 @@ const OutputEssay = ({
                   onClose={() => {
                     setFeedbackBoxShow(false);
                   }}
+                  setConfettiVisible={setConfettiVisible}
                 />
               ) : (
                 <></>
               )}
             </>
           )}
+          <div
+            style={
+              confettiVisible
+                ? { visibility: "visible" }
+                : { visibility: "collapsed" }
+            }
+          >
+            <Confetti
+              width={width}
+              height={height}
+              run={confettiVisible}
+              recycle={false}
+            />
+          </div>
           <PageHeader>
             <HeaderLeft>
               <LeftButton onClick={() => setGptResult("")}>
@@ -291,6 +371,10 @@ const OutputEssay = ({
             </HeaderLeft>
             <IconButtonBox>
               {/* <IconButton style={{ backgroundImage: `url(${HelpIcon})` }} /> */}
+              <IconButton
+                onClick={quizletButtonOnClick}
+                style={{ backgroundImage: `url(${QuizletIcon})` }}
+              />
               <IconButton
                 onClick={() => setFeedbackBoxShow(true)}
                 style={{ backgroundImage: `url(${FeedbackIcon})` }}

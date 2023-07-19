@@ -35,6 +35,8 @@ export const COLORS = {
   grey_6: "#E9EAEC",
   grey_7: "#F0F1F2",
 
+  placeholder: "#D9D9D9",
+
   dark_gray: "#777777",
   gray: "#999999",
   light_gray: "#E6E6E6",
