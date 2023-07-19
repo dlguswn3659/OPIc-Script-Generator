@@ -126,6 +126,7 @@ function Feedback({
   }, [description, email]);
 
   const onMaskClick = (e) => {
+    setConfettiVisible(false);
     if (e.target === e.currentTarget) {
       onClose(e);
     }
@@ -155,6 +156,7 @@ function Feedback({
     } catch (error) {
       alert("오류가 발생하였습니다. 잠시 후 다시 시도해주세요.");
       console.error("Feedback 데이터 추가에 실패했습니다:", error);
+      setConfettiVisible(false);
     }
   };
 
@@ -172,7 +174,12 @@ function Feedback({
             <ContainerHeader
               style={{ justifyContent: "right", marginBottom: "20px" }}
             >
-              <CloseButton onClick={onClose} />
+              <CloseButton
+                onClick={() => {
+                  setConfettiVisible(false);
+                  onClose();
+                }}
+              />
             </ContainerHeader>
             <div style={{ position: "relative", width: "100%" }}>
               <BigText>OPICScript 어떠셨나요?</BigText>

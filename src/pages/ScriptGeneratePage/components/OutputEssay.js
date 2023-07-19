@@ -226,6 +226,10 @@ const OutputEssay = ({
   ];
 
   useEffect(() => {
+    setConfettiVisible(false);
+  }, [optionModalShow, surveyListBoxShow]);
+
+  useEffect(() => {
     var str = text.trim();
 
     const words = str.split(/\s+/);
@@ -235,6 +239,7 @@ const OutputEssay = ({
   useEffect(() => {
     setText(response);
     setTextKor(responseKor);
+    setConfettiVisible(false);
   }, [response]);
 
   useEffect(() => {
@@ -294,7 +299,7 @@ const OutputEssay = ({
 
     // combinedTextResult를 clipboard에 복사
     copyToClipboard(combinedTextResult);
-    alert("클립보드에 자동복사된 단어장을 '불러오기' 클릭 후 붙여넣으세요!");
+    alert("클립보드에 자동복사된 텍스트를 '불러오기' 클릭 후 붙여넣으세요!");
     const url = "https://quizlet.com/create-set"; // 특정 링크 URL을 여기에 입력하세요
     const newWindow = window.open(url, "_blank");
     if (newWindow) {
