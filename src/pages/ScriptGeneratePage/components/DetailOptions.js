@@ -7,6 +7,7 @@ import OptionEssay from "./OptionEssay";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import LeftArrow from "../../../assets/icons/left-arrow.svg";
+import RightArrow from "../../../assets/icons/right-arrow.svg";
 import HelpIcon from "../../../assets/icons/help.svg";
 import Help from "./Help";
 
@@ -180,7 +181,7 @@ const LeftButton = styled.button`
   border: 0px;
   display: flex;
   margin: auto 0px;
-  width: 80px;
+  width: auto;
 `;
 
 const HelpButton = styled.button`
@@ -188,8 +189,8 @@ const HelpButton = styled.button`
   height: 24px;
   background-image: url(${HelpIcon});
   border: hidden;
-  position absolute;
-  right: 0px;
+  // position absolute;
+  // right: 0px;
 `;
 
 const DetailOptions = ({
@@ -197,12 +198,19 @@ const DetailOptions = ({
   setCurrentQuestionIdx,
   questionLength,
   setDetailOptionsOn,
+  savedResult,
+  savedResultKor,
+  setSavedResult,
+  setSaveShow,
+  setSavedResultKor,
 }) => {
   const [length, setLength] = useState(1);
   const [level, setLevel] = useState(2);
   const [speech, setSpeech] = useState(0);
   const [style, setStyle] = useState("");
   const [helpOn, setHelpOn] = useState(false);
+
+  useEffect(() => {}, [savedResult]);
 
   const lengthList = [
     {
@@ -313,7 +321,10 @@ const DetailOptions = ({
       length: lengthList[length],
       level: levelList[level],
       speech: speechList[speech],
-      style: "write like a/an '" + style + "', but limit to 200 words.",
+      style:
+        speech == 0
+          ? "write like a/an '" + style + "'"
+          : "write like a/an '" + style + "', but limit to 200 words.",
     });
   };
 
@@ -323,6 +334,10 @@ const DetailOptions = ({
     } else {
       setCurrentQuestionIdx(questionLength - 1);
     }
+  };
+
+  const nextOnClick = () => {
+    setSaveShow(true);
   };
 
   return (
@@ -342,7 +357,23 @@ const DetailOptions = ({
         <LeftButton onClick={prevOnClick}>
           <ArrowIcon src={LeftArrow} />
         </LeftButton>
-        <HelpButton onClick={() => setHelpOn(true)} />
+        <div
+          style={{
+            display: "flex",
+            position: "absolute",
+            right: "0px",
+            alignItems: "right",
+          }}
+        >
+          <HelpButton onClick={() => setHelpOn(true)} />
+          {savedResult?.length > 0 ? (
+            <LeftButton onClick={nextOnClick}>
+              <ArrowIcon src={RightArrow} />
+            </LeftButton>
+          ) : (
+            <></>
+          )}
+        </div>
       </HeaderBox>
       <ResponseContainer>
         <ContainerHeader></ContainerHeader>

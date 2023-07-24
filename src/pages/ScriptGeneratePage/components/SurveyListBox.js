@@ -156,7 +156,12 @@ const CreateButton = styled.button`
     #02362a40;
 `;
 
-const SurveyListBox = ({ questions, answers, setSurveyListBoxShow }) => {
+const SurveyListBox = ({
+  questions,
+  answers,
+  setSurveyListBoxShow,
+  mainQuestion,
+}) => {
   const [descriptionAnswerList, setDescriptionAnswerList] = useState([]);
   const [qnaMerge, setQnaMerge] = useState("");
   const [gptResult, setGptResult] = useState("");
@@ -165,6 +170,8 @@ const SurveyListBox = ({ questions, answers, setSurveyListBoxShow }) => {
   const [detailOptions, setDetailOptions] = useState({});
   const [helpOn, setHelpOn] = useState(false);
   const [detailOptionsOn, setDetailOptionsOn] = useState(false);
+  const [savedResult, setSavedResult] = useState("");
+  const [savedResultKor, setSavedResultKor] = useState("");
 
   useEffect(() => {
     if (detailOptions?.length) {
@@ -263,7 +270,8 @@ const SurveyListBox = ({ questions, answers, setSurveyListBoxShow }) => {
           },
           body: JSON.stringify({
             prompt:
-              `Can you write a script for interviewee's OPIc Test? In a speech format, not in a dialogue format. He wants to get an IM score. Using the information obtained from this question and answer at below.\n\n\n\n${parsedText}\n\n (+ requirements : formulate a 200-300 word script in the form of an essay that aims to obtain IH level in an OPIC test. You are free to add your own creative information and make sure the resulting paragraph is concise, logically correct, grammatically correct, unique and mostly engaging to the reader. +!!! A requirement that must be followed!!! : Your response script's form is '<START> {your OPIc test script} <END> <START2> {The same OPIc test script translated into Korean. Each sentence in the Korean translation should correspond one-on-one to the sentences in the English text. Therefore, it should be the same as the number of sentences in the English text.} <END2>'. )` +
+              `Can you write a script for interviewee's OPIc Test? In a speech format, not in a dialogue format. He wants to get an IM score. Use the information below to answer the following question.
+              Question: ${mainQuestion}\n\n\n\n${parsedText}\n\n (+ requirements : formulate a 200-300 word script in the form of an essay that aims to obtain IH level in an OPIC test. You are free to add your own creative information and make sure the resulting paragraph is concise, logically correct, grammatically correct, unique and mostly engaging to the reader. +!!! A requirement that must be followed!!! : Your response script's form is '<START> {your OPIc test script} <END> <START2> {The same OPIc test script translated into Korean. Each sentence in the Korean translation should correspond one-on-one to the sentences in the English text. Therefore, it should be the same as the number of sentences in the English text.} <END2>'. )` +
               "\n\n" +
               detailOptionStr,
           }),
@@ -340,6 +348,8 @@ const SurveyListBox = ({ questions, answers, setSurveyListBoxShow }) => {
               answers={descriptionAnswerList}
               setGptResult={setGptResult}
               setGptResultKor={setGptResultKor}
+              setSavedResult={setSavedResult}
+              setSavedResultKor={setSavedResultKor}
             />
           ) : (
             <>
@@ -347,6 +357,10 @@ const SurveyListBox = ({ questions, answers, setSurveyListBoxShow }) => {
                 <DetailOptions
                   setDetailOptions={setDetailOptions}
                   setDetailOptionsOn={setDetailOptionsOn}
+                  savedResult={savedResult}
+                  setSavedResult={setSavedResult}
+                  savedResultKor={savedResultKor}
+                  setSavedResultKor={setSavedResultKor}
                 />
               ) : (
                 <>

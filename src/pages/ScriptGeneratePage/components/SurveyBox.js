@@ -136,7 +136,7 @@ const HelpButton = styled.button`
   right: 0px;
 `;
 
-const SurveyBox = ({ questions, setSelectedMainQuestionIdx }) => {
+const SurveyBox = ({ questions, setSelectedMainQuestionIdx, mainQuestion }) => {
   const [currentQuestionIdx, setCurrentQuestionIdx] = useState(0);
   const [listAnswerIdx, setListAnswerIdx] = useState(-1);
   const [descriptionAnswer, setDescriptionAnswer] = useState("");
@@ -147,6 +147,9 @@ const SurveyBox = ({ questions, setSelectedMainQuestionIdx }) => {
   const [waiting, setWaiting] = useState(false);
   const [detailOptions, setDetailOptions] = useState({});
   const [helpOn, setHelpOn] = useState(false);
+  const [savedResult, setSavedResult] = useState("");
+  const [savedResultKor, setSavedResultKor] = useState("");
+  const [saveShow, setSaveShow] = useState(false);
 
   useEffect(() => {
     if (detailOptions?.length) {
@@ -167,6 +170,14 @@ const SurveyBox = ({ questions, setSelectedMainQuestionIdx }) => {
       fetchData();
     }
   }, [detailOptions]);
+
+  useEffect(() => {
+    if (saveShow) {
+      setGptResult(savedResult);
+      setGptResultKor(savedResultKor);
+      setSaveShow(false);
+    }
+  }, [saveShow]);
 
   useEffect(() => {
     if (questions?.length > 0) {
@@ -255,7 +266,8 @@ const SurveyBox = ({ questions, setSelectedMainQuestionIdx }) => {
           },
           body: JSON.stringify({
             prompt:
-              `Can you write a script for interviewee's OPIc Test? In a speech format, not in a dialogue format. He wants to get an IM score. Using the information obtained from this question and answer at below.\n\n\n\n${parsedText}\n\n (+ requirements : formulate a 200-300 word script in the form of an essay that aims to obtain IH level in an OPIC test. You are free to add your own creative information and make sure the resulting paragraph is concise, logically correct, grammatically correct, unique and mostly engaging to the reader. +!!! A requirement that must be followed!!! : Your response script's form is '<START> {your OPIc test script} <END> <START2> {The same OPIc test script translated into Korean. Each sentence in the Korean translation should correspond one-on-one to the sentences in the English text. Therefore, it should be the same as the number of sentences in the English text.} <END2>'. )` +
+              `Can you write a script for interviewee's OPIc Test? In a speech format, not in a dialogue format. He wants to get an IM score. Use the information below to answer the following question.
+              Question: ${mainQuestion}\n\n\n\n${parsedText}\n\n (+ requirements : formulate a 200-300 word script in the form of an essay that aims to obtain IH level in an OPIC test. You are free to add your own creative information and make sure the resulting paragraph is concise, logically correct, grammatically correct, unique and mostly engaging to the reader. +!!! A requirement that must be followed!!! : Your response script's form is '<START> {your OPIc test script} <END> <START2> {The same OPIc test script translated into Korean. Each sentence in the Korean translation should correspond one-on-one to the sentences in the English text. Therefore, it should be the same as the number of sentences in the English text.} <END2>'. )` +
               "\n\n" +
               detailOptionStr,
           }),
@@ -333,6 +345,9 @@ const SurveyBox = ({ questions, setSelectedMainQuestionIdx }) => {
               answers={descriptionAnswerList}
               setGptResult={setGptResult}
               setGptResultKor={setGptResultKor}
+              mainQuestion={mainQuestion}
+              setSavedResult={setSavedResult}
+              setSavedResultKor={setSavedResultKor}
             />
           ) : (
             <>
@@ -341,6 +356,11 @@ const SurveyBox = ({ questions, setSelectedMainQuestionIdx }) => {
                   setDetailOptions={setDetailOptions}
                   setCurrentQuestionIdx={setCurrentQuestionIdx}
                   questionLength={questions?.length}
+                  savedResult={savedResult}
+                  savedResultKor={savedResultKor}
+                  setSavedResult={setSavedResult}
+                  setSaveShow={setSaveShow}
+                  setSavedResultKor={setSavedResultKor}
                 />
               ) : (
                 <>

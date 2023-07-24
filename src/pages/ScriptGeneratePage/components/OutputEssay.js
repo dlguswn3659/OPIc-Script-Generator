@@ -186,6 +186,9 @@ const OutputEssay = ({
   answers,
   setGptResult,
   setGptResultKor,
+  mainQuestion,
+  setSavedResult,
+  setSavedResultKor,
 }) => {
   const { width, height } = useWindowSize();
   const [text, setText] = useState("");
@@ -238,7 +241,9 @@ const OutputEssay = ({
 
   useEffect(() => {
     setText(response);
-    setTextKor(responseKor);
+    if (responseKor != "") {
+      setTextKor(responseKor);
+    }
     setConfettiVisible(false);
   }, [response]);
 
@@ -318,6 +323,7 @@ const OutputEssay = ({
           questions={questions}
           answers={answers}
           setSurveyListBoxShow={setSurveyListBoxShow}
+          mainQuestion={mainQuestion}
         />
       ) : (
         <>
@@ -333,6 +339,7 @@ const OutputEssay = ({
               command={command}
               setOverwriting={setText}
               setTextKor={setTextKor}
+              mainQuestion={mainQuestion}
             />
           ) : (
             <>
@@ -366,7 +373,14 @@ const OutputEssay = ({
           </div>
           <PageHeader>
             <HeaderLeft>
-              <LeftButton onClick={() => setGptResult("")}>
+              <LeftButton
+                onClick={() => {
+                  setSavedResult(text);
+                  setSavedResultKor(textKor);
+                  console.log("hihi", text);
+                  setGptResult("");
+                }}
+              >
                 <ArrowIcon src={LeftArrow} />
               </LeftButton>
               <LogoContainer

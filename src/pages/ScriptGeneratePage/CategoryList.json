@@ -7,7 +7,7 @@
       "id": 1,
       "mainQuestions": [
         {
-          "mainQuestion": "Let's start the interview now. Tell me something about yourself. ",
+          "mainQuestion": "Let's start the interview now. Tell me something about yourself. ",
           "mainQuestionKor": "인터뷰를 시작해볼까요? 자기 소개를 해주세요.",
           "questions": [
             {
@@ -41,7 +41,7 @@
               "placeholder": "저는 새로운 언어를 배우는 걸 좋아하고, 호주에서 스쿠바 다이빙을 좋아하게 됐어요."
             },
             {
-              "question": "지금 오픽 시험과 영어 공부를 하는 이유를 설명해 주세요. ",
+              "question": "지금 오픽 시험과 영어 공부를 하는 이유를 설명해 주세요. ",
               "type": "descriptive_form",
               "answerList": [],
               "placeholder": "외국 회사에 취업하고 싶어서 공인 어학 성적을 따고 있습니다. 그래서 오픽 시험을 보게 됐어요."
@@ -50,7 +50,7 @@
               "question": "추가로 이야기 하고 싶은 내용이 있으면 말해주세요. (없으면 건너뛰기)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": "오늘 긴장 안하고 시험 잘 볼 수 있었으면 좋겠네요! 만나서 반가워요. "
+              "placeholder": "오늘 긴장 안하고 시험 잘 볼 수 있었으면 좋겠네요! 만나서 반가워요. "
             }
           ]
         }
@@ -67,10 +67,10 @@
           "mainQuestionKor": "당신의 집에 대해 이야기해주세요. 어떤 모습인가요? 어떤 종류의 방이 있나요? 가능한 상세히 설명해주세요.",
           "questions": [
             {
-              "question": "거주 형태가 어떻게 되시나요?",
+              "question": "어디서 어떤 종류의 집에 사시나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": "혼자 홍대에서 자취하고 있어요."
+              "placeholder": "혼자 홍대 원룸에서 자취하고 있어요."
             },
             {
               "question": "누구랑 거주하고 계시나요?",
@@ -79,58 +79,22 @@
               "placeholder": "혼자 살아요."
             },
             {
-              "question": "어디 지역에 사세요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": "마포구 홍대요."
-            },
-            {
-              "question": "그 지역은 뭐로 유명한가요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": "놀기에 좋죠. 술집도 많고, 맛집도 많고, 주변에 연희동도 있어서 데이트 하러 많이 옵니다. 사람들이 주로 여기서 약속을 잡아요. 지인들이 주로 놀러와서 사람 만나기는 좋고 주변에 없는게 없어서 편리해요. 근데 좀 시끄러워서 귀찮습니다. "
-            },
-            {
-              "question": "이 지역에 얼마나 오래 사셨어요?",
+              "question": "이 지 지역, 이 집에서 얼마나 오래 사셨어요?",
               "type": "descriptive_form",
               "answerList": [],
               "placeholder": "이사온지 3개월 됐어요. 군대 전역하고 이사왔어요. "
             },
             {
-              "question": "이 집에서는 얼마나 자주 사셨나요?",
+              "question": "집의 크기와 구조가 어떻게 되시나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": "3개월이요."
-            },
-            {
-              "question": "이사를 많이 하셨어요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": "자주 한 편이에요."
-            },
-            {
-              "question": "집의 크기가 어떻게 되시나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": "작은 원룸입니다."
-            },
-            {
-              "question": "집 구조가 어떻게 되나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": "원룸인데 있을건 다 있어서 편해요."
+              "placeholder": "작은 원룸입니다. 원룸인데 있을건 다 있어서 편해요."
             },
             {
               "question": "집의 분위기가 어떤가요?",
               "type": "descriptive_form",
               "answerList": [],
               "placeholder": "동네는 시끄러운데 우리 집은 조용한 편이에요. 근데 문이 얇아서 복도 소리가 잘 들려서 귀찮습니다."
-            },
-            {
-              "question": "집에 있는 주요 가구들을 간단하게 설명해주세요.",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": "냉장고, 세탁기, 식탁은 기본 옵션이고, 악기 연주하는 걸 좋아해서 기타랑 피아노가 있어요!"
             },
             {
               "question": "집이 좋은 이유를 써주세요.",
@@ -145,10 +109,58 @@
               "placeholder": "집이 좁음. 창문이 작음. 환기가 잘 안되고 햇빛이 잘 안들어옴."
             },
             {
-              "question": "집의 특이사항이 있다면 써주세요.",
+              "question": "집의 한줄평을 써주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": "신설임. 그래서 모든 가구가 새거라 그건 너무 좋네요."
+              "placeholder": "좁지만 있을건 다 있고 가성비가 좋다. 홍대에서 한번 살아보고 싶었는데 괜찮은 것 같다. 내가 사교적인 편이라 사람 자주 만나면서 만족하면서 살고 있다."
+            }
+          ]
+        },
+        {
+          "mainQuestion": "Tell me about your home. What does it look like? What types of rooms does it have? Please describe it in detail.",
+          "mainQuestionKor": "당신의 집에 대해 이야기해주세요. 어떤 모습인가요? 어떤 종류의 방이 있나요? 가능한 상세히 설명해주세요.",
+          "questions": [
+            {
+              "question": "어디서 어떤 종류의 집에 사시나요?",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": "혼자 홍대 원룸에서 자취하고 있어요."
+            },
+            {
+              "question": "누구랑 거주하고 계시나요?",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": "혼자 살아요."
+            },
+            {
+              "question": "이 지 지역, 이 집에서 얼마나 오래 사셨어요?",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": "이사온지 3개월 됐어요. 군대 전역하고 이사왔어요. "
+            },
+            {
+              "question": "집의 크기와 구조가 어떻게 되시나요?",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": "작은 원룸입니다. 원룸인데 있을건 다 있어서 편해요."
+            },
+            {
+              "question": "집의 분위기가 어떤가요?",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": "동네는 시끄러운데 우리 집은 조용한 편이에요. 근데 문이 얇아서 복도 소리가 잘 들려서 귀찮습니다."
+            },
+            {
+              "question": "집이 좋은 이유를 써주세요.",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": "주변에 뭐가 많음. 교통편 좋음. 월세가 쌈. 있을거 다 있음."
+            },
+            {
+              "question": "집이 싫은 이유를 써주세요.",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": "집이 좁음. 창문이 작음. 환기가 잘 안되고 햇빛이 잘 안들어옴."
             },
             {
               "question": "집의 한줄평을 써주세요.",
@@ -163,64 +175,34 @@
           "mainQuestionKor": "당신의 침실에 대해 이야기해주세요. 어떤 모습이며 무엇을 보관하고 있나요? 가능한 많은 세부사항을 사용하여 설명해주세요.",
           "questions": [
             {
-              "question": "당신의 침실은 어떤 모습인가요? 색상, 가구, 장식 등에 대해 설명해주세요.",
+              "question": "본인 방에 대한 한줄평을 먼저 적어주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": " "
+              "placeholder": "홍대에 있는 작은 원룸입니다."
             },
             {
-              "question": "침실의 크기는 어느 정도인가요? 창문의 위치와 크기도 알려주세요.",
+              "question": "본인 방은 어떤 모습인가요? 색상, 가구, 장식 등에 대해 설명해주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": " "
+              "placeholder": "방은 정말 작아요. 벽의 색은 회색과 흰색이고, 바닥은 대리석입니다. 방에 딱 들어가면 침대, 책상, 냉장고, 옷걸이, 화장실 보이고 그게 다에요. 필요한 것만 딱 있습니다. "
             },
             {
-              "question": "침대는 어떤 종류인가요? 퀸 사이즈, 싱글 사이즈, 혹은 다른 종류의 침대를 사용하고 있나요?",
+              "question": "방의 장단점이 뭔가요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": " "
+              "placeholder": "방의 장점은 위치가 홍대 중심에 있다는 것이고, 그럼에도 불구하고 조용하다는거? 그리고 월세가 싸고 보증금이 적어서 언제든지 이사갈 수 있어요. 단점은 방이 좀 좁고 창문이 작아서 햇빛도 잘 안들어오고 환기하기도 힘들다는 점이에요."
             },
             {
-              "question": "침실에는 어떤 가구들이 있나요? 옷장, 서랍장, 책상 등이 있을까요?",
+              "question": "방에 특별히 애용하는 물건들이 있나요? 사진 액자, 책, 음악 악기 등을 보관하고 있을까요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": " "
+              "placeholder": "말씀드린 가구 말고는 화장품이랑 옷이 많은 것 같아요. 냉장고도 있는데 요리를 자주 안해서 음료수랑 간단한 간식 정도 넣어두고 먹고 있어요. "
             },
             {
-              "question": "벽면에는 어떤 장식이나 포스터가 걸려 있나요? 당신의 개인적인 취향이나 스타일을 보여줄 수 있는 요소가 있을까요?",
+              "question": "침실에서 가장 편안하게 느끼는 공간이 어디인가요? 그곳에서 휴식을 취하거나 특별한 시간을 보내나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": " "
-            },
-            {
-              "question": "침실 바닥은 어떤 재질이나 마감으로 되어 있나요? 마루, 카펫, 혹은 다른 재질을 사용하고 있나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": " "
-            },
-            {
-              "question": "침실에는 어떤 조명 시설이 있나요? 천장 조명, 스탠드 조명, 혹은 다른 종류의 조명을 사용하고 있나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": " "
-            },
-            {
-              "question": "침실에는 어떤 기술 기기나 전자제품이 있나요? 텔레비전, 스피커, 컴퓨터 등이 있는지 알려주세요.",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": " "
-            },
-            {
-              "question": "침실에는 어떤 개인적인 소지품이나 애용하는 물건들이 있나요? 사진 액자, 책, 음악 악기 등을 보관하고 있을까요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": " "
-            },
-            {
-              "question": "침실에서 가장 편안하게 느끼는 공간이 어디인가요? 그곳에서 휴식을 취하거나 특별한 시간을 보내는가요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": " "
+              "placeholder": "저는 거의 방에 없지만, 가장 좋아하는 공간은 침대에요. 침대에 핸드폰 거치대가 있는데, 에어컨 틀고 누워서 핸드폰으로 영상보면서 쉬면 너무 행복해요."
             }
           ]
         },
@@ -229,130 +211,70 @@
           "mainQuestionKor": "가족이 함께 시간을 보내는 것은 중요합니다. 가족과 함께 집에서 언제 시간을 보내나요? 가족이 집에서 보통 무엇을 하나요?",
           "questions": [
             {
-              "question": "당신의 가족과 함께 집에서 시간을 보내는 가장 일반적인 시간대는 언제인가요?",
+              "question": "가족과 집에서 함게 시간을 많이 보내나요? 얼마나 자주, 언제 시간 같이 보내나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": " "
+              "placeholder": "저는 한달에 한번정도 본가에 가서 그렇게 자주 시간을 보내진 않지만, 가는 날에는 가족이랑 최대한 시간을 많이 보내려고 해요."
             },
             {
-              "question": "가족과 함께 보내는 시간 중에서 가장 많이 하는 활동은 무엇인가요?",
+              "question": "가족과 함께 보내는 시간 중에 가장 많이 하는 활동들은 무엇들이 있나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": " "
+              "placeholder": "집에서 있을 때는 같이 요리를 하고 밥을 먹으면서 이야기를 하던가, 누나랑 동생이랑 같이 침대에 누워서 게임을 자주 해요. "
             },
             {
-              "question": "가족과 함께 집에서 보내는 시간에 어떤 특별한 전통이나 관례가 있는가요?",
+              "question": "최근에 가족과 집에서 함께 보낸 기억남는 경험을 간단하게 스토리텔링 해주세요. ",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": " "
+              "placeholder": "최근에 집에 간게, 한 2달 전인데, 가서 같이 밥먹고, 카페가고, 집에 들어와서는 누나랑 동생이랑 새로운 게임을 앱 스토어에서 다운 받았어요. \"Reigns\" 라는 게임인데, 왕을 키우는 게임이에요. 같이 재미있게 했습니다."
             },
             {
-              "question": "집에서 가족과 함께 보내는 시간 중에서 가장 기억에 남는 순간은 무엇인가요?",
+              "question": "가족과 함게 보내는 시간이 나에게 갖는 의미에 대해 한두문장 이야기 하며 답변을 마무리 합시다.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": " "
-            },
-            {
-              "question": "가족과 함께 집에서 보내는 시간에는 주로 무엇을 이야기하거나 논의하나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": " "
-            },
-            {
-              "question": "집에서 가족과 함께 보내는 시간에는 어떤 게임이나 활동을 즐기나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": " "
-            },
-            {
-              "question": "가족과 함께 집에서 보내는 시간을 어떻게 보낼지 결정하는데 있어서 가족 구성원들의 의견을 얼마나 반영하나요? ",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": " "
-            },
-            {
-              "question": "가족과 함께 집에서 보내는 시간이 가족 구성원들 간의 관계에 어떤 영향을 미쳤나요?.",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": " "
-            },
-            {
-              "question": "집에서 가족과 함께 보내는 시간에는 어떤 음식이나 요리를 함께 준비하거나 즐기나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": " "
-            },
-            {
-              "question": "가족과 함께 집에서 보내는 시간에 대해 향후 어떤 계획이 있나요? 더욱 특별한 활동이나 이벤트를 계획하고 있나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": " "
+              "placeholder": "20살 때 부터 혼자 살았는데 떨어져 사니까 더 가족과 보내는 시간이 소중하게 느껴진다. 앞으로 더 자주 가족과 좋은 추억을 쌓고 싶다."
             }
           ]
         },
         {
           "mainQuestion": "Have you made any changes to your house within the last few years? If so, what kinds of changes have you made to your home? Are you satisfied with the changes?",
-          "mainQuestionKor": "지난 몇 년 동안 집에 어떤 변경을 가했나요? 변경을 가했다면, 어떤 종류의 변경을 집에서 했나요? 변경에 만족하고 있나요?",
+          "mainQuestionKor": "지난 몇 년 동안 집에 어떤 변화를 주었나요? 변화를 주었다면, 어떤 종류의 변화를 주었나요? \b바꾼 부분에 대해 만족하고 있나요?",
           "questions": [
             {
-              "question": "지난 몇 년 동안 집에 어떤 변화를 주셨나요? 집에서 어떤 종류의 변경사항을 만들었나요?",
+              "question": "집에 어떤 변화를 준적이 있나요? (가구를 구매, 뭔가를 버림, 리모델링을 함, 이불을 바꿈, 가구 이동을 함, 등등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": " "
-            },
-            {
-              "question": "집을 개조하거나 리모델링한 적이 있나요? 어떤 부분을 개선하거나 바꾸었나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": " "
+              "placeholder": "최근에 서랍을 하나 새로 샀어요!"
             },
             {
               "question": "변화를 주고자 한 이유는 무엇이었나요? 집에서 불편하게 느껴지는 점이 있었나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": " "
+              "placeholder": "집에는 보관 해야하지만 자리가 없는 물건들이 많았거든요. 세제라던지, 친구한테 받은 선물이라던지. 정리하기 위해 이 서랍을 샀어요!"
             },
             {
-              "question": "집에 새로운 가구를 추가했거나 인테리어 스타일을 변경한 적이 있나요? 어떤 종류의 가구나 장식품을 사용했나요?",
+              "question": "결과가 어떤가요? 변화에 만족하고 있나요? 어떻게 삶을 질을 향상시켰나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": " "
+              "placeholder": "전반적으로 집이 깔끔해졌어요! 물건 꺼내는게 좀 귀찮긴 한데, 만족합니다."
             },
             {
-              "question": "변경사항이 집의 기능성을 향상시켰나요? 예를 들어, 주방이나 욕실을 개선했거나 수납 공간을 늘렸나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": " "
+              "question": "변경사항에 대해 가족이나 주변 반응은 어떤가요? 그들도 변화를 긍정적으로 받아들였나요? (없으면 건너뛰기)",
+              "placeholder": "친구한테 보내준 적 있는데 깔끔해졌데요!"
             },
             {
-              "question": "변경된 집에서 삶의 편의성이 개선되었나요? 일상 생활에서 변화가 어떤 영향을 미쳤나요? ",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": " "
+              "question": "그 외의 변화를 준 부분들도 있나요? 간단히 추가로 소개해주세요.(없으면 건너뛰기)",
+              "placeholder": "최근에 이불도 바꿨어요!"
             },
             {
-              "question": "변경사항에 대해 만족하고 있나요? 변화가 예상대로 나타나고, 당신의 삶의 질을 향상시켰다고 느끼나요? ",
+              "question": "앞으로 집에 어떤 추가적인 변화를 생각하거나 계획하고 있나요? 미래에 변경하고 싶은 부분을 이야기하며 답변을 마무리 합시다.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": " "
-            },
-            {
-              "question": "변화를 주기 전과 후의 집의 분위기나 느낌이 다른가요? 어떻게 달라진 점을 느끼실 수 있나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": " "
-            },
-            {
-              "question": "변경사항에 대해 가족들이 어떤 반응을 보였나요? 그들도 변화를 긍정적으로 받아들였나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": " "
-            },
-            {
-              "question": "앞으로 집에 어떤 추가적인 변화를 생각하거나 계획하고 있나요? 미래에 변경하고 싶은 부분이 있다면 무엇인가요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": " "
+              "placeholder": "사실 지금 집이 만족스럽지만, 환기가 안돼서 지금 이사를 할지 고민중이에요. 그래도 단기적으로는 큰 변화를 주진 않을 것 같습니다."
             }
           ]
         }
@@ -411,13 +333,13 @@
               "placeholder": ""
             },
             {
-              "question": "주민들과의 구체적인 경험 하나를 적어주세요. 지역 주민 행사가 있나요? 혹은 특별히 기억남는 에피소드가 있는 이웃이 있을까요? (마음에 안드는 주민도 가능) ",
+              "question": "주민들과의 구체적인 경험 하나를 적어주세요. 지역 주민 행사가 있나요? 혹은 특별히 기억남는 에피소드가 있는 이웃이 있을까요? (마음에 안드는 주민도 가능) ",
               "type": "descriptive_form",
               "answerList": [],
               "placeholder": ""
             },
             {
-              "question": "\b동네 총평 한두 문장으로 답변을 마무리해주세요. (지금까지 한 말 요약 혹은 앞으로의 계획) ",
+              "question": "\b동네 총평 한두 문장으로 답변을 마무리해주세요. (지금까지 한 말 요약 혹은 앞으로의 계획) ",
               "type": "descriptive_form",
               "answerList": [],
               "placeholder": ""
@@ -784,10 +706,64 @@
     },
     {
       "title": "회사",
-      "titleEng": "Office",
+      "titleEng": "Work",
       "img": "/images/office.svg",
       "id": 5,
       "mainQuestions": [
+        {
+          "mainQuestion": "Superparagraph: Work",
+          "mainQuestionKor": "",
+          "questions": [
+            {
+              "question": "근무하는 회사 이름이 어떻게 되시나요? 본인의 직급은 뭔가요?",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            },
+            {
+              "question": "회사를 간단히 소개해주세요. 회사는 무엇으로 유명하고 어떤 서비스를 제공하나요?",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            },
+            {
+              "question": "본인의 직급과 업무는 어떻게 되시나요?",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            },
+            {
+              "question": "사무실은 어디있나요? 어디로 출근하세요? 사무실이 어떤지 설명해주세요.",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            },
+            {
+              "question": "본인 하루 일과를 간단히 설명해주세요. (점심시간 포함)",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            },
+            {
+              "question": "어떤 IT장비, 기술, 소프트웨어를 써서 업무를 진행하시나요?",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            },
+            {
+              "question": "기억남는 프로젝트 하나를 설명해주세요. (본인 업무와 장비, 기술을 써서 하는 부분 부각)",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            },
+            {
+              "question": "회사에서의 계획을 설명해주세요. 앞으로 이직할 계획이 있나요?",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": ""
+            }
+          ]
+        },
         {
           "mainQuestion": "You indicated in the survey that you are employed. Tell me about the company you work for. Where is it located and when was it established? What services or products does it provide to the customers? ",
           "mainQuestionKor": "조사에서 귀하가 고용 중이라고 밝혔습니다. 귀하가 일하는 회사에 대해 이야기해주세요. 어디에 위치하고 언제 설립되었나요? 어떤 서비스나 제품을 고객들에게 제공하나요?",
@@ -1009,17 +985,9 @@
               "placeholder": ""
             }
           ]
-        }
-      ]
-    },
-    {
-      "title": "회사 업무",
-      "titleEng": "Working",
-      "img": "/images/working.svg",
-      "id": 6,
-      "mainQuestions": [
+        },
         {
-          "mainQuestion": "In your backgroun survey, you indicated in the survey that you have a job. Describe the most memorable project that you've worked on for your company. Why was it so memorable? ",
+          "mainQuestion": "In your background survey, you indicated in the survey that you have a job. Describe the most memorable project that you've worked on for your company. Why was it so memorable?",
           "questions": [
             {
               "question": "귀하가 귀사에서 진행한 가장 기억에 남는 프로젝트에 대한 세부 내용을 공유해 주실 수 있나요?",
@@ -1028,7 +996,7 @@
               "placeholder": ""
             },
             {
-              "question": "이 특정 프로젝트가 다른 프로젝트들과 비교하여 그 중요성이나 영향력 면에서 돋보이게 한 것은 무엇인가요?",
+              "question": "다른 프로젝트들과 비교하여 이 프로젝트가 중요한 이유가 뭔가요?",
               "type": "descriptive_form",
               "answerList": [],
               "placeholder": ""
@@ -1046,19 +1014,17 @@
               "placeholder": ""
             },
             {
-              "question": "이 프로젝트 수행 과정에서 혁신적이거나 창의적인 접근 방식이 사용되었나요?",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": "",
+              "question": "이 프로젝트가 귀사의 성장이나 성공에 어떻게 기여했나요? 이 프로젝트를 돌이켜보면 어떤 가치 있는 교훈이나 경험을 얻었나요?"
+            },
+            {
               "type": "descriptive_form",
               "answerList": [],
               "placeholder": ""
             },
             {
-              "question": "이 프로젝트를 특히 기억에 남게 한 특정한 이정표나 성과가 있었나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "이 프로젝트가 귀사의 성장이나 성공에 어떻게 기여했나요? 이 프로젝트를 돌이켜보면 어떤 가치 있는 교훈이나 경험을 얻었나요?",
               "type": "descriptive_form",
               "answerList": [],
               "placeholder": ""
@@ -1071,157 +1037,31 @@
           "mainQuestionKor": "당신의 직위는 무엇인가요? 당신의 업무와 책임은 무엇인가요? 가능한 많은 세부 정보를 알려주세요.",
           "questions": [
             {
-              "question": "귀하의 사무실이나 직장의 전반적인 배치와 디자인을 어떻게 설명하시겠어요?",
+              "question": "회사에서 본인의 직급이나, 답당 업무, 부서가 뭔가요?",
               "type": "descriptive_form",
               "answerList": [],
               "placeholder": ""
             },
             {
-              "question": "귀하의 작업 공간에서 주목할만한 특징이나 독특한 측면이 무엇인가요?",
+              "question": "얼마나 오래 이 업무를 해왔나요? 전 회사에서도 이 업무를 했나요?",
               "type": "descriptive_form",
               "answerList": [],
               "placeholder": ""
             },
             {
-              "question": "사무실의 색상 구성과 미적 요소에 대해 설명해 주실 수 있나요?",
+              "question": "이 업무를 하게 된 이유가 뭔가요?",
               "type": "descriptive_form",
               "answerList": [],
               "placeholder": ""
             },
             {
-              "question": "귀하의 직장에는 어떤 종류의 가구와 장비가 있는지 알려주실 수 있나요?",
+              "question": "그 업무에서의 전형적인 하루를 설명해주세요 ",
               "type": "descriptive_form",
               "answerList": [],
               "placeholder": ""
             },
             {
-              "question": "귀하의 사무실에서 직원들을 위해 제공되는 특정한 편의 시설이나 시설은 있나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "귀하의 사무실 건물 내에는 휴식이나 취미 활동을 할 수 있는 공간이 있나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "귀하의 사무실에 흥미로운 또는 눈길을 끄는 예술 작품이나 장식 요소가 있을까요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "귀하의 직장의 전반적인 분위기나 느낌을 어떻게 설명하시겠어요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "귀하의 책상 또는 작업 공간을 어떻게 설명하시겠어요? 본인이 직접 꾸민 부분이 있을까요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "귀하의 사무실의 자랑할 부분 또는 아쉬운 부분이 있다면 적어주세요.",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            }
-          ]
-        },
-        {
-          "mainQuestion": "Tell me about the technology or equipment in your office or workplace. Which devices do you use regulary? What do you use them for?",
-          "mainQuestionKor": "사무실이나 직장에는 어떤 기술이나 장비가 있나요? 일상적으로 어떤 장치를 사용하나요? 그 장치들은 어떤 용도로 사용하나요?",
-          "questions": [
-            {
-              "question": "일상적인 업무에서 귀하가 정기적으로 사용하는 장치나 가젯의 종류에 대해 설명해 주실 수 있나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "이러한 장치들이 귀하의 효율성이나 생산성 향상에 어떻게 기여하나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "귀하의 업무 수행에 의존하는 특정한 소프트웨어나 애플리케이션이 있나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "이러한 기술적 장치나 장비들이 전통적인 방법과 비교하여 귀하의 업무 방식을 어떻게 변화시켰나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "최근에 위에서 언급한 장치나 기술을 어떻게 활용하여 특정 업무나 프로젝트를 수행했는지 예를 들어주실 수 있나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "귀하의 사무실에서 기술을 업그레이드하거나 새로운 기술을 도입하기 위한 진행 중인 계획이나 노력이 있나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            }
-          ]
-        },
-        {
-          "mainQuestion": "\bDifferent people enjoy doing different things during their lunch breaks. What do you do during your lunch break? Give as many details as you can.",
-          "mainQuestionKor": "각기 다른 사람들은 점심 시간 동안 다른 일들을 즐깁니다. 점심 시간 동안 어떤 일을 하시나요? 가능한 많은 세부 정보를 알려주세요.",
-          "questions": [
-            {
-              "question": "일반적으로 귀하는 점심 시간에 어떻게 보내시나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "귀하는 자리에서 점심을 먹는 것을 선호하시나요, 아니면 다른 공간이나 카페테리아로 이동하시나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "귀하는 보통 점심 시간에 어떤 종류의 음식이나 식사를 하시나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "점심 시간을 혼자 보내시는 것을 즐기시나요, 아니면 동료와 함께 보내시는 것을 선호하시나요? 점심 시간에 동료들과 소통하고 대화하는 것을 좋아하시나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "귀하는 점심 시간에 참여하는 특정한 활동이나 취미가 있으신가요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "점심 시간을 휴식과 충전의 시간으로 활용하시나요, 아니면 더 활동적으로 보내시나요? 점심 시간이 귀하의 전반적인 복지나 업무와 삶의 균형에 어떻게 기여하는지 설명해 주실 수 있나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "귀하는 점심 시간에 방문하거나 이용하는 가까운 장소나 시설이 있으신가요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "귀하는 점심 시간에 따르는 특별한 일정이 있으신가요?",
+              "question": "\b업무에 만족하시나요? 이직하거나 다른 업무로 이전할 계획이 있나요?",
               "type": "descriptive_form",
               "answerList": [],
               "placeholder": ""
@@ -1241,64 +1081,64 @@
           "mainQuestionKor": "\b모듬 답변:주제의 모든 질문을 한 문단으로 묶어 준비하세요 (첫 시험 추천 IL~IH)",
           "questions": [
             {
-              "question": "영화를 얼마나 자주 보시나요? 영화를 얼마나 좋아하시나요?",
+              "question": "영화를 얼마나 자주 보시나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "한달에 한번정도 봐요."
             },
             {
               "question": "특별히 좋아하는 장르들이 있나요? 좋아하는 이유는 무엇인가요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "애니메이션을 좋아해요. 화려한 연출이 돋보이기 때문이에요"
             },
             {
-              "question": "최근에 영화관에서 본 영화를 하나 소개해 주세요 (마음에 들었던 영화)(좋아하는 장르면 좋고, 좋아하는 배우가 나오면 더 좋음)",
+              "question": "최근에 영화관에서 본 영화를 하나 소개해 주세요 (마음에 들었던 영화)(좋아하는 장르나 좋아하는 배우가 나오면 더 좋습니다.)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "최근에 스파이더맨을 보았어요."
             },
             {
               "question": "최근에 봤다고 하신 그 영화의 줄거리를 한두 문장으로 요약해 주세요. ",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "거미에 물려 초능력을 갖게 된 스파이더맨이 세계를 구하는 내용이에요. 이번 편에는 스파이더맨이 본인의 자아에 대해 고민하는 내용을 다루었어요"
             },
             {
               "question": "보통 영화를 보러 갈 때 어떻게 표를 예매하고 영화를 보나요? 그 루틴을 간단히 말해주세요. (네이버를 통해 예매를 하고, 미리 도착해서 리뷰를 읽는다던지)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "영화를 가기전에 블로그로 영화평을 찾아봐요. 그 후에 사전에 예매를 하고 가서 봅니다."
             },
             {
-              "question": "영화가 끝나고는 어떤 루틴이 있나요?",
+              "question": "영화가 끝나고는 주로 무엇을 하나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "영화가 끝나고 나서는 친구들과 영화에 대해 이야기하는 것을 좋아해요"
             },
             {
               "question": "가장 좋아하는 배우는 누구인가요? 그 배우를 좋아하는 이유가 뭔가요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "톰 크루즈를 가장 좋아합니다. 나이가 들어서도 본인의 역할에 몰입해서 연기하는 모습이 멋있어서요."
             },
             {
               "question": "그 배우에 대한 대표적인 사건 사고를 하나 설명해 주세요. (좋은 또는 나쁜 사건) 1~3 문장으로 사건을 요약해 주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "탑건 매버릭이라는 영화를 촬영했는데, 그의 젊었을 때의 모습과 그의 나이들었을 때의 모습을 스크린에서 볼 수 있었어요."
             },
             {
-              "question": "최근에 즐겁게 본 그 영화를 생각했을 때, 내 영화 취향이 과거와 비교했을 때 어떻게 변화했나요?",
+              "question": "최근에 즐겁게 본 영화를 생각했을 때, 내 영화 취향이 과거와 비교했을 때 어떻게 변화했나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "과거에는 공포영화를 많이 봤었는데, 요즘에는 로맨틱코미디처럼 일상을 다루는 내용을 좋아해요."
             },
             {
               "question": "\b앞으로도 영화를 많이 볼 계획인가요? 답변을 마무리 하기 위해 앞으로 이 취미를 어떻게 즐길 계획인지 말씀해 주세요. (더 자주보고싶다, 더 다양한 영화를 보고싶다, 더 재미있는 영화가 나왔으면 좋겠다, 등등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "앞으로도 영화를 자주 볼 거 같아요. 영화관뿐만 아니라 OTT로도 쉽게 볼 수 있어 좋아요. 스파이더맨의 다음 시리즈가 빨리 개봉했으면 좋겠어요"
             }
           ]
         },
@@ -1310,37 +1150,37 @@
               "question": "가장 좋아하는 영화 장르가 무엇이고 좋아하는 이유가 무엇인가요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "애니메이션을 좋아해요. 화려한 연출이 돋보이기 때문이에요"
             },
             {
               "question": "해당 장르에서 귀하에게 오랜 기억을 남긴 특정한 영화들이 있나요? ",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "인사이드 아웃과 스파이더맨입니다."
             },
             {
               "question": "그 영화들 중 가장 좋아하는 영화는 무엇이고 그 영화를 기억하게 만든 이유는 무엇인가요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "인사이드 아웃을 가장 좋아해요. 감정을 캐릭터화한 디즈니의 창의성이 인상깊었어요"
             },
             {
               "question": "귀하의 좋아하는 장르에서 특정 감독, 배우들의 작품을 존경하거나 지켜보시나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "특정 감독을 좋아하진 않는 거 같아요. 다만 디즈니나 마블 시리즈의 영화는 챙겨보는 편입니다."
             },
             {
-              "question": "앞으로 이 장르의 영화들을 계속 좋아할 예정인가요?",
+              "question": "최근에 봤던 해당 장르영화에 대해 짧게 말씀해주세요(줄거리, 감상소감 등 1~3문장)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "최근에 스파이더맨을 보았어요. 거미에 물려 초능력을 갖게 된 스파이더맨이 세계를 구하는 내용이에요. 이번 편에는 스파이더맨이 본인의 자아에 대해 고민하는 내용을 다루었다는 게 흥미로웠어요"
             },
             {
               "question": "앞으로 개봉할 그 장르의 영화들 중에서 기대되는 영화가 있다면 말해주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "스파이더맨의 후속편이 기대됩니다."
             }
           ]
         },
@@ -1349,64 +1189,52 @@
           "mainQuestionKor": "가장 좋아하는 영화 배우는 누구인가요? 이 배우에 대해 뉴스에서 들은 특정 이야기를 알려주세요. 이 배우에 관련된 세부 사항을 먼저 알려주시고, 그 후에 일어난 일에 대해 자세히 알려주세요.",
           "questions": [
             {
-              "question": "귀하의 가장 좋아하는 영화 배우는 누구이며, 그들의 연기에 무엇이 귀하를 끌어들이나요?",
+              "question": "귀하의 가장 좋아하는 영화 배우는 누구이며, 왜 좋아하나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "톰 크루즈입니다. 나이가 들어도 열심히하는 그의 모습이 보기 좋았어요"
             },
             {
-              "question": "귀하의 가장 좋아하는 배우와 관련된 특정한 뉴스 이야기나 사건을 기억하실 수 있나요? 이 이야기의 세부사항은 어떻게 되나요?",
+              "question": "귀하의 가장 좋아하는 배우와 관련된 특정한 이야기나 사건을 기억하실 수 있나요? 이 이야기의 세부사항은 어떻게 되나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "비행기 조종사의 이야기를 담은 탑건을 촬영한 점이에요. 나이가 많음에도 스턴트맨을 사용하지 않고 직접 파일럿 훈련을 받아 역할을 소화했습니다."
             },
             {
               "question": "이 특정한 뉴스 이야기에 대해 처음 어떻게 알게 되었나요? 소셜 미디어, 뉴스 매체, 혹은 입소문을 통해 알게 되었나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "탑건이라는 영화를 몰랐는데 유튜브 영화리뷰를 보고 알게 되었어요. 20년 전에 탑건의 주인공을 연기했던 그가 나이가 들어서 같은 역할을 한번 더 연기한다는 것을 알게 되었어요."
             },
             {
               "question": "가장 좋아하는 배우와 관련된 사건을 알게 되었을 때, 처음에 어떤 생각이나 반응을 하셨나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "빨리 그의 영화를 보고 싶었어요"
             },
             {
-              "question": "이 뉴스 이야기가 배우나 여배우에 대한 귀하의 인식에 어떤 영향을 미쳤나요? 그들에 대한 의견이 어떤 방식으로 변했나요?",
+              "question": "이 뉴스 이야기가 배우에 대한 귀하의 인식에 어떤 영향을 미쳤나요? 배우에 관한 의견이 어떤 방식으로 변했나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "귀하의 사무실 건물 내에는 휴식이나 취미 활동을 할 수 있는 공간이 있나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "해당 사건과 관련하여 특별한 상황이나 사건이 있었나요? 그것이 그 사건의 중요성이나 대중의 관심을 더 했나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
+              "placeholder": "나이가 들었지만 스턴트맨을 사용하지 않고 직접 연기하는 열정이 존경스러웠어요"
             },
             {
               "question": "미디어나 대중은 이 뉴스 이야기에 어떻게 반응했나요? 그것에 대한 큰 관심이나 논의가 있었나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "많은 대중이 관심을 가졌고, 영화는 대박이 났습니다."
             },
             {
-              "question": "해당 사건이 관련된 배우나 여배우에게 어떤 결과나 영향을 미쳤나요? 그들은 그 상황을 어떻게 다루었나요?",
+              "question": "해당 사건이 관련된 배우에게 어떤 결과나 영향을 미쳤나요? 그들은 그 상황을 어떻게 다루었나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "톰크루즈는 한번 더 그의 명예를 드높였고, 팬들을 관리했어요"
             },
             {
               "question": "돌아본다면 이 사건으로 이 배우에 대한 나의 마음과 생각이 많이 바뀌었나요? ",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "그는 훌륭한 배우라는 것을 다시금 느꼈습니다."
             }
           ]
         },
@@ -1418,31 +1246,31 @@
               "question": "영화관에 가실 때 일반적으로 어떤 루틴을 따르시는지 설명해주실 수 있나요? 영화를 보기 전과 후에 어떤 절차를 거치시나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "영화를 보러가기전에 영화에 관한 리뷰를 찾아보고 가요. 그 후에 사전에 예매를 하고 영화를 보러 갑니다."
             },
             {
               "question": "일반적으로 영화관을 방문하는 계획을 얼마나 미리 세우시나요? 온라인으로 티켓을 예매하시는 것을 선호하시나요, 아니면 영화관에서 직접 구매하시나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "영화관 티켓을 온라인으로 미리 구매하고 가요"
             },
             {
-              "question": "영화가 시작되기 전에 어떤 활동을 좋아하시나요? 영화관에 일찍 도착해서 탐험을 하거나 간식을 사러 가시나요? 상영 시작 전 시간을 어떻게 최대한 활용하시나요?",
+              "question": "영화가 시작되기 전에 어떤 활동을 좋아하시나요? 영화관에 일찍 도착해서 매장을 구경하거나 간식을 사러 가시나요? 상영 시작 전 시간을 어떻게 최대한 활용하시나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "영화를 보기전에 먹을 간식을 삽니다."
             },
             {
               "question": "영화가 끝나고 일반적으로 어떤 활동을 하시나요? 같이 온 분과 영화에 대해 이야기하거나 내용을 돌아보는 것을 좋아하시나요? 영화 관람 경험을 어떻게 마무리하고 이어나가시나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "영화가 끝난 후에 해당 내용을 친구들과 이야기하는 것을 좋아해요"
             },
             {
-              "question": "영화 후에 즐기는 활동이 있나요? 예를 들어, 근처 카페를 방문하거나 밥이나 술을 먹나요?",
+              "question": "영화를 보고 난 후에 즐기는 활동이 있나요? 예를 들어, 블로그를 작성하거나 친구들과 영화에 관하여 이야기하는 것 등이 있습니다. ",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "영화가 끝나고 근처 밥집이나 카페에서 친구와 함께 영화에 대해 이야기를 합니다."
             }
           ]
         },
@@ -1454,37 +1282,31 @@
               "question": "지난 몇 년 동안 귀하의 영화에 대한 흥미는 어떻게 변화했나요? 과거에 어떤 종류의 영화를 좋아했나요? 현재는 어떤가요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "과거에는 공포영화를 좋아했지만, 최근에는 로맨틱코미디를 좋아해요"
             },
             {
               "question": "과거의 영화 취향을 돌아보면, 그 때 그 영화들을 왜 좋아했었나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "친구들과 함께 모여서 공포영화를 보는 것이 즐거웠기 때문이에요. 하지만 이제는 시시한 거 같아요"
             },
             {
               "question": "요즘 좋아하는 영화를 좋아하는 이유가 뭔가요? (특정 배우, 트렌드, 내용 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "로맨틱코미디를 좋아하는 이유는 사람의 일상을 잘 녹아냈기 때문이에요"
             },
             {
-              "question": "최근 영화 트렌드나 새로운 장르 중에서 흥미를 느낀 적이 있나요? 이러한 현재의 영화 트렌드나 장르에 어떤 점이 매력적으로 다가왔나요?",
+              "question": "해당 장르를 좋아하게 된 인상깊은 영화가 있다면 소개해주세요",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "사랑하기 때문에라는 영화가 인상깊었어요. 사람들의 일상을 드라마처럼 하나하나 다루었기 때문이에요"
             },
             {
-              "question": "앞으로 취향이 바뀌어도 꾸준히 계속 좋아할 종류의 영화들이 있나요?",
+              "question": "바뀐 영화 취향과 이유를 1~2문장으로 다시 요약해주세요",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "그 이유가 뭔가요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
+              "placeholder": "공포영화에서 로맨틱코미디로 좋아하는 장르가 바뀌었어요. 공포영화를 자주보니 식상하다고 느꼈고, 로맨틱코미디는 일상의 다양한 부분을 다루어서 공감이 많이 되기 때문이에요"
             }
           ]
         }
@@ -1504,61 +1326,43 @@
               "question": "어떤 종류의 TV 프로그램을 주로 시청하시나요? 예를 들어, 드라마, 예능, 다큐멘터리, 스포츠 등을 언급해주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "옛날 예능인 무한도전을 좋아합니다."
             },
             {
               "question": "당신이 좋아하는 TV 프로그램은 어떤 이유로 인해 매력적인가요? 스토리, 배우들의 연기, 재미 요소, 교양적인 측면 등을 고려해보세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "해당 TV 프로그램을 처음 시청한 이유는 무엇이었나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
+              "placeholder": "다양한 도전을 하는 게 흥미로웠어요"
             },
             {
               "question": "이 프로그램에서 가장 좋아하는 요소는 무엇인가요? 특정한 캐릭터, 흥미로운 이야기 진행, 예상치 못한 사건 등을 언급해주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "레슬링 도전하기, 알레스카에서 김상덕씨 찾기 등 도전하는 모습이 재밌고 감동적이었어요 "
             },
             {
               "question": "보통 언제 이 프로그램을 시청하시나요? 주중, 주말, 특정한 시간대 등을 고려해보세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "이 프로그램을 보는 데 얼마나 많은 시간을 소요하시나요? 연속해서 여러 에피소드를 시청하는 경우나, 주 단위로 정해진 시간을 할애하는 경우 등을 언급해주세요.",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
+              "placeholder": "요즘에는 유튜브의 오분순삭을 통해 보고 있어요"
             },
             {
               "question": "이 프로그램을 함께 시청하는 사람들이 있나요? 가족, 친구, 혹은 혼자서 보시는 경우 등을 언급해주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "주로 혼밥할 때 혼자 봐요"
             },
             {
               "question": "이 프로그램이 여러분에게 주는 감정이나 영향은 무엇인가요? 웃음, 감동, 인사이트 제공 등을 고려해보세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "이 프로그램을 시청함으로써 얻는 추가적인 가치가 있나요? 지식 습득, 문화적 이해 증진, 취미 활동 등을 고려해보세요.",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
+              "placeholder": "마음이 편한하고 웃겨요"
             },
             {
               "question": "이 프로그램을 시청함으로써 얻은 인상적인 순간이나 배운 점은 무엇인가요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "10년이 넘은 예능임에도 아직까지 웃기다는 건 그만큼 무한도전 멤버들이 프로그램에 진심을 다했기에 가능하다고 생각해요."
             }
           ]
         },
@@ -1567,64 +1371,40 @@
           "mainQuestionKor": "과거에 시청했던 특히 즐거웠던 TV 쇼가 있나요? 그 쇼의 제목은 무엇이었나요? 그 쇼에 대해 어떤 내용을 알려주세요. 왜 그 쇼를 그렇게 좋아했나요?",
           "questions": [
             {
-              "question": "어떤 시기에 이 프로그램을 시청하셨나요? 과거의 몇 년 동안인지, 어느 연도에 특히 많이 시청했는지를 언급해주세요.",
+              "question": "어떤 시기에 무슨 프로그램을 시청하셨나요? 과거의 몇 년 동안인지, 어느 연도에 특히 많이 시청했는지를 언급해주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "옛날 예능인 무한도전을 좋아합니다. 과거 10년 넘게 진행했던 예능프로그램이에요"
             },
             {
               "question": "해당 TV 프로그램의 장르나 유형은 무엇이었나요? 예를 들어, 드라마, 애니메이션, 예능 등을 고려해보세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "예능프로그램"
             },
             {
               "question": "이 프로그램은 어떤 이야기나 주제를 다루었나요? 간단히 줄거리나 핵심 플롯을 소개해주세요",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "레슬링 도전하기, 알레스카에서 김상덕씨 찾기 등 무모하다고 느껴지는 일에 도전하는 내용이에요"
             },
             {
               "question": "이 프로그램에서 어떤 캐릭터가 인상적이었나요? 그들의 성격, 행동, 관계 등을 언급해주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "노홍철이 인상깊었어요. 무한 긍정과 어디로 튈지 모르는 매력을 갖고 있었어요"
             },
             {
               "question": "이 프로그램에서 특별히 기억에 남는 에피소드나 장면이 있나요? 그렇다면 그 이유를 설명해주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "이 프로그램을 통해 어떤 감정을 느꼈나요? 웃음, 감동, 슬픔 등을 고려해보세요.",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "이 프로그램이 당시의 여러분의 취향이나 관심사와 어떻게 맞아떨어졌나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "이 프로그램을 함께 시청하는 사람들과의 소통이나 이야기가 있었나요? 가족, 친구, 혹은 온라인 커뮤니티 등을 고려해보세요.",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "이 프로그램이 여러분에게 주는 가치나 의미는 무엇인가요? 교훈, 영감, 혹은 단순한 즐거움 등을 고려해보세요",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
+              "placeholder": "알레스카에 사는 김상덕씨 찾기가 인상깊었어요. 지나가는 말한마디를 콘텐츠화해서 진짜 알레스카에 가서 찾는 에피소드를 뽑아냈기 때문이에요"
             },
             {
               "question": "이 프로그램을 다시 보고 싶거나 추천하고 싶은 이유는 무엇인가요? ",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "지금의 예능들과 비교하더라도 오히려 더 재밌는 거 같아요. 그만큼 멤버와 스태프들 모두 진심으로 프로그램을 제작했기 때문이라고 생각해요"
             }
           ]
         },
@@ -1636,61 +1416,31 @@
               "question": "텔레비전을 처음으로 시청하기 시작한 나이나 시점은 언제였나요? 어떤 프로그램에 매료되어 처음으로 텔레비전을 시청하게 된 이유가 있었나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "어린 시절부터 텔레비전을 즐기면서 어떤 종류의 프로그램을 주로 시청했나요? 예를 들어, 애니메이션, 교육 프로그램, 드라마 등을 고려해보세요.",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "당시의 TV 프로그램은 어떤 특징을 가지고 있었나요? 채널의 다양성, 방송 시간, 콘텐츠의 다양성 등을 고려해보세요.",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
+              "placeholder": "5살 때 짱구는 못말려, 도라에몽 등의 만화를 보며 처음으로 텔리비전을 시청했던 거 같아요"
             },
             {
               "question": "텔레비전을 시청하면서 가장 기억에 남는 프로그램은 무엇이었나요? 그 프로그램이 왜 기억에 남는지 설명해주세요",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "당시에는 어떤 방식으로 TV 프로그램을 시청했나요? 예를 들어, 아날로그 TV, 텔레비전 안테나, 비디오 테이프 등을 고려해보세요.",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
+              "placeholder": "1박2일이 기억에 남아요. 대한민국의 아름다운 지역들을 소개해주고 멤버들이 유쾌했기 때문이에요"
             },
             {
               "question": "TV 프로그램이 시대 변화에 따라 어떻게 발전해왔는지 어떻게 느껴지나요? 콘텐츠의 다양성, 제작 방식, 방송 플랫폼 등을 고려해보세요",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "과거에는 지상파 TV프로그램으로 보았는데, 현재는 넷플릭스, 유튜브 등 OTT가 대세인 거 같아요"
             },
             {
-              "question": "현재와 비교하여 당시에는 어떤 TV 프로그램이 특히 인기가 있었나요? 인기 프로그램의 특징이나 인기 요인은 무엇이었나요?",
+              "question": "현재와 비교하여 당시에는 어떤 TV 프로그램이 특히 인기가 있었나요? 과거 인기 프로그램의 특징이나 인기 요인은 무엇이었나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "현재에는 관촬예능, 쿡방 등이 대세인데, 과거에는 리얼버라이어티가 인기가 많았어요. 새로운 것을 시도하는 창의성이 매력적이었어요"
             },
             {
-              "question": "현재의 TV 프로그램과 비교하여, 당시의 TV 프로그램이 가지고 있던 특별한 매력은 무엇이었나요?",
+              "question": "TV 프로그램이 어떻게 변화했는지 1~3문장으로 요약해주세요. 그리고 귀하에게 어떤 영향을 끼쳤나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "현재의 TV 프로그램과 비교했을 때, 당시의 TV 프로그램이 갖춘 장점이나 가치는 무엇이라고 생각하시나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "당시에는 TV 프로그램 시청이 일상 생활에서 어떤 역할을 했나요? 가족과의 소통, 문화 교류, 정보 획득 등을 고려해보세요.",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
+              "placeholder": "과거에는 리얼버라이어티 예능이라 더욱 몰입이 되었어요. 하지만 현재에는 각본에 따라 촬영되는 관촬예능, 쿡방이 대세입니다. 그래서 tv를 잘 안보게 되는 거 같아요"
             }
           ]
         },
@@ -1699,62 +1449,38 @@
           "mainQuestionKor": "배경 조사에서 즐겨보는 리얼리티 쇼를 언급하셨습니다. 즐겨보는 리얼리티 쇼가 어디에서 진행되었나요? 그 장소는 어떻게 보였나요? 왜 그 장소에서 쇼가 촬영되었나요? 가능한 많은 세부 정보를 알려주세요.",
           "questions": [
             {
-              "question": "어떤 현실 TV 프로그램을 가장 좋아하시나요?",
+              "question": "어떤 리얼리티 TV 프로그램을 가장 좋아하시나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "1박2일을 가장 좋아합니다."
             },
             {
               "question": "해당 프로그램이 어느 장소에서 촬영되었는지 알고 있나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "대한민국의 여러 장소에서 촬영됩니다."
             },
             {
               "question": "그 장소는 어떤 모습을 하고 있나요? (도시, 자연환경, 건물 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "대한민국의 알려지지 않은 명소 등을 보여줍니다."
             },
             {
               "question": "그 장소의 특징이나 느낌은 어땠나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "그 프로그램이 다른 장소에서 촬영될 수도 있었을텐데, 왜 그 장소에서 촬영되었을까요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "그 장소의 주변 환경이나 자연적인 요소가 프로그램에 어떤 역할을 했을까요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "그 장소의 문화나 역사적인 배경이 프로그램의 내용과 어떤 연관성을 가지고 있었을까요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "그 장소의 인프라나 시설이 프로그램의 촬영에 어떤 영향을 미쳤나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
+              "placeholder": "자연친화적이고 가보고 싶다는 느낌을 받았습니다."
             },
             {
               "question": "프로그램에 나오는 참가자들이 그 장소에서 어떤 활동이나 경험을 했나요?",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "아름다운 섬을 소개합니다. 종종 낙오되거나 배를 타고 섬에 들어가거나 하며 알지 못하는 대한민국의 명소들을 소개해줍니다."
             },
             {
               "question": "그 장소가 프로그램의 전반적인 분위기나 스토리텔링에 어떤 영향을 미쳤나요?",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "프로그램을 보며 함께 여행을 하고 있는 듯한 느낌을 줍니다."
             }
           ]
         }
@@ -2028,61 +1754,55 @@
               "question": "어떤 공연장을 가장 좋아하고 있나요? 그 공연장은 어디에 위치해 있나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": " "
+              "placeholder": "대학로에 있는 소극장에 가는 것을 좋아합니다."
             },
             {
               "question": "해당 공연장을 선택한 이유가 있나요? 그 공연장이 다른 곳과 비교해서 어떤 장점이 있는지 알려주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": " "
-            },
-            {
-              "question": "공연장 내부를 어떻게 느끼시나요? 좌석 배치, 음향 시스템, 조명 등에 대해 어떤 생각이 있나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": " "
+              "placeholder": "여러 소극장이 모여있어 다양한 연극을 볼 수 있기 때문입니다."
             },
             {
               "question": "공연장 외부는 어떤 모습인가요? 건물의 디자인이나 주변 환경에 대해 설명해 주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": " "
+              "placeholder": "건물의 지하에 있기 때문에 건물 외부의 큰 특징은 따로 없습니다."
             },
             {
-              "question": "해당 공연장을 방문하는 사람들과의 교류나 대화의 기회가 있나요?",
+              "question": "공연장 내부를 어떻게 느끼시나요? 좌석 배치, 음향 시스템, 조명 등에 대해 어떤 생각이 있나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": " "
+              "placeholder": "무대와 관객석이 매우 가까워요. 또한 좌석의 간격이 좁습니다."
             },
             {
-              "question": "공연장에서는 어떤 종류의 공연을 자주 즐기시나요? 음악 공연, 연극, 무용 등을 선호하시나요?",
+              "question": "해당 공연장에서 어떤 종류의 공연을 자주 즐기시나요? (연극, 음악 공연, 뮤지컬, 무용 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": " "
+              "placeholder": "연극을 주로 즐깁니다."
             },
             {
               "question": "해당 공연장에서 특히 인상 깊었던 공연이 있나요? 그 이유는 무엇인가요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": " "
+              "placeholder": "옥탑방고양이라는 연극이 인상깊습니다. 배우들이 관객과 소통하고 그 내용을 반영하여 연극을 했기 때문입니다."
             },
             {
-              "question": "공연장을 방문할 때 주로 어떤 옷차림으로 가시나요? 편안한 복장을 선호하시나요 아니면 조금 더 격식 있는 복장을 선호하시나요?",
+              "question": "해당 공연장을 방문하는 사람들과의 교류나 대화의 기회가 있나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": " "
+              "placeholder": "블로그나 인스타그램을 통해 연극에 대해 소통할 수 있어요"
             },
             {
               "question": "공연장에서 공연 이외에 다른 시설이나 편의 시설이 있는지 알려주세요. 예를 들어, 카페, 레스토랑, 상점 등이 있을 수 있습니다.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": " "
+              "placeholder": "공연장 내부에는 따로 없고, 공연장 근처에 식당, 카페 등이 많습니다."
             },
             {
               "question": "해당 공연장에 대해 개선되었으면 하는 부분이 있다면 무엇인가요? 향상시키고 싶은 시설, 서비스, 혹은 이벤트 등이 있을까요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": " "
+              "placeholder": "딱히 없어요."
             }
           ]
         },
@@ -2094,61 +1814,49 @@
               "question": "여러분이 처음으로 관람한 공연을 기억하고 있나요? 그 공연은 무엇이었나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": " "
+              "placeholder": "제가 처음 본 공연은 최현우의 마술쇼입니다."
             },
             {
               "question": "해당 공연은 언제였나요? 정확한 날짜나 시기를 알려주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": " "
+              "placeholder": "중학생 때 학교 친구들과 보러갔습니다."
             },
             {
               "question": "첫 번째 공연을 보러 간 장소는 어디였나요? 공연장이나 장소의 이름을 기억하고 계신가요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": " "
+              "placeholder": "이화여자대학교 ECC건물 안에 있는 공연장에서 관람했습니다."
             },
             {
               "question": "그 공연을 관람하게 된 이유가 있나요? 왜 그 공연을 선택하게 되었는지 알려주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": " "
-            },
-            {
-              "question": "공연 시작 전에 어떤 기대와 느낌을 가지고 있었나요? 떨림이나 설렘이 있었을까요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": " "
-            },
-            {
-              "question": "공연이 시작되면서 어떤 느낌을 받았나요? 첫 인상은 어땠나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": " "
+              "placeholder": "학교선생님께서 무료 티켓을 주셔서 관람하러갔습니다."
             },
             {
               "question": "공연의 내용과 품질에 대해서 어떤 생각을 하셨나요? 연기, 음악, 무용 등에 대해 어떤 감상을 가지셨나요? ",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": " "
+              "placeholder": "무대효과와 최현우 마술사의 마술이 신기했습니다."
             },
             {
               "question": "공연 중에 특히 기억에 남는 장면이 있었나요? 그 장면에 대해 자세히 설명해 주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": " "
+              "placeholder": "무대에 있던 최현우마술사가 30초만에 제뒤에 좌석에서 걸어나온 장면이 인상깊습니다."
             },
             {
               "question": "첫 번째 공연을 보면서 느꼈던 감정이나 인상을 알려주세요. 그 공연이 여러분에게 무슨 의미를 갖는지 말씀해 주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": " "
+              "placeholder": "공연을 보며 새로운 것을 상상하고 열심히 준비한 공연가들의 공연을 볼 수 있어 좋았습니다."
             },
             {
               "question": "첫 번째 공연을 보고 나서, 공연에 대한 여러분의 관심이나 태도에 어떤 변화가 있었나요? 이후로 공연을 자주 관람하게 되었거나 다른 장르의 공연에도 관심을 갖게 된 적이 있나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": " "
+              "placeholder": "공연을 통해 공연가들의 노력을 볼 수 있어 좋았습니다. 마술쇼뿐만 아니라 뮤지컬, 서커스 등의 공연에도 관심을 갖게 되었습니다. "
             }
           ]
         },
@@ -2160,61 +1868,43 @@
               "question": "여러분이 지금까지 본 공연 중에서 가장 기억에 남는 공연은 무엇인가요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": " "
+              "placeholder": "태양의 서커스가 가장 기억에 남습니다."
             },
             {
-              "question": "해당 공연은 언제였나요? 정확한 날짜나 시기를 알려주세요.",
+              "question": "해당 공연은 언제였고 어디에서 보았나요? 정확한 날짜나 시기를 알려주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": " "
+              "placeholder": "2022년 12월쯤에 잠실에서 보았습니다."
             },
             {
               "question": "그 공연은 어떤 종류였나요? 음악 공연, 연극, 무용, 오페라 등 다양한 장르 중 어디에 속했나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": " "
+              "placeholder": "서커스"
             },
             {
               "question": "왜 그 공연이 여러분에게 가장 기억에 남았는지 알려주세요. 어떤 이유로 그렇게 감명깊게 느껴졌나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": " "
-            },
-            {
-              "question": "공연을 보면서 여러분은 어떤 감정을 느꼈나요? 그 감정이 여러분에게 어떤 의미를 가지고 있는지 알려주세요.",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": " "
-            },
-            {
-              "question": "공연의 내용과 전달하려는 메시지에 대해 어떤 생각을 하셨나요? 어떤 인상을 받았나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": " "
+              "placeholder": "코로나로 사라졌던 극단이 부활하여 진행했던 첫 공연이기 때문입니다."
             },
             {
               "question": "공연 중에서 가장 인상 깊은 장면이나 순간이 있었나요? 그 장면이나 순간에 대해 자세히 설명해 주세요. ",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": " "
+              "placeholder": "하늘에서 그네를 타는 에이리얼 스트랩스가 인상깊습니다. 서로를 믿고 호흡을 많이 맞추어야 가능한 묘기였기 때문입니다."
             },
             {
-              "question": "해당 공연에서 가장 잘 기억하는 음악이나 곡은 무엇인가요? ",
+              "question": "공연을 보면서 여러분은 어떤 감정을 느꼈나요? 그 감정이 여러분에게 어떤 의미를 가지고 있는지 알려주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": " "
-            },
-            {
-              "question": "공연을 관람하면서 가장 인상 깊었던 예술가나 배우에 대해 어떤 생각을 하셨나요? 그들의 연기나 퍼포먼스에 대해서 어떤 감상을 가지셨나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": " "
+              "placeholder": "불쇼와 하늘에서 그네를 타는 에이리얼스트랩스 등을 보며 공연가들의 노력에 대한 경이로움을 느낄 수 있었습니다."
             },
             {
               "question": "그 공연을 본 후에 여러분의 관심이나 시선이 어떻게 변화했나요? 그 공연을 통해 예술이나 공연예술에 대한 새로운 시각을 얻게 되었나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": " "
+              "placeholder": "태양의 서커스 관람이후 연극, 뮤지컬 등 다양한 장르의 예술을 보러 다니게 되었습니다."
             }
           ]
         }
@@ -2234,55 +1924,37 @@
               "question": "귀하께서 자주 방문하시는 공원의 이름을 알려주실 수 있나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "서울에 있는 한강을 주로 갑니다."
             },
             {
               "question": "해당 공원은 어디에 위치하고 있나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "귀하의 회사의 본사 또는 본사는 어디에 위치해 있나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
+              "placeholder": "서울 망원동쪽에 있습니다."
             },
             {
               "question": "귀하는 이 공원을 얼마나 자주 방문하시나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "일주일에 1회 이상 갑니다."
             },
             {
               "question": "이 공원의 특징이 있을까요? 예를 들어, 나무, 연못, 벤치, 놀이터 등이 있나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "다른 공원들과 비교했을 때 어떤 차이가 있나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "이 공원에 주로 어떤 사람들이 방문하나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
+              "placeholder": "한강이 옆에 흐르고 넓은 들판이 있습니다. 또한 나무와 꽃이 많습니다."
             },
             {
               "question": "공원에서 어떤 활동을 즐기시나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "강을 따라 조깅을 주로 합니다."
             },
             {
               "question": "이 공원에서 경험한 기억에 남는 사건이나 경험을 설명해주실 수 있나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "친구와 함께 조깅을 하러 갔다가 한강라면을 먹은게 인상깊습니다. 한강공원은 운동코스 뿐만 아니라 편의시설도 갖추고 있습니다."
             }
           ]
         },
@@ -2294,31 +1966,31 @@
               "question": "기억에 남는 공원에서 발생한 특별한 사건이 있나요? 있다면 간단히 설명해 주세요. ",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "친구들과 한강공원에서 피크닉을 했던 게 인상깊습니다."
             },
             {
               "question": "그 사건은 어떤 성격을 가지고 있었나요? 재미있는, 놀란, 또는 감동적인 일이었나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "그 사건은 어떻게 펼쳐졌나요? 상세히 어떤 일이 있었는지 설명해주실 수 있나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
+              "placeholder": "바쁜 일상에서 여유로움을 느낄 수 있었습니다."
             },
             {
               "question": "그 사건에는 다른 사람들도 관련되어 있었나요? 그들이 어떻게 반응하거나 그 특별한 순간에 어떤 역할을 했나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "친구들과 함께 갔습니다. 벚꽃아래에서 음악을 들으며 맛있는 음식을 나눠 먹었습니다"
             },
             {
               "question": "그 사건을 통해 얻었던가 잃은게 있나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "일상에서 벗어나 여유로움을 느꼈습니다. 또한 친구들과의 소중한 추억을 쌓을 수 있었습니다."
+            },
+            {
+              "question": "사건과 관련해 공원에 대해 추가적으로 하고 싶은 말이 있나요?",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": "한강은 피크닉하기 좋은 장소입니다. 친구들과 놀러가길 추천합니다."
             }
           ]
         },
@@ -2330,37 +2002,37 @@
               "question": "귀하께서 자주 방문하는 공원에서 사람들, 특히 어린이들이 자주 하는 활동에 대해 말씀해 주실 수 있나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "공원에서 피크닉을 하거나 자전거를 주로 탑니다."
             },
             {
               "question": "공원에서 어린이들이 하는 흔한 게임이나 스포츠가 있나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "아이들이 모여서 자전거를 많이 탑니다."
             },
             {
               "question": "특히 어린이들을 위해 공원에 설치된 놀이 시설이나 장비가 있나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "자전거 대여소와 묘기 자전거장이 마련되어 있습니다."
             },
             {
               "question": "어른들은 일반적으로 공원에서 어떻게 시간을 보내나요? 어린이와 비슷한 활동을 하나요? 아니면 다른 활동들을 하나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "어른들은 공원에서 보통 피크닉을 하고 대화하며 시간을 보냅니다."
             },
             {
               "question": "어린이와 어른들이 공원의 시설이나 공간을 사용하는 방식에 어떤 차이를 관찰하시나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "가족단위로 많이 놀러오는데 아이들은 생동력있게 뛰어놀고, 부모님들은 자연을 느끼며 여유로움을 즐깁니다."
             },
             {
               "question": "공원에서 어린이나 어른들을 위한 행사나 프로그램이 있나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "봄에는 벚꽃축제를 가을에는 야시장과 불꽃놀이축제 등이 한강공원에서 진행됩니다."
             }
           ]
         },
@@ -2369,53 +2041,36 @@
           "mainQuestionKor": "다녀온 두 개의 다른 공원을 비교해주세요. 그들의 유사점과 차이점에 대해 알려주세요. 어느 공원을 선호하시는지 그 이유를 설명해주세요.",
           "questions": [
             {
-              "question": "방문하고 흥미로웠던 두 개의 다른 공원을 설명해주실 수 있나요?",
+              "question": "방문하고 흥미로웠던 두 개의 다른 공원에 대해 각각 설명해주실 수 있나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "한강공원은 조깅, 자전거를 타는 사람이 많은 반면 연남동에 있는 공원은 데이트를 하는 젊은 사람들이 많습니다."
             },
             {
               "question": "두 공원이 크기, 배치, 또는 전반적인 분위기 측면에서 어떤 유사점이 있나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "두 공원이 방문객에게 제공하는 시설이나 편의 시설에서 어떤 차이가 있나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
+              "placeholder": "한강공원은 다양한 연령대가 이용하며 넓고, 연남동에 있는 공원은 도심에 있어 규모가 작으며 주로 젊은 성인들이 많습니다."
             },
             {
               "question": "각 공원에서 다른 공원과 구별되는 독특한 특징이나 관광 명소가 있나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "한강공원은 한강과 넓은 자연경관이 특징인 반면 연남동의 공원은 변화가와 이어져있다는 특징이 있습니다."
             },
             {
               "question": "공원들은 다른 테마나 목적을 가지고 있나요? 특정 활동을 위해 설계되었거나 다른 연령층을 대상으로 하는 것인가요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "두 공원을 방문하는 사람들의 행동이나 목적이 어떻게 다른가요? ",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
+              "placeholder": "한강공원은 다양한 연령층이 사용할 수 있도록 개방되어있는 반면, 연남동의 공원은 변화가와 연결되어있어 근처에 데이트 장소가 많습니다."
             },
             {
               "question": "귀하 개인적으로 어느 공원을 선호하시나요? 그 이유는 분위기, 편의 시설 또는 제공하는 전반적인 경험 때문인가요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "무엇을 하느냐에 따라 선호하는 공원이 다릅니다. 운동을 할 때는 한강공원을, 데이트나 친구를 만날 땐 연남동의 공원을 주로 갑니다."
             },
-            {
-              "question": "귀하는 점심 시간에 따르는 특별한 일정이 있으신가요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            }
+            {}
           ]
         }
       ]
@@ -2434,37 +2089,37 @@
               "question": "카페를 자주 방문하시나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "일주일에 2번 정도 갑니다."
             },
             {
               "question": "방문하시는 카페 이름이 뭔가요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "별다방입니다."
             },
             {
               "question": "선호하는 커피숍 유형이 있나요? (예: 지역 카페, 체인점, 특별한 커피숍 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "지역 카페를 자주 갑니다."
             },
             {
               "question": "왜 이런 유형의 카페를 찾으시나요? ",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "그 카페만의 시그니처 메뉴를 맛보는 게 즐거워서 갑니다."
             },
             {
               "question": "보통 커피숍에서 어떤 활동을 하시나요? (친구와 수다, 공부, 일, 카페 탐방, 커피 마시기) ",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "새로운 음료를 마셔보고 친구와 수다를 떱니다."
             },
             {
-              "question": "커피숍에 가실 때 주문하시는 주문이 있나요? 어떤 기준으로 메뉴를 고르시나요? ",
+              "question": "커피숍에 가실 때 주문하시는 메뉴가 있나요? 어떤 기준으로 메뉴를 고르시나요? ",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "안 먹어본 메뉴를 찾아 먹습니다."
             }
           ]
         },
@@ -2476,49 +2131,43 @@
               "question": "가장 좋아하는 카페의 이름은 무엇인가요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "로덴드론이라는 카페를 좋아합니다."
             },
             {
-              "question": "그 카페는 어디에 위치하고 있나요? 주소를 알려주시거나 대략적인 지역을 설명해주세요.",
+              "question": "그 카페는 어디에 위치하고 있나요? 대략적인 지역을 설명해주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "서울 서대문구 연희동에 있습니다."
             },
             {
               "question": "이 카페를 어떻게 알게 되셨나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "여자친구와 데이트를 하며 알게 되었습니다."
             },
             {
               "question": "독특한 건축적 또는 인테리어 디자인적 요소가 있나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "이 카페에서 나오는 음악은 어떤가요? 이 카페를 좋아하는 이유에 포함되나요? ",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
+              "placeholder": "주택을 개조하여 카페로 만들었습니다."
             },
             {
               "question": "이 커피숍을 특별하게 만드는 매뉴가 있나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "앙버터와 휘낭시에가 맛있습니다."
             },
             {
               "question": "그 외에도 이 카페를 특별하게 만드는 요소가 있나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "2층짜리 주택을 개조하여 만들어 집같은 편안함을 줍니다."
             },
             {
               "question": "\b마지막으로 이 카페의 한줄평을 해주세요!",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "연인과 데이트하기 좋은 장소!"
             }
           ]
         },
@@ -2530,37 +2179,31 @@
               "question": "먼저 커피숍에서의 기억에 남는 경험에 대해 간단히 이야기해 주실 수 있나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "10년만에 만난 친구와 3시간 동안 수다를 떨었던게 기억에 남습니다."
             },
             {
               "question": "이 기억에 남는 커피숍 경험은 언제 어디에서 있었나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "23살 여름, 연희동 좁은 골목에 있는 카페였습니다."
             },
             {
               "question": "그때 함께 하신 분들은 누구였나요? 혼자 갔으셨나요, 아니면 친구와 함께 갔으셨나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "이 경험을 기억에 남게 만든 하이라이트 또는 주요 사건은 무엇이었나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
+              "placeholder": "제 친구 소피아와 함께 갔습니다."
             },
             {
               "question": "커피숍에서의 시간 동안 특정한 대화나 교류가 있었나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "친구와 근황을 이야기하는데 너무 즐거웠습니다. 또한 카페도 이뻐서 카페의 아기자기한 모습에 대해 이야기했습니다."
             },
             {
               "question": "\b마지막으로 그 날의 기억남는 경험을 한줄 요약해주세요. ",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "한 여름에 에어컨이 나오는 아기자기한 카페에서 소피아와 3시간 동안 수다를 떨어 즐거웠습니다."
             }
           ]
         }
@@ -3588,76 +3231,88 @@
           "mainQuestionKor": "가장 좋아하는 게임에 대해 이야기해주세요. 그 게임의 규칙을 말씀해주세요. 자세한 방법을 알려주세요.",
           "questions": [
             {
-              "question": "밖에서 여행하는 휴가를 싫어하시나요? 그 이유가 뭔가요? (싫어하지 않으면 그 이야기를 하시면 됩니다)",
+              "question": "가장 좋아하는 게임의 이름을 말해주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "저는 롤이라는 게임을 제일 좋아해요."
             },
             {
-              "question": "집에서 보내는 휴가가 밖에서 여행하며 보내는 휴가보다 좋은 이유에는 뭐가 있을까요?",
+              "question": "이 게임은 어떤 플렛폼의 게임인가요? 그리고 게임 하는 방법과 목적을 간단하게 설명해주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "롤은 컴퓨터 게임인데, 5대 5로 서로 싸우고 죽여서 넥서스라는 상대방의 마지막 건물을 부시는 게임이에요"
             },
             {
-              "question": "휴가 동안 집에 머무르는 것이 휴식과 활력을 어떻게 제공할 수 있나요?",
+              "question": "게임에서의 본인의 역할을 조금 더 구체적으로 설명해주세요. (주인공, 캐릭터, 챔피언, 포지션, 등등) ",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "게임에 다양한 포지션이 있는데 저는 보통 정글을 해요. 팀을 도와주는 포지션이에요. 제가 제일 좋아하는 챔피언은 자르반 4세라는 챔피언인데, 창을 든 기사입니다. "
             },
             {
-              "question": "\b본인의 과거 휴가를 예시로 들며 어떤 활동들이 진정한 휴식과 활력을 줬는지 설명해주세요. ",
+              "question": "이 게임이 특별히 재미있는 이유를 설명해주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "가끔 스트레스를 많이 받지만, 그래도 역시 팀 게임은 팀하고 같이 협업해서 상대방을 이기는 재미인 것 같아요."
             },
             {
-              "question": "집에서 휴가를 보내면 어떤 기분이 드나요?",
+              "question": "사람들이 많이 하는 게임인가요? 인기가 많나요? 이 게임이 얼마나 알려져 있는지 설명해주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "아마 지금 전 세계에서 가장 인기있는 게임일 거에요. 한국에서는 특히 인기가 많죠. "
             },
             {
-              "question": "집에서 휴가를 보내면 비용 절감이나 재정적인 이점이 있는가요?",
+              "question": "이 게임을 얼마나 오래 즐겨왔고 좋아해 왔는지 설명해 주세요. ",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "저는 이 게임을 중학교 3학년 때 부터 지금까지 해왔어요. 너무 재미있어서 중독됐었죠. 이 게임이 없었으면 학교 성적이 많이 올랐을거에요. "
             },
             {
-              "question": "답변을 마무리 하기 위해 마지막으로 남들은 여행을 다니며 휴가를 즐기지만 나는 집에서 휴가를 즐기는 이유를 한두 마디로 요약해 주세요. ",
+              "question": "답변을 마무리 하기 위해 마지막으로 지금 이 게임을 얼마나 하고 있고, 앞으로 어떻게 즐길지, 이 게임이 나한테 갖는 의미가 뭔지 한두 마디로 요약해 주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "지금은 이 게임을 많이 못하지만 종종 친구들하고 만나서 피시방을 가면 옛날 생각나고, 항상 너무 재미있어요. 롤은 제 중고등학교 시절을 책임져준 게임인 것 같습니다."
             }
           ]
         },
         {
-          "mainQuestion": "Describe one memorable experience you had during a vacation at home. What happened and how did you deal with it? Why was the vacation so unforgettable? Give me many details.",
-          "mainQuestionKor": "집에서 휴가를 보내면서 기억에 남는 경험 하나를 설명해주세요. 무슨 일이 있었고 그것에 대처하는 방법은 무엇이었나요? 왜 그 휴가가 잊을 수 없는 경험이었는지 많은 세부 사항을 알려주세요.",
+          "mainQuestion": "How and when were you interested in playing games? What game did you like to play at that time? How did you learn to play the game? Tell me all the details.",
+          "mainQuestionKor": "언제, 어떻게 게임에 빠지게 되셨나요? 그 당시에는 어떤 게임을 좋아하셨나요? 그 게임은 어떻게 배우게 되셨나요? 구체적으로 알려주세요. ",
           "questions": [
             {
-              "question": "집에서의 휴가 중에 특별한 경험을 한 줄로 설명해 주실 수 있나요? (힐링한 경험, 웃겼던 경험, 당황했던 경험) ",
+              "question": "언제 어디서 어떻게 게임을 하기 시작하셨나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "저는 초등학교때 미술 학원에서 크레이지 아케이드 하면서 게임을 좋아하게 됐던 것 같아요."
             },
             {
-              "question": "이제 이 사건이 일어난 순서를 설명해 주세요.",
+              "question": "\b게임을 점점 좋아하게 된 과정을 설명해주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "친구들이랑 매일 같이 하면서 게임을 천천히 배웠고, 게임 하는 재미로 미술 학원 다닌 것 같아요."
             },
             {
-              "question": "이 경험이 특별한 이유를 설명해 주세요.",
+              "question": "제일 좋아하게 된 게임이 뭔가요? 이 게임은 언제했고 어떻게 빠지게 됐는지 말해주세요. ",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "아마 가장 좋아하게 된 게임은 리그 오브 레전드라는 게임인 것 같아요. 중학교 3학년 때 처음 시작했어요."
             },
             {
-              "question": "이 경험을 통해 어떤 감정을 느끼셨고 생각을 하셨나요?",
+              "question": "이 게임을 얼마나 좋아했는지 그리고 얼마나 잘했는지 설명해 주세요. ",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "거의 중독이었죠. 친구들이랑 수백시간 했었고, 이 게임이 너무 재미있어서 공부도 제대로 못하고 그랬어요 ㅋㅋ"
+            },
+            {
+              "question": "이 게임을 어떻게 배웠나요? 아니면 잘하기 위한 어떤 노력들을 했나요?",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": "매일 유투브 강의 보고, 온라인 가이드 찾아보고, 친구들이랑 어떻게 하면 더 잘할지 연구하고 그랬습니다."
+            },
+            {
+              "question": "이 답변을 마무리 하기 위해 요즘은 게임을 어떻게 즐기고 있는지 말해주세요.",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": "그렇게 평생을 할 것 같았던 게임을 요즘엔 잘 못하고 있어요. 그래도 롤은 가끔 친구들이랑 피시방 가면 즐길 수 있어서 좋아요."
             }
           ]
         }
@@ -3936,124 +3591,118 @@
           "mainQuestionKor": "가정에서 가족 구성원들은 각자 다른 책임을 가지고 있을 것입니다. 가족 구성원 각각이 어떤 집 안일을 담당하고 있는지 알려주세요.",
           "questions": [
             {
+              "question": "당신은 주로 어떤 집안일을 하시나요? (바닥 청소, 창문 청소, 욕실 청소, 기타)",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": "바닥청소와 화장실 청소를 합니다."
+            },
+            {
               "question": "당신은 집에서 청소를 얼마나 자주 합니까? (매일, 매주, 매달, 기타)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "2일에 한번씩 합니다."
             },
             {
-              "question": "당신이 주로 어떤 청소 작업을 하시나요? (바닥 청소, 창문 청소, 욕실 청소, 기타)",
+              "question": "당신의 다른 가족들은 어떤 집안일을 담당하나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "어머니는 빨래와 식사준비를 하시고, 아버지는 분리수거를 하세요."
             },
             {
-              "question": "청소할 때 어떤 도구를 주로 사용하시나요? (청소기, 걸레, 유리 청소용 액체 등)",
+              "question": "귀하의 가족들이 집안일 업무분담을 어떻게 했는지 말씀해주세요",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "어머니가 대부분의 집안일을 하셨어요. 조금이라도 부담을 줄여드리기 위해 설거지나 분리수거는 남은 가족들이 가위바위보로 당번을 정했어요."
             },
             {
-              "question": "당신은 가구 정리와 정돈을 어떻게 하시나요? (정기적으로 하시나요, 필요할 때만 하시나요)",
+              "question": "당신은 가족들의 집안일 업무분담에 대해 어떻게 생각하나요? 그 이유도 말씀해주세요",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "적절하다고 생각해요. 가족 모두 불만을 가지지 않고 깨끗한 집을 유지할 수 있었기 때문이에요."
             },
             {
-              "question": "당신이 집안에서 가장 시간이 많이 걸리는 청소 작업은 무엇인가요?",
+              "question": "귀하의 가족들의 집안일 업무분담에 대한 본인의 생각을 1~2문장으로 말씀해주세요.(현재 상황이나 앞으로 더 개선할 점에 대해 말씀해주세요.)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "청소할 때 가장 좋아하는 음악이 있나요? 있다면 어떤 음악을 선호하시나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
+              "placeholder": "부모님이 출장을 가거나 할 때 집이 지저분해지는 거 같아요. 제가 조금 더 솔선수범해야겠어요."
             }
           ]
         },
         {
           "mainQuestion": "You and your family probably have different responsibilities at home. Tell me about which chores each family member is responsible for.",
-          "mainQuestionKor": "당신이 할 수 없었던 집안일이 있었나요? 그렇다면 왜 할 수 없었는지 상세히 설명해주세요. 가능한 많은 세부 사항을 제시해주세요.",
+          "mainQuestionKor": "모두가 정기적으로 가정에서 집안일을 해야 합니다. 귀하는 일반적으로 가정에서 어떤 집안일을 주로 하시나요? 그 일들에 대해 자세히 말해주세요.",
           "questions": [
             {
-              "question": "당신 가족 구성원들은 집안에서 어떤 청소 업무를 맡고 있나요?",
+              "question": "당신은 집안에서 어떤 청소 업무를 맡고 있나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "바닥청소와 화장실청소를 하고 있습니다."
             },
             {
-              "question": "가장 나이 많은 가족 구성원은 어떤 가사 업무를 주로 맡고 있나요?",
+              "question": "당신의 가족 구성원들은 집안에서 어떤 청소 업무를 맡고 있나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "가장 어린 가족 구성원은 어떤 가사 업무를 맡고 있나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
+              "placeholder": "어머니는 빨래와 식사준비를 하시고, 아버지는 분리수거를 하세요."
             },
             {
               "question": "가족 구성원들은 청소 업무를 분담하기 위해 어떻게 협력하고 있나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "어머니는 식사준비, 아버지는 분리수거 등 가족구성원 각각 업무를 배정했어요. 설거지는 매번 가위바위보로 당번을 정했어요."
             },
             {
               "question": "가족 구성원들 간에 청소 업무 분담에 대해 만족하고 있나요? 그 이유는 무엇인가요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "가족 모두 만족하고 있어요. 오랜기간동안 가족들 모두 불만을 가지지 않고 깨끗한 집을 유지할 수 있었기 때문이에요."
             },
             {
-              "question": "만약 가족 구성원 중 한 명이 바쁜 때에 청소 업무를 도와줄 수 없다면 어떻게 대처하고 있나요?",
+              "question": "만약 가족 구성원 중 한 명이 바쁜일이 생겨 집안일을 도와줄 수 없다면 어떻게 대처할 것인가요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "제가 솔선수범해서 도와드릴 거 같아요."
             }
           ]
         },
         {
           "mainQuestion": "Have you ever had chores that you weren't able to do? If so, explain why you weren't able to do them. Tell me using as many details as possible.",
-          "mainQuestionKor": "모두가 정기적으로 가정에서 집안일을 해야 합니다. 귀하는 일반적으로 가정에서 어떤 집안일을 주로 하시나요? 그 일들에 대해 자세히 말해주세요.",
+          "mainQuestionKor": "당신이 할 수 없었던 집안일이 있었나요? 그렇다면 왜 할 수 없었는지 상세히 설명해주세요. 가능한 많은 세부 사항을 제시해주세요.",
           "questions": [
             {
-              "question": "지금까지 당신이 할 수 없었던 청소 업무가 있었나요? 있다면 그 이유를 상세히 설명해주세요.",
+              "question": "지금까지 당신이 할 수 없었던 집안일이 있었나요? 있다면 그 이유를 상세히 설명해주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "과일 껍질 깎는 것을 하지 못했어요. 칼을 다루는데 능숙하지 않기 때문이에요"
             },
             {
-              "question": "그 청소 업무를 완수하지 못한 것에 대해 어떤 감정을 느꼈나요? (책임감, 실망, 불편함 등)",
+              "question": "그 일을 하지 못했을 때 어떤 감정을 느꼈나요? (책임감, 실망, 불편함 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "처음 해보는 거라 못한다고 생각했어요."
             },
             {
               "question": "그 업무를 완료하지 못했을 때 다른 사람들은 어떤 반응을 보였나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "그냥 그런가보다 했던 거 같아요."
             },
             {
               "question": "그 업무를 완료하지 못했을 때 어떤 대체 조치를 취했나요? (다른 가족 구성원이 도움을 주었거나, 나중에 보충적으로 처리한 경우 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "할머니께서 과일 깎는 법을 가르쳐주셨어요"
             },
             {
               "question": "비슷한 상황이 다시 발생한다면 어떻게 대처하고 싶으신가요? (더 많은 시간 확보, 일정 조정, 협력 요청 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "모르는 거에 대해서는 다른 가족구성원들에게 도움을 요청할 거 같아요."
             },
             {
               "question": "청소 업무 완수에 어려움을 겪을 때 가장 도움이 되었던 팁이나 전략이 있나요? 있다면 공유해주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "유튜브에 집안일 영상 등을 통해 팁을 얻을 수 있었어요."
             }
           ]
         }
@@ -4073,37 +3722,37 @@
               "question": "당신은 특정한 음식점을 자주 방문하나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "저희 동네에 있는 곱창집에 한달에 두번 이상은 가요."
             },
             {
-              "question": "그 음식점에서 주로 어떤 종류의 음식을 제공하나요? (한식, 중식, 양식, 일식 등)",
+              "question": "그 음식점에서 주로 어떤 종류의 음식을 제공하나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "곱창볶음"
             },
             {
               "question": "그 음식점에서 가장 좋아하는 메뉴는 무엇인가요? 왜 그 메뉴를 선호하시나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "야채곱창을 좋아해요. 깻잎과 조화로운 곱창의 식감이 좋아요"
             },
             {
               "question": "음식점을 선택할 때 어떤 기준을 고려하나요? (가격, 맛, 분위기, 서비스 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "직원의 친절함과 음식의 맛"
             },
             {
               "question": "그 음식점에 자주 가는 이유는 무엇인가요? (위치, 특별한 메뉴, 친절한 직원 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "사장님이 친절하세요. 그리고 가격대비 음식의 양도 많습니다."
             },
             {
               "question": "그 음식점에서의 좋은 경험이나 추천할만한 이야기가 있나요? 있다면 공유해주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "제 생일 날 서비스라며 음료수를 선물해주셨어요. 맛있는 음식에 친절한 서비스까지 받아 저는 그 음식점의 단골이 되었습니다."
             }
           ]
         },
@@ -4112,40 +3761,40 @@
           "mainQuestionKor": "많은 나라에서 특별하거나 독특한 음식들이 있습니다. 귀하의 나라에서 전통적인 음식 중 어떤 것들이 있는지 설명해주세요. 상세하게 묘사해주세요.",
           "questions": [
             {
-              "question": "당신의 나라에서 어떤 전통 요리가 있나요? 그 요리에 대해 자세히 설명해주세요.",
+              "question": "당신의 나라에는 어떤 전통 요리가 있나요? 그 요리에 대해 자세히 설명해주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "김치, 속재료와 숙성방법에 따라 100가지 이상의 종류가 있는 발효음식이에요."
             },
             {
               "question": "그 전통 요리의 주 재료는 무엇인가요? 그 재료들이 어떻게 사용되나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "배추, 고추가루, 액젓 등 다양한 재료가 들어가요."
             },
             {
               "question": "그 전통 요리를 만드는데 필요한 도구나 기술이 있나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "장독대에 넣어 숙성시키는 방법이 있어요. 최근에는 김치냉장고를 통해 김치의 맛을 보존하곤 합니다."
             },
             {
               "question": "그 전통 요리는 어떤 특별한 음식 조합이나 조리법을 가지고 있나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "지역별로 재료를 달리하여 다양한 김치가 있어요. 어떤 지방에서는 굴을 넣고, 어떤 지방에서는 액젓만 넣어요. 그리고 발효정도에 따라 묵은지, 겉절이 등 다양한 김치가 있습니다."
             },
             {
               "question": "그 요리는 어떤 계절이나 특별한 행사 때에 주로 섭취되나요? 그 이유는 무엇인가요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "한국에는 겨울 전에 김장철이 있어요. 가족들과 함께 겨울에 먹을 김치를 담그는 풍습이에요. 김치는 사계절 내내 먹습니다."
             },
             {
-              "question": "그 전통 요리를 먹을 때 주로 어떤 음료나 음식들을 곁들이나요?",
+              "question": "소개한 음식에 대해 1~2문장 말씀해주세요",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "김치는 한국인의 밥상에서 빠질 수 없는 음식입니다."
             }
           ]
         },
@@ -4157,37 +3806,37 @@
               "question": "당신이 마지막으로 방문한 식당은 어떤 곳이었나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "홍제동에 있는 오리백숙집에 갔어요"
             },
             {
               "question": "그 식당에서 주로 어떤 종류의 음식을 판매하나요? 그 중에서 당신은 무엇을 주로 선택했나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "오리백숙, 삼계탕 등을 판매해요. 저는 오리백숙을 주문했습니다."
             },
             {
               "question": "그 식당의 분위기나 인테리어는 어땠나요? 어떤 음악이나 장식 요소가 있었나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "오래 운영한 식당 같았어요."
             },
             {
               "question": "당신은 누구와 함께 그 식당을 방문했나요? 친구, 가족, 동료 등 누구와 함께했는지 알려주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "어머니와 함께 방문했습니다."
             },
             {
               "question": "식당 방문 경험 중에서 특별한 사건이나 기억에 남는 일이 있었나요? 있다면 그 이야기를 공유해주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "오리 백숙의 양이 많아 남은 음식들을 포장했어요. 한약재가 통으로 들어가 있는 모습이 인상깊었어요."
             },
             {
               "question": "그 식당에서의 식사 경험은 어떠셨나요? 음식의 맛, 서비스, 가격 등을 평가하실 수 있나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "종업원분들이 친절했어요. 오리백숙은 매우 부드러웠습니다. 다음에 또 가고 싶어요"
             }
           ]
         }
@@ -4207,31 +3856,31 @@
               "question": "프로젝트 작업을 할 때 어떤 사이트를 자주 사용하나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "ChatGPT를 사용합니다."
             },
             {
-              "question": "인터넷을 주로 어떤 목적으로 사용하나요? 어떻게 작업에 도움을 줄 수 있는지 설명해주세요.",
+              "question": "그 인터넷을 주로 어떤 목적으로 사용하나요? 어떻게 작업에 도움을 줄 수 있는지 설명해주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "문서작성을 위해 정보를 수집할 때 사용합니다. 프로그램에 적절한 질문을 입력하면 AI가 답변해줍니다."
             },
             {
-              "question": "최근에 인터넷을 통해 어떤 종류의 자료를 찾았나요? (논문, 뉴스 기사, 통계, 이미지 등)",
+              "question": "최근에 그 인터넷을 통해 어떤 종류의 자료를 찾았나요? (논문, 뉴스 기사, 통계, 이미지 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "논문에 대한 사람들의 칼럼을 찾아 보았습니다."
             },
             {
               "question": "인터넷에서 자료를 찾을 때 신뢰할 만한 소스나 검증된 자료를 어떻게 찾나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "자료 출처를 확인하고 다른 정보들과 비교분석해봅니다."
             },
             {
-              "question": "인터넷을 통해 프로젝트 작업을 할 때 부딪힌 어려움이나 도움이 되었던 팁이 있나요? 있다면 공유해주세요.",
+              "question": "인터넷을 통해 프로젝트 작업을 할 때 부딪힌 어려움이 있었나요? 극복하기 위해 도움이 되었던 팁이 있다면 공유해주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "검색한 자료에 대해 검증되지 않은 정보가 있었어요. 그래서 자료검색 시 출처를 기입하는 습관을 가져 극복했습니다."
             }
           ]
         },
@@ -4240,40 +3889,40 @@
           "mainQuestionKor": "지금은 다양한 종류의 컴퓨터와 소프트웨어가 있습니다. 어떤 종류의 컴퓨터와 소프트웨어를 사용하고 계신지 설명해주세요. 상세히 묘사해주세요.",
           "questions": [
             {
-              "question": "당신이 사용하는 컴퓨터의 종류는 무엇인가요? (노트북, 데스크탑, 태블릿 등)",
+              "question": "당신이 자주 사용하는 컴퓨터의 종류는 무엇인가요? (노트북, 데스크탑, 태블릿 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "데스크탑을 사용해요"
             },
             {
               "question": "컴퓨터의 운영체제는 무엇인가요? (Windows, macOS, Linux 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "Windows 입니다."
             },
             {
               "question": "컴퓨터의 사양에 대해 설명해주세요. (프로세서, 메모리, 저장 용량 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "잘은 모르겠어요. 버벅거리지 않은 것보니 충분한 거 같네요 "
             },
             {
               "question": "어떤 종류의 소프트웨어를 주로 사용하나요? (워드 프로세서, 스프레드시트, 디자인 도구, 개발 도구 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "크롬과 워드를 자주 사용합니다."
             },
             {
               "question": "소프트웨어의 버전이나 라이선스 형태에 대해 설명해주세요. (예: Microsoft Office 365 구독, Adobe Photoshop CC 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "대학생 신분으로 무료로 Microsoft Office 365 구독하고 있어요."
             },
             {
               "question": "컴퓨터와 소프트웨어의 조합이 어떻게 당신의 작업이나 일상 생활에 도움이 되고 있는지 설명해주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "학교 과제를 할 때 능률이 올라가요. 특히 데스크탑과 태블릿이 클라우드로 연동되기 때문에 작업할 때 훨씬 효과적입니다."
             }
           ]
         },
@@ -4285,31 +3934,31 @@
               "question": "당신이 처음으로 인터넷을 사용한 시기는 언제인가요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "초등학교 때 처음으로 사용했어요."
             },
             {
               "question": "하루에 인터넷 사용에 얼마나 많은 시간을 소요하나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "요즘에는 하루 3시간 이상을 사용하는 거 같아요."
             },
             {
               "question": "인터넷 사용이 당신의 일상 생활에서 어떤 부분을 차지하고 있나요? (소셜 미디어, 온라인 쇼핑, 업무, 엔터테인먼트 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "인스타그램, 유튜브 등에 습관적으로 많은 시간을 할애하는 거 같아요"
             },
             {
               "question": "인터넷을 사용하는 동안 가장 자주 하는 활동은 무엇인가요? 왜 그 활동을 선호하시나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "친구들과 일상을 공유하는 SNS를 자주해요. 자주 만나진 못해도 서로가 어떻게 지내는 지 알 수 있어서 자주 들어가게 돼요."
             },
             {
               "question": "인터넷 사용에 대한 긍정적인 측면과 부정적인 측면 중에서 가장 크게 느끼는 점은 무엇인가요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "긍정적인 점은 멀리 있어도 친구와 소통할 수 있는 것이고, 부정적인 점은 절제없이 사용하게 된다는 점이에요"
             }
           ]
         }
@@ -4329,115 +3978,115 @@
               "question": "어릴 적 가장 기억에 남는 명절이 어떤 것이었나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "설날"
             },
             {
               "question": "그 명절 때 당신이 어떤 활동을 했나요? (여행, 가족 모임, 특별한 이벤트 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "어른들께 세배를 했습니다."
             },
             {
               "question": "그 활동이 특별했던 이유는 무엇이었나요? (새로운 경험, 특별한 사람과 함께하는 시간 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "어른들께 새해인사를 드리고 나서 세뱃돈을 받아 기분이 좋았어요."
             },
             {
-              "question": "그 휴일의 분위기나 분위기를 조성하는 데 어떤 요소들이 있었나요? (장식, 음식, 음악 등)",
+              "question": "그 휴일의 분위기나 분위기를 조성하는 데 어떤 요소들이 있었나요? (문화, 음식, 음악 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "멀리사는 가족들이 설날에는 다같이 모여 북적북적한게 기억에 남아요."
             },
             {
-              "question": "그 휴일에 참여한 다른 사람들은 어떤 반응을 보였나요? (기쁨, 놀라움, 감동 등)",
+              "question": "그 명절에 다른 사람들은 무엇을 주로 하였나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "어른들은 고스톱을 쳤고, 친척들과는 윷놀이를 했습니다. "
             },
             {
-              "question": "그 휴일을 돌이켜보았을 때, 여전히 특별하고 소중한 추억으로 남아있는 이유는 무엇인가요?",
+              "question": "그 명절을 돌이켜보았을 때, 여전히 특별하고 소중한 추억으로 남아있는 이유는 무엇인가요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "마음편히 가족들과 소중한 시간을 보냈기 때문입니다. 명절마다 모여서 사촌들과 함께 윷놀이하고 맛있는 음식들을 먹을 수 있어 좋았습니다."
             }
           ]
         },
         {
           "mainQuestion": "Certain holidays are more important than others. What is the biggest holiday in your country? Tell me what you usually do on that holiday and how you celebrate it.",
-          "mainQuestionKor": "특정 휴일은 다른 휴일보다 중요합니다. 귀하의 나라에서 가장 중요한 휴일은 무엇인가요? 그 휴일에 일반적으로 어떤 활동을 하고 어떻게 축하하나요?",
+          "mainQuestionKor": "특정 휴일은 다른 휴일보다 중요합니다. 귀하의 나라에서 가장 중요한 명절은 무엇인가요? 그 휴일에 일반적으로 어떤 활동을 하고 어떻게 축하하나요?",
           "questions": [
             {
               "question": "당신의 나라에서 가장 중요한 연휴는 무엇인가요? (설날, 추석 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "설날"
             },
             {
               "question": "그 휴일을 보통 어떻게 지내나요? (가족과의 모임, 특별한 행사, 음식 준비 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "가족들과 모이고, 새해인사를 합니다."
             },
             {
               "question": "그 휴일에 대한 전통적인 행사나 의식은 어떤 것이 있나요? (차례, 의식적인 한복의상 착용, 세뱃돈 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "어른들께 세배를 하고, 새해 덕담을 듣습니다."
             },
             {
               "question": "그 휴일을 준비하는 과정이나 특별한 준비물이 있나요? (장식, 특별한 음식, 기념품 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "설날에는 떡국을 먹습니다."
             },
             {
               "question": "그 휴일을 함께 보내는 가족, 친구, 이웃 등과의 상호 작용이 어떻게 이루어지나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "오랜만에 가족들을 보기도 하고 고스톱, 윷놀이 등 전통놀이를 함께 합니다."
             },
             {
               "question": "그 휴일을 기념하는 데 가장 기억에 남는 경험이나 이야기가 있나요? 있다면 공유해주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "세배 후에 세뱃돈을 받던 사촌형이 어른들께 용돈을 드릴 때, 많은 시간이 지났음을 느끼게 되어 인상깊었습니다."
             }
           ]
         },
         {
           "mainQuestion": "There are many different ways to celebrate a holiday. How are holidays celebrated in your country and what kinds of special food are prepared?",
-          "mainQuestionKor": "휴일을 축하하는 방법은 다양합니다. 귀하의 나라에서 휴일을 어떻게 축하하고 어떤 특별한 음식을 준비하나요?",
+          "mainQuestionKor": "명절을 축하하는 방법은 다양합니다. 귀하의 나라에서 명절을 어떻게 축하하고 어떤 특별한 음식을 준비하나요?",
           "questions": [
             {
               "question": "당신의 나라에서는 명절을 어떻게 기념하나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "설날에 가족들과 함께 모여 새해인사를 주고 받으며 기념합니다."
             },
             {
               "question": "명절에는 어떤 활동을 주로 하나요? (가족과의 모임, 특별한 행사, 의식 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "새해인사, 가족모임, 차례 등이 있습니다."
             },
             {
               "question": "명절을 맞아 주로 어떤 종류의 음식이 준비되고, 어떤 음식을 먹는 것이 전통적인가요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "떡국, 삼색나물, 갈비찜 등"
             },
             {
               "question": "그 음식들이 명절과 어떤 연관성이 있나요? (문화적인 의미, 상징성, 역사적 배경 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "떡국을 먹으면 한살을 더 먹는다는 이야기가 있습니다."
             },
             {
               "question": "명절을 축하하며 준비하는 음식과 관련된 흥미로운 이야기나 전통적인 요리법이 있나요? 있다면 공유해주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "떡국을 먹으면 한살을 더 먹는다는 이야기가 있습니다. 그래서 어렸을 때 2그릇을 먹고 2살 많아졌다고 농담하곤 했습니다."
             }
           ]
         }

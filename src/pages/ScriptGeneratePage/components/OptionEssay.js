@@ -168,6 +168,7 @@ function OptionEssay({
   command,
   setOverwriting,
   setTextKor,
+  mainQuestion,
 }) {
   const [oldResponse, setOldResponse] = useState("");
   const [newResponse, setNewResponse] = useState(``);
@@ -280,6 +281,7 @@ function OptionEssay({
     setTextKor(tmpKor);
     setOldResponse(newResponse);
     setNewResponse("");
+    onClose();
   };
 
   const deleteOnClick = () => {

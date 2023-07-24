@@ -85,6 +85,7 @@ const SelectMainQuestion = ({ mainQuestionList, setSelectedCategoryId }) => {
         <SurveyBox
           questions={mainQuestionList[selectedMainQuestionIdx].questions}
           setSelectedMainQuestionIdx={setSelectedMainQuestionIdx}
+          mainQuestion={mainQuestionList[selectedMainQuestionIdx].mainQuestion}
         />
       ) : (
         <>
