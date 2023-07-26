@@ -152,7 +152,7 @@ const DivideLine = styled.div`
 const ScrollBox = styled.div`
   min-height: 80px;
   padding-bottom: 20px;
-  max-height: 245px;
+  max-height: 120px;
   width: 100%;
   overflow-y: auto;
   position: relative;
