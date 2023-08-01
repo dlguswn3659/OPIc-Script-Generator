@@ -148,6 +148,30 @@ function Feedback({
         datetime: currentTime, // 현재 시간을 datetime 필드에 추가합니다.
       });
 
+      // const response = await fetch(
+      //   `${process.env.REACT_APP_EC2_IP_ADDRESS}/feedback`,
+      //   {
+      //     method: "POST",
+      //     headers: {
+      //       "Content-Type": "application/json",
+      //     },
+      //     body: JSON.stringify({
+      //       stars: rate,
+      //       text: description,
+      //       email: email,
+      //       datetime: currentTime, // 현재 시간을 datetime 필드에 추가합니다.
+      //     }),
+      //   },
+      // );
+
+      // const data = await response.json();
+      // if (response.status !== 200) {
+      //   throw (
+      //     data.error ||
+      //     new Error(`request failed with status ${response.status}`)
+      //   );
+      // }
+
       console.log("Feedback 데이터가 성공적으로 추가되었습니다.");
       setConfettiVisible(true);
 

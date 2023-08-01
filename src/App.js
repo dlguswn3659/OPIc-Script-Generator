@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { IntroPage, ScriptGeneratePage } from "./pages";
+import { IntroPage, ScriptGeneratePage, AdminPage } from "./pages";
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
@@ -8,6 +8,7 @@ import { COLORS as palette } from "./utils/style/Color/colors";
 import ReactGA from "react-ga";
 import { createBrowserHistory } from "history";
 import ReactGA4 from "react-ga4";
+import { Footer } from "./components";
 
 ReactGA4.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS_TRAKING_ID);
 
@@ -19,7 +20,7 @@ history.listen((response) => {
   console.log(response.location.pathname);
   ReactGA.set({ page: response.location.pathname });
   ReactGA.pageview(response.location.pathname);
-  ReactGA4.set({page: response.location.pathname});
+  ReactGA4.set({ page: response.location.pathname });
   ReactGA4.send("pageview");
 });
 
@@ -50,7 +51,9 @@ function App() {
             <Routes>
               <Route exact path="/" element={<IntroPage />} />
               <Route path="/generate" element={<ScriptGeneratePage />} />
+              <Route path="/admin" element={<AdminPage />} />
             </Routes>
+            <Footer />
           </WebAppContainer>
         </BodyInner>
       </BrowserRouter>
