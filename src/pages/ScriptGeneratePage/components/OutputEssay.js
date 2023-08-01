@@ -432,9 +432,9 @@ const OutputEssay = ({
           <TextInfoBox>
             <TextInfoTitle>Word : </TextInfoTitle>
             <TextInfoValue>{wordCount}</TextInfoValue>
-            <InfoDivide />
+            {/* <InfoDivide />
             <TextInfoTitle>예상 수준 : </TextInfoTitle>
-            <TextInfoValue>NH</TextInfoValue>
+            <TextInfoValue>NH</TextInfoValue> */}
           </TextInfoBox>
           <OptionBox>
             {OptionList.map((item, index) => (
