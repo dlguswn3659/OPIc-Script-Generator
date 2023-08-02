@@ -16,12 +16,15 @@ const Container = styled.div`
   min-height: 100vh;
   padding: 20px 20px;
   background-color: ${palette.light_bg};
+  position: relative;
 `;
 
 const ContentBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
 `;
 
 const LogoImage = styled.img`
@@ -84,7 +87,7 @@ const Content2 = styled.div`
 
 const ImageBox = styled.div`
   width: 100%;
-  min-height: 352px;
+  // height: 352px;
   margin-top: 70px;
   margin-bottom: 50px;
 `;
@@ -125,6 +128,10 @@ const BottomBar = styled.div`
   height: 100px;
   display: flex;
   justify-content: space-between;
+  position: absolute;
+  padding: 20px;
+  left: 0;
+  bottom: 0;
 `;
 
 const LeftButton = styled.button`
@@ -223,12 +230,16 @@ const TutorialCard = () => {
     },
     {
       img: [<ExampleImage src={Tuto5} />],
-      content1:
-        "마지막으로 글 길이, 목표 성적, 그리고 내가 추구하는 말투를 설정하시면",
+      content1: (
+        <>
+          "마지막으로 글 길이, 목표 성적, 그리고 내가 추구하는 말투를
+          설정하시면"
+        </>
+      ),
     },
     {
       img: [<ExampleImage src={Tuto6} />],
-      content1: "원하는 대본이 완성!",
+      content1: <>원하는 대본이 완성!</>,
     },
   ];
 
