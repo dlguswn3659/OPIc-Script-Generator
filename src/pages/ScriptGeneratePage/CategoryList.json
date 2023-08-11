@@ -4106,37 +4106,37 @@
               "question": "사람들이 은행에 가는 이유는 무엇이라고 생각하나요? (예금, 대출, 투자, 환전 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "예금이나 대출을 받으러 많이 간다고 생각해요"
             },
             {
-              "question": "최근 언제 은행을 방문하였었나요?",
+              "question": "최근 언제 무슨 이유로 은행을 방문하였었나요? (예금 입출금, 계좌 개설, 이체, 수표 발행 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "지난달에 돈을 인출하기 위해 다녀왔어요"
             },
             {
-              "question": "최근 은행을 방문하여 처리한 일반적인 업무는 무엇인가요? (예금 입출금, 계좌 개설, 이체, 수표 발행 등)",
+              "question": "은행 방문 과정에서 필요한 서류나 절차는 어떤 것들이 있나요? (신분증, 카드, 계좌번호 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "은행 방문 과정에서 필요한 서류나 절차는 어떤 것들이 있나요? (신분증, 계좌번호 등)",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
+              "placeholder": "카드만 있으면 되요"
             },
             {
               "question": "은행 방문은 어떤 시간에 가장 많이 이루어지나요? 특정한 요일이나 시간대에 사람들이 더 많이 방문하는 이유는 무엇인가요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "은행 시작시간에 맞춰서 아침 일찍가요. 은행에 사람들이 많기 때문이에요"
             },
             {
               "question": "은행 방문 시 경험한 어려움이나 편리함, 만족도에 대해 어떤 이야기를 할 수 있나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "은행창구 직원에 비해 사람이 많아 꽤 오래 기달려야 하는건 귀찮아요."
+            },
+            {
+              "question": "사람들이 은행을 가는 이유를 다시한번 말씀해주세요",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": "사람들은 주로 예금, 적금 등을 신청하거나 돈을 인출하러 은행에 자주 가는 거 같아요"
             }
           ]
         },
@@ -4148,37 +4148,31 @@
               "question": "당신의 나라의 은행은 어디에 위치해 있나요? (도시 중심가, 상업지구, 주거지역 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "우리나라에는 은행이 많아요. 어딜가도 보이는 거 같아요"
             },
             {
               "question": "은행의 영업 시간은 어떻게 되나요? (주중에만, 주말에도 영업하는지, 특별한 휴무일이 있는지)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "주중 9시에서 4시까지 운영하는 걸로 알고 있어요"
             },
             {
-              "question": "은행의 외관은 어떻게 보이나요? (건물 유형, 건축 양식, 크기 등)",
+              "question": "은행에 어떤 특징적인 요소나 장식이 있는지 설명해주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "은행 건물에는 어떤 특징적인 요소나 장식이 있는지 설명해주세요. (로고, 표지판, 유리창 등)",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
+              "placeholder": "각 은행마다 간판이 있어요. 그런데 요즘에는 인터넷 뱅킹으로 해서 창구 직원이 많이 줄어드는 거 같아요."
             },
             {
               "question": "은행 내부는 어떻게 구성되어 있나요? (입구, 로비, 은행원 업무 공간, ATM 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "은행창구와 atm이 분리되어 있어요"
             },
             {
               "question": "은행 방문 시 주로 겪는 경험과 대면하는 은행원들의 모습에 대해 설명해주세요. (응대 태도, 서비스 품질 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "모든 직원들이 친절하게 해주는 거 같아요"
             }
           ]
         },
@@ -4190,37 +4184,31 @@
               "question": "가장 최근 은행을 방문한 경험에 대해 이야기해주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "돈을 인출하기 위해서 은행에 다녀왔어요"
             },
             {
               "question": "은행을 방문한 목적과 그 목적을 달성하기 위해 어떤 업무를 진행했나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "만기 적금액을 찾기 위해서 은행창구에서 만기적금을 해지했습니다."
             },
             {
               "question": "은행에 도착한 순간부터 은행 내부로 진입하는 과정에 대해 설명해주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "번호표를 뽑고 기다리면 돼요"
             },
             {
               "question": "은행 내부의 분위기나 환경에 대해 어떤 인상을 받았나요? (소음, 청결도, 인테리어 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "은행원들과의 상호작용을 어떻게 진행했나요? (대면 창구, 전화, 인터넷 뱅킹 등)",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
+              "placeholder": "은행 내부는 깔끔하지만 너무 많은 사람들이 오래 기다려요."
             },
             {
               "question": "은행 방문 후에는 어떤 느낌이 들었나요? 만족스러웠던 점이나 불편했던 점이 있으면 어떤 것이었는지 설명해주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "오프라인보다 인터넷 뱅킹을 자주 이용하는게 효율적이라고 다시금 느꼈어요. 기다리는 시간이 아깝기 때문이에요"
             }
           ]
         }
@@ -4240,37 +4228,31 @@
               "question": "당신의 나라에서는 대중교통이 어떤 형태로 제공되나요? (지하철, 버스, 전철 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "버스, 지하철 등 다양한 대중교통이 있습니다."
             },
             {
               "question": "당신이 주로 이용하는 대중교통은 무엇인가요? 그 이유는 무엇인가요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "버스를 자주 이용합니다. 환승서비스가 있어 가격이 저렴하기 때문이에요"
             },
             {
               "question": "당신이 선호하는 대중교통은 어떤 특징이 있는지 설명해주세요. (편의성, 안전성, 저렴한 비용 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "대부분의 지역을 갈 수 있고, 환승제도로 가격이 저렴하다는 특징이 있습니다."
             },
             {
               "question": "대중교통을 이용할 때 주로 겪는 경험이나 불편한 점은 무엇인가요? (혼잡도, 지연, 불친절한 승객 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "대중교통을 이용하는 동안 주로 하는 활동이나 시간 활용 방법은 무엇인가요? (책 읽기, 음악 듣기, 스마트폰 사용 등)",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
+              "placeholder": "출근시간 대에는 사람이 너무 많아서 힘들어요"
             },
             {
               "question": "대중교통을 이용하는 것이 당신에게 가장 큰 장점은 무엇인가요? 그 장점을 경험한 사례나 이야기가 있다면 공유해주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "가격이 저렴하고, 버스 전용도로를 이용하기 때문에 편해요. 서울에서 안산까지 가는데 2,000원 정도면 갈 수 있어요."
             }
           ]
         },
@@ -4282,37 +4264,37 @@
               "question": "당신이 어릴 적부터 현재까지 당신의 도시의 대중교통 시스템에 어떤 변화가 있었나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "다양한 버스노선이 생겼어요"
             },
             {
               "question": "어릴 적에는 어떤 종류의 대중교통이 주로 이용되었나요? 그리고 현재는 어떤 종류의 대중교통이 더 많이 사용되나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "버스를 자주 이용했어요. 현재는 지하철을 자주 이용합니다."
             },
             {
               "question": "대중교통 시스템에 있었던 가장 큰 변화나 개선 사항은 무엇인가요? (새로운 노선 개설, 업그레이드된 차량, 디지털 서비스 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "환승제도의 도입이 커요. 환승제도 이후 대중교통을 이용하는 사람의 수가 늘었어요"
             },
             {
               "question": "대중교통 시스템의 개선이 주민들에게 어떤 영향을 미쳤나요? (이동 편의성, 교통체증 완화 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "교통체증을 완화해주었어요"
             },
             {
               "question": "대중교통 개선을 위해 시행된 정책이나 프로그램에 대해 알고 있나요? 그것들이 어떻게 시민들의 삶을 향상시키는지 설명해주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "버스전용차선 등이 생기고 나서 자가용보다 버스를 이용하는 시민이 많아졌어요. 이는 환경에도 좋은 영향을 줘요"
             },
             {
               "question": "대중교통 시스템 개선으로 인해 당신 개인적으로 어떤 변화를 느꼈나요? 이전에는 어려웠던 점이 개선되었거나 이용 경험이 향상된 점이 있나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "예전에는 특정지역에는 대중교통으로 갈 수 없었는데, 버스 노선이 확장되어 에버랜드, 안산 등 다양한 지역을 대중교통을 이용해서 갈 수 있어요"
             }
           ]
         },
@@ -4324,37 +4306,31 @@
               "question": "대중교통을 이용하면서 겪은 불편한 경험이 있나요? 그 경험이 어떤 것이었는지 자세히 설명해주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "지방에서는 버스 도착예정시간이 맞지 않은 경우가 많았어요. 그래서 30분 넘게 기다린 적이 있습니다."
             },
             {
               "question": "대중교통을 이용하는 동안 주로 겪는 문제는 무엇인가요? (혼잡도, 지연, 불친절한 승객 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "출, 퇴근 시간에 대중교통을 이용하면 너무 혼잡해서 제대로 서있기가 힘들어요"
             },
             {
               "question": "대중교통에서 발생한 문제가 당신의 일상 생활에 어떤 영향을 미쳤나요? (시간적 제약, 스트레스, 불편함 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "혼잡한 대중교통을 이용할 때는 스트레스를 받아요"
             },
             {
               "question": "대중교통 문제에 대처하기 위해 당신이 취한 조치나 전략이 있었나요? (다른 경로 이용, 시간 조절, 특정 시간대 피하기 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "대중교통에서 발생한 문제를 해결하기 위해 당신이 의견이나 제안을 제시한 적이 있나요? 그 결과는 어떠했나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
+              "placeholder": "출, 퇴근 시간을 피해 대중교통을 이용하니 앉아서 갈 수 있고 편했어요"
             },
             {
               "question": "대중교통을 이용하는 동안 발생한 문제에 대한 대응이 개선되었거나 어떤 점에서 나아졌다고 생각하나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "대중교통을 이용하면서 책을 읽는 등 한결 여유로워졌어요"
             }
           ]
         }
@@ -4374,37 +4350,37 @@
               "question": "건강을 유지하기 위해 사람들이 해야 할 것들은 무엇인가요? (운동, 영양, 수면 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "수면시간을 일정하게 유지하고, 일주일에 4번 이상 운동을 해야할 거 같아요"
             },
             {
               "question": "어떤 종류의 운동이 건강에 가장 도움이 되는지 어떻게 생각하시나요? 그 이유는 무엇인가요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "헬스와 조깅이 도움이 되는 거 같아요. 근력운동과 유산소 운동을 하는게 건강을 유지하는데 필수라고 생각해요"
             },
             {
               "question": "올바른 영양 섭취를 위해 어떤 종류의 식단이 좋다고 생각하시나요? 어떤 식품을 주로 포함시켜야 하나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "채소와 단백질을 섭취해야 한다고 생각해요."
             },
             {
               "question": "수면이 건강에 미치는 영향에 대해 어떻게 생각하시나요? 얼마나 많은 수면을 취해야 하나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "하루에 6시간 이상은 자야한다고 생각합니다."
             },
             {
               "question": "스트레스 관리를 위해 어떤 방법을 추천하시나요? 어떤 활동이 스트레스를 줄이는 데 도움이 될까요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "운동을 하면서 스트레스를 해소할 수 있다고 생각해요"
             },
             {
               "question": "건강을 유지하기 위해 당신이 개인적으로 실천하고 있는 습관이나 루틴이 있나요? 어떤 변화를 느꼈나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "하루 6시간 이상자고, 일주일에 4번 이상 운동하기를 하고 있어요. 몸무게가 줄고 더 건강한 느낌을 받아요"
             }
           ]
         },
@@ -4416,37 +4392,37 @@
               "question": "치과를 방문하는 것에 대해 불안한 감정을 가지고 있나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "치과에서 나는 소리가 싫어요."
             },
             {
               "question": "치과 진료 중에 불편한 경험이 있었나요? 그 경험이 어떤 것이었는지 자세히 설명해주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "사랑니를 뽑는데 너무 아팠어요"
             },
             {
               "question": "치과 진료에서 어떤 측면이 가장 불편하거나 불안감을 느끼게 했나요? (주사, 치료 도구, 소리 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "진료 대기할 때 들리는 치료소리가 소름 돋습니다."
             },
             {
-              "question": "이전에 경험한 불편한 치과 진료로 인해 치과에 대한 태도가 변했나요? 어떻게 변했나요?",
+              "question": "성인이 되고 나서 치과에 대한 태도가 변했나요? 변했다면 어떻게 변했나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "치과를 다녀오고 나면 깔끔한 치아를 얻는다는 느낌을 받아 개운해요"
             },
             {
               "question": "불안한 치과 진료를 극복하기 위해 어떤 방법을 사용했나요? (진정법, 순간적인 휴식 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "나한테 도움 되는 일이라고 생각하다보면 불안감이 사라져요"
             },
             {
               "question": "만약 불안을 갖고 치과를 방문한다면, 치과에서 제공하는 서비스나 방법 중에서 불안을 완화시킬 수 있는 것은 무엇일까요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "치료 전 치료상황에 대해 간호사분이 미리 말씀해주시면서 진료하면 덜 아픈 거 같아요"
             }
           ]
         },
@@ -4458,37 +4434,37 @@
               "question": "건강 상의 이유로 어떤 활동을 그만두어야 했던 적이 있나요? 그 활동이 무엇이었는지 자세히 알려주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "허리 디스크가 있어 고등학교 때 장시간 앉아서 공부를 하지 못했어요"
             },
             {
               "question": "건강 문제로 인해 그 활동을 그만두기로 결정한 과정은 어떠했나요? 어떤 신호나 증상이 있었나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "병원에서 진료를 받았는데 허리디스크가 있다는 결과를 받았습니다."
             },
             {
               "question": "건강상의 이유로 그 활동을 그만둘 때 어떤 감정이 들었나요? ",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "억울했어요."
             },
             {
               "question": "건강상의 이유로 그 활동을 그만둔 후에 어떤 대안적인 방법이나 활동으로 대체하셨나요? ",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "운동을 시작하여 코어근육을 만들고 살을 뺐어요"
             },
             {
               "question": "그 활동을 그만둔 후에 건강 상태가 어떻게 변화했나요? 어떤 개선이 있었나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "허리디스크가 있어도 근육이 지탱해주어 일상생활에 지장이 없어졌습니다."
             },
             {
-              "question": "그 활동을 그만둔 후에도 그 활동을 다시 시작하고 싶은 욕구가 있나요? 그렇다면 그 이유는 무엇인가요?",
+              "question": "그때 느꼈던 점에 대해 말씀해주세요",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "건강이 모든 일의 최우선이라는 걸 느꼈어요"
             }
           ]
         }
@@ -4505,40 +4481,40 @@
           "mainQuestionKor": "귀하의 나라의 호텔에 대해 이야기해주세요. 그것들은 어떤 모습인가요? 어디에 위치해 있나요? 어떤 시설이 있나요?",
           "questions": [
             {
+              "question": "귀하가 최근에 방문한 호텔경험에 대해 1~3문장으로 말씀해주세요",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": "부산에 있는 호텔에 갔었어요. 바다뷰를 창문으로 볼 수 있어 예뻤고, 스파와 헬스장 등 다양한 시설이 있어 좋았어요"
+            },
+            {
               "question": "호텔의 외관과 건물 스타일은 어떻게 되나요? (현대적, 전통적, 유럽식 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "귀하의 나라에는 어떤 유형의 호텔이 있나요? (럭셔리 호텔, 비즈니스 호텔, 모텔 등)",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
+              "placeholder": "현대적 호텔"
             },
             {
               "question": "호텔은 일반적으로 어디에 위치해 있나요? (도심, 해변, 관광지 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "서울과 같은 도심과 부산 등 해변도시 근처에 많이 있어요"
             },
             {
               "question": "호텔에서는 어떤 종류의 시설을 제공하나요? (레스토랑, 수영장, 피트니스 센터 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "조식서비스, 수영장, 스파 등의 시설을 제공해요"
             },
             {
               "question": "호텔 객실은 어떻게 꾸며져 있나요? (시설, 가구, 욕실 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "안락한 침대와 깨끗하고 편리한 조리시설, 욕실 등으로 이루어져 있어요"
             },
             {
               "question": "귀하의 나라의 호텔에서 제공되는 추가 서비스나 혜택은 무엇이 있나요? (무료 아침 식사, 스파 서비스, 세탁 서비스 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "호텔식사가 인상깊어요. 저는 다양한 와인을 마셔볼 수 있었습니다."
             }
           ]
         },
@@ -4550,37 +4526,31 @@
               "question": "호텔에 도착하면 일반적으로 어떤 절차를 따르나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "체크인을 하고 스파 등 호텔내부시설을 사용해요"
             },
             {
               "question": "체크인을 하기 위해 어떤 절차를 밟아야 하나요? (예약 확인, 신분증 제출 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "객실 배정을 받은 후에는 어떤 단계를 거치나요? (객실로 안내, 엘리베이터 이용 등)",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
+              "placeholder": "카운터에서 예약확인 등을 하면 체크인을 할 수 있어요"
             },
             {
               "question": "객실에 도착하면 어떤 시설이 제공되는지 확인하나요? (무료 Wi-Fi, 냉장고, 전화기 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "무료 와이파이를 연결하고, 시설 등의 청결상태를 확인해요"
             },
             {
               "question": "호텔에서 제공하는 추가 서비스를 이용하려면 어떻게 신청하나요? (룸 서비스, 세탁 서비스, 택시 예약 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "호텔 카운터에 연락하면 추가서비스를 편리하게 이용할 수 있어요"
             },
             {
               "question": "호텔에서 머무는 동안 어떻게 편의를 누리고 쾌적한 시간을 보내나요? (식사, 레저 시설 이용, 관광지 정보 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "근처 관광지를 둘러보고, 호텔에서 편하게 휴식을 취했어요. 특히 저녁에 이용했던 스파는 환상적이었습니다."
             }
           ]
         },
@@ -4592,31 +4562,31 @@
               "question": "호텔에서 머무는 동안 특별한 경험이 있었나요? 그 경험이 어떤 것이었는지 자세히 알려주세요.",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "평일에 호텔의 헬스장과 스파를 사용하는데 저와 친구밖에 없었어요."
             },
             {
               "question": "그 경험에서 느낀 감정이나 기분은 어땠나요? ",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "성공한 사람들은 이런 생활이 일상일거라고 생각하니 성공하고 싶다는 동기부여가 되었습니다."
             },
             {
               "question": "호텔 직원이나 서비스는 그 경험에서 어떤 역할을 했나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "호텔직원들도 정말 친절했어요"
             },
             {
               "question": "그 경험으로 인해 당신의 호텔 체류에 어떤 변화가 있었나요? 그 후에 호텔에 대한 태도나 기대가 어떻게 변했을까요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "더 오래있고 싶었지만 비싸서 기존 일정까지만 있다가 체크아웃했어요"
             },
             {
               "question": "그 경험은 당신에게 어떤 가치나 교훈을 줬나요? 당신은 그 경험으로부터 어떤 것을 배웠나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "쾌적한 생활공간은 여유로운 심리적 안정을 준다는 것을 느꼈어요."
             }
           ]
         }
@@ -4633,41 +4603,36 @@
           "mainQuestionKor": "귀하의 나라에서 사람들이 일반적으로 어떤 옷을 입나요? 집에서 휴식을 취할 때 어떤 옷을 입나요? 직장에서 입는 옷과 어떻게 다른가요?",
           "questions": [
             {
-              "question": "귀하의 나라에서 과거에 사람들이 일반적으로 어떤 종류의 옷을 입었나요?",
+              "question": "귀하의 나라에서 사람들이 일반적으로 어떤 종류의 옷을 입었나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "옛날 사람들의 옷 스타일은 어떻게 되었나요? (전통적인 디자인, 특정 재료 등)",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "현재 사람들이 입는 옷은 어떻게 달라지고 있나요? (현대적인 스타일, 국제적인 영향 등)",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
+              "placeholder": "무신사라는 브랜드의 옷을 자주 입어요. 슬랙스나 셔츠, 니트 등 깔끔한 옷을 많이 입습니다."
             },
             {
               "question": "어떤 요소들이 옷 스타일 변화에 영향을 미치고 있는지 알려주세요. (대중문화, 유행 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "인스타그램 등을 통해 사람들의 패션이 획일화되는 경향이 있어요"
             },
             {
               "question": "귀하의 나라에서는 어떤 특정 기간 동안 특별한 패션 트렌드가 있었나요? (특정 시대의 스타일, 유행 아이템 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "슬랙스, 와이드팬츠, 조거팬츠 등 SNS를 통해 유행하는 바지 스타일이 달라졌어요"
             },
             {
               "question": "옷 스타일 변화가 사회적인 영향을 미치는 경우가 있었나요? (문화적인 변화, 개인 표현의 변화 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
-            }
+              "placeholder": "전반적으로 사람들이 깔끔하게 옷을 입게 되었지만, 특정 브랜드의 의류상품들은 더 비싸진 거 같아요."
+            },
+            {
+              "question": "평상시 말고 집이나 출근할 때 귀하가 입는 복장에 대해 말씀해주세요",
+              "type": "descriptive_form",
+              "answerList": [],
+              "placeholder": "집에서는 무조건 편한 옷을 입어야해요. 그래서 기능성 티에 체육복을 주로 입습니다."
+            },
+            {}
           ]
         },
         {
@@ -4675,40 +4640,34 @@
           "mainQuestionKor": "귀하의 나라에서 패션 트렌드에 어떤 변화가 있었나요? 과거에 사람들이 어떤 옷을 입었는지와 어떻게 다른가요?",
           "questions": [
             {
-              "question": "가장 최근에 옷 쇼핑을 한 경험이 어떠셨나요?",
+              "question": "귀하의 나라의 과거 패션 트렌드는 어땠나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "과거에는 아디다스 저지, 노스페이스 패딩 등 을 사람들이 많이 입었어요. 또한 알 수 없는 개성을 표출했어요"
             },
             {
-              "question": "어떤 옷을 구매하셨나요? (상세한 설명 포함)",
+              "question": "현재에는 어떤 패션 트렌드가 있나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "현재에는 무신사, 에이블리 등 대형 쇼핑플랫폼의 옷을 사람들이 많이 찾는 거 같아요"
             },
             {
-              "question": "옷을 쇼핑하러 갈 때 누구와 함께 갔나요? (가족, 친구, 혼자 등)",
+              "question": "귀하가 겪은 패션트렌드의 영향을 말씀해주세요",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "무신사 옷들이 깔끔하고 가격이 적당하다고 생각했는데, 길거리에 같은 옷을 입은 사람들을 자주 마주쳐서 기피하게 되는 거 같아요"
             },
             {
-              "question": "쇼핑을 위해 어떤 종류의 상점을 방문했나요? (백화점, 의류 매장, 아울렛 등)",
+              "question": "최근 쇼핑을 위해 어떤 종류의 상점을 방문했나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "어플을 사용해 쇼핑하는 게 편하나, 홍대나 아울렛에 가서 직접 옷을 입어보고 사는 거 같아요"
             },
             {
-              "question": "옷을 선택하고 구매하는 과정에서 어떤 요소를 고려했나요? (스타일, 가격, 품질 등)",
+              "question": "패션 트렌드 변화에 대해 1~2문장 말씀해주세요",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "옷 쇼핑 후에 어떤 감정이 들었나요? 새로운 옷을 가지고 느낀 만족도는 어떤가요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
+              "placeholder": "과거 스키니진 등이 유행했으나 현재에는 와이드팬츠 등이 유행이에요. 패션은 돌고 도는 거 같아요. 그래서 그냥 본인에게 맞는 옷을 사입는게 현명한 거 같아요"
             }
           ]
         },
@@ -4717,40 +4676,40 @@
           "mainQuestionKor": "최근에 옷을 쇼핑하러 간 경험에 대해 이야기해주세요. 무엇을 샀으며 누구와 함께 갔나요?",
           "questions": [
             {
-              "question": "가장 최근에 옷을 쇼핑하러 간 경험이 어떠셨나요?",
+              "question": "가장 최근에 옷을 쇼핑하러 어디로 갔었나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "파주 아울레에 옷을 사러 갔어요"
             },
             {
               "question": "어떤 종류의 옷을 구매하셨나요? (옷 종류, 색상, 디자인 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "여름 옷을 사러 갔습니다."
             },
             {
               "question": "누구와 함께 쇼핑을 하러 갔나요? (가족, 친구, 동료 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "친구와 함께 가서 쇼핑했어요"
             },
             {
               "question": "쇼핑을 하러 간 상점이 어땠나요? (대형 매장, 쇼핑몰, 온라인 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "아울렛이라 다양한 매장이 모여있었어요"
             },
             {
               "question": "옷을 선택하고 구매하는 과정에서 어떤 요소를 고려했나요? (가격, 품질, 스타일 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "가격과 옷의 품질 그리고 저한테 어울리는지를 보는 거 같아요"
             },
             {
               "question": "쇼핑 후에 구매한 옷을 입고 어떤 느낌을 받았나요? 만족스러웠나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "저한테 잘 어울려서 매우 만족스러웠어요"
             }
           ]
         }
@@ -4770,37 +4729,37 @@
               "question": "귀하는 보통 어떤 종류의 약속을 잡으시나요? (의료 약속, 회의, 식사 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "친구들과 식사약속을 주로 잡습니다."
             },
             {
               "question": "어떤 사람들과 약속을 잡으시나요? (가족, 친구, 동료, 전문가 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "친구"
             },
             {
               "question": "약속을 잡는 이유는 무엇인가요? (의료 상담, 업무 회의, 친목 모임 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "친목모임 및 스트레스 해소"
             },
             {
               "question": "약속을 잡을 때 어떤 수단을 사용하시나요? (전화, 온라인 예약, 대면 예약 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "DM과 카카오톡을 이용해서 약속을 잡아요"
             },
             {
               "question": "약속을 잡을 때 고려하는 요소는 무엇인가요? (일정 조율, 장소 선택, 상대방의 가용성 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "상대방이 사는 곳과 나의 사는 곳의 거리, 일정 등을 보고 합리적으로 약속일정을 잡아요"
             },
             {
-              "question": "가장 최근에 잡은 약속은 어떤 내용이었나요? 그 약속은 성공적으로 이루어졌나요?",
+              "question": "가장 최근에 잡은 약속은 어떤 내용이었나요? 그 약속은 어땠나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "학교 선배와 저녁으로 곱도리탕을 함께 먹었어요. 오랜만에 만나 매우 반가웠습니다"
             }
           ]
         },
@@ -4812,37 +4771,31 @@
               "question": "귀하는 친구들과 만날 때 주로 어디에서 만나시나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "명지대에서 자주 만나요"
             },
             {
               "question": "어떤 장소를 선호하시는 이유가 있나요? (분위기, 편의성, 특별한 시설 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "명지대에는 다양한 식당이 있고, 대중교통이 잘되어있어 접근성이 좋아요"
             },
             {
               "question": "선호하는 장소에서 어떤 활동을 즐기시나요? (식사, 커피 마시기, 쇼핑, 관광 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "식사를 하고 코인노래방에 갑니다"
             },
             {
               "question": "만나는 장소를 선택할 때 어떤 요소를 고려하시나요? (위치, 가격, 편의시설, 주변 환경 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
-            },
-            {
-              "question": "가장 기억에 남는 친구와의 만남은 어디에서 이루어졌나요? 그 장소는 어떤 특별한 경험을 주었나요?",
-              "type": "descriptive_form",
-              "answerList": [],
-              "placeholder": ""
+              "placeholder": "위치와 먹고 싶은 메뉴 등을 고려해요"
             },
             {
               "question": "귀하는 친구들과 함께 만날 때 특별한 장소를 찾는 편인가요, 아니면 편리하고 익숙한 장소를 선호하시나요? 그 이유는 무엇인가요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "편리하고 익숙한 장소를 선호해요. 오랜 시간 같은 식당에 가다보면 그 장소에 추억이 쌓이고 정이 들기 때문이에요"
             }
           ]
         },
@@ -4854,37 +4807,37 @@
               "question": "가장 기억에 남는 친구와의 약속은 언제였나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "군대에서 전역하는 날 친구들과 여행을 가기로 했던 약속이에요"
             },
             {
               "question": "그 약속은 어떤 장소에서 이루어졌나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "부대 앞에서 만나 가평과 강화도로 여행을 갔어요"
             },
             {
               "question": "어떤 활동을 함께 즐겼나요? (식사, 여행, 공연 관람 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "번지점프를 하고, 캠프파이어와 바베큐 파티를 했어요"
             },
             {
               "question": "그 약속을 특별하게 만든 원인은 무엇이었나요? (특별한 이벤트, 감동적인 경험, 새로운 활동 등)",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "친구들과 더욱 가까워질 수 있었고, 번지점프라는 버킷리스트를 이룰 수 있었기에 더 특별했어요"
             },
             {
               "question": "그 약속 중에서 가장 인상 깊었던 순간은 어떤 것이었나요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "친구들과 추억에 대해 이야기하는 밤이 인상깊었습니다."
             },
             {
               "question": "이번 약속에서 얻은 추억이나 감정은 어떤 것이었나요? 그 약속을 다시 하고 싶은 이유는 무엇인가요?",
               "type": "descriptive_form",
               "answerList": [],
-              "placeholder": ""
+              "placeholder": "감사함을 느꼈어요. 다들 바쁘지만 시간을 내서 함께 또 여행을 가고 싶네요"
             }
           ]
         }
