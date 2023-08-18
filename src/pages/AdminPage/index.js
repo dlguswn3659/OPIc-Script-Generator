@@ -5,6 +5,7 @@ import AddCategoryForm from "./components/AddCategoryForm";
 import CategoryListShow from "./components/CategoryListShow";
 import CategoryList from "../ScriptGeneratePage/CategoryList.json";
 import JsonViewer from "./components/JsonViewer";
+import { getJson, saveJson } from "../../utils/api/admin";
 
 const Container = styled.div`
   width: 100%;
@@ -48,6 +49,17 @@ const AdminPage = () => {
     JSON.stringify(CategoryList, null, 2),
   );
 
+  useEffect(() => {
+    (async () => {
+      const getJsonResult = await getJson().then((res) => {
+        console.log(res);
+        if (res != "error") {
+          setJsonData(JSON.stringify(res, null, 2));
+        }
+      });
+    })();
+  }, []);
+
   //   useEffect(()=>{
 
   //   }, [CategoryList])
@@ -65,12 +77,23 @@ const AdminPage = () => {
     }
   };
 
-  const submitOnClick = () => {
+  const submitOnClick = async () => {
     try {
       setCategoryList(JSON.parse(jsonData));
-
       // json 수정하는 api 호출
-      alert("수정이 완료되었습니다.");
+
+      const saveJsonResult = await saveJson(JSON.parse(jsonData))
+        .then((res) => {
+          console.log(res);
+          if (res != "error") {
+            alert("수정이 완료되었습니다.");
+          } else {
+            alert("에러가 발생했습니다.");
+          }
+        })
+        .catch((err) => {
+          alert("에러가 발생했습니다.");
+        });
     } catch {
       alert("Json에 문법적인 오류가 있습니다. 확인 수정 후 다시 시도해주세요.");
     }

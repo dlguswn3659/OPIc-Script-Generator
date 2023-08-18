@@ -12,7 +12,7 @@ const CategoryListShow = ({ data }) => {
 
   return (
     <div style={{ textAlign: "left", fontSize: "10px" }}>
-      {data.categoryList.map((category) => (
+      {data.map((category) => (
         <div key={category.id}>
           <h2 onClick={() => toggleDetails(category.id)}>
             {category.title} - {category.titleEng}

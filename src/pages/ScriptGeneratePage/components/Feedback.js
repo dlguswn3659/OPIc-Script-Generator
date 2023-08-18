@@ -9,6 +9,7 @@ import StarFull from "../../../assets/icons/star-full.png";
 import StarEmpty from "../../../assets/icons/star-empty.png";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 import firestore from "../../../firebase";
+import { saveFeedback } from "../../../utils/api/log";
 
 const InnerContainer = styled.div`
   width: 100%;
@@ -147,6 +148,19 @@ function Feedback({
         email: email,
         datetime: currentTime, // 현재 시간을 datetime 필드에 추가합니다.
       });
+
+      const feedbackResult = await saveFeedback({
+        stars: rate,
+        text: description,
+        email: email,
+        date: currentTime.toString(),
+      })
+        .then((res) => {
+          console.log(res);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
 
       // const response = await fetch(
       //   `${process.env.REACT_APP_EC2_IP_ADDRESS}/feedback`,
