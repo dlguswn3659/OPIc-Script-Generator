@@ -4,6 +4,8 @@ import { COLORS as palette } from "../../utils/style/Color/colors";
 import CategoryList from "./CategoryList.json";
 import { SelectMainQuestion } from "./components";
 import { getJson } from "../../utils/api/admin";
+import { initializeUserLog } from "../../utils/api/localStorageUserLog";
+
 
 const Container = styled.div`
   width: 100%;
@@ -99,6 +101,10 @@ const ScriptGeneratePage = () => {
         }
       });
     })();
+  }, []);
+
+  useEffect(() => {
+    initializeUserLog();
   }, []);
 
   return (
