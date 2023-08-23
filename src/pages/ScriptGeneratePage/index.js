@@ -113,6 +113,7 @@ const ScriptGeneratePage = () => {
         <SelectMainQuestion
           mainQuestionList={categories[selectedCategoryId].mainQuestions}
           setSelectedCategoryId={setSelectedCategoryId}
+          title={categories[selectedCategoryId].title}
         />
       ) : (
         <>

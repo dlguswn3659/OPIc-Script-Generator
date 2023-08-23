@@ -189,6 +189,7 @@ const OutputEssay = ({
   mainQuestion,
   setSavedResult,
   setSavedResultKor,
+  title
 }) => {
   const { width, height } = useWindowSize();
   const [text, setText] = useState("");
@@ -324,6 +325,7 @@ const OutputEssay = ({
           answers={answers}
           setSurveyListBoxShow={setSurveyListBoxShow}
           mainQuestion={mainQuestion}
+          title={title}
         />
       ) : (
         <>

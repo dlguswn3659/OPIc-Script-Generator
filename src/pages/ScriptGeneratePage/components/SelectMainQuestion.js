@@ -76,7 +76,7 @@ const EngQuestionBox = styled.div`
   margin-top: 3px;
 `;
 
-const SelectMainQuestion = ({ mainQuestionList, setSelectedCategoryId }) => {
+const SelectMainQuestion = ({ mainQuestionList, setSelectedCategoryId, title }) => {
   const [selectedMainQuestionIdx, setSelectedMainQuestionIdx] = useState(-1);
 
   return (
@@ -86,6 +86,7 @@ const SelectMainQuestion = ({ mainQuestionList, setSelectedCategoryId }) => {
           questions={mainQuestionList[selectedMainQuestionIdx].questions}
           setSelectedMainQuestionIdx={setSelectedMainQuestionIdx}
           mainQuestion={mainQuestionList[selectedMainQuestionIdx].mainQuestion}
+          title={title}
         />
       ) : (
         <>

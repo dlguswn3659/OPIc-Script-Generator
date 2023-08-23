@@ -34,6 +34,7 @@ function initializeUserLog() {
     const currentId = JSON.parse(localStorage.getItem(USER_LOG_KEY)).id;
     const currentTryNum = JSON.parse(localStorage.getItem(USER_LOG_KEY)).tryNum;
     if (currentTryNum != 0) {
+      // tryNum은 gpt api 호출하는 순간 1씩 늘어남.
       localStorage.setItem(USER_LOG_KEY, JSON.stringify(userLog));
       updateMultipleUserLogValues({
         id: currentId,
@@ -52,7 +53,7 @@ const updateMultipleUserLogValues = async (keyValuePairs) => {
     for (const [key, value] of Object.entries(keyValuePairs)) {
       parsedUserLog[key] = value;
     }
-
+    console.log(parsedUserLog);
     localStorage.setItem(USER_LOG_KEY, JSON.stringify(parsedUserLog));
 
     const saveLogResult = await saveLog(parsedUserLog).then((res) => {
