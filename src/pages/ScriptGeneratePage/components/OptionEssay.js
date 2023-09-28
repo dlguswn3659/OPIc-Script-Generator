@@ -7,6 +7,7 @@ import CloseIcon from "../../../assets/icons/close.svg";
 import Loading from "./Loading";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { updateMultipleUserLogValues } from "../../../utils/api/localStorageUserLog";
 
 const InnerContainer = styled.div`
   width: 100%;
@@ -231,7 +232,32 @@ function OptionEssay({
         );
 
         const data = await response.json();
+        // 여기서 user tracking을 한다. (번역까지 다 완료된 후에!)
+        const date = new Date();
+        var userLogTmp = {
+          interviewKor: JSON.parse(
+            localStorage.getItem(process.env.REACT_APP_USER_LOG_KEY),
+          ).interviewKor,
+          interviewEng: JSON.parse(
+            localStorage.getItem(process.env.REACT_APP_USER_LOG_KEY),
+          ).interviewEng,
+          tryNum:
+            JSON.parse(localStorage.getItem(process.env.REACT_APP_USER_LOG_KEY))
+              .tryNum + 1,
+          errNum: JSON.parse(
+            localStorage.getItem(process.env.REACT_APP_USER_LOG_KEY),
+          ).errNum,
+          errLog: "",
+          reqDate: date.toString(),
+          additionalOption: addedCommand,
+        };
         if (response.status !== 200) {
+          userLogTmp.errNum = userLogTmp.errNum + 1;
+          userLogTmp.errLog = String(
+            data.error ||
+              new Error(`request failed with status ${response.status}`),
+          );
+          updateMultipleUserLogValues(userLogTmp);
           throw (
             data.error ||
             new Error(`request failed with status ${response.status}`)
@@ -251,7 +277,15 @@ function OptionEssay({
           console.log(parsedText3);
 
           setTmpKor(parsedText3);
+          userLogTmp.interviewKor =
+            userLogTmp.interviewKor + "\n\n ->" + parsedText3;
+          userLogTmp.interviewEng =
+            userLogTmp.interviewEng + "\n\n ->" + parsedText;
+          updateMultipleUserLogValues(userLogTmp);
         } catch {
+          userLogTmp.errNum = userLogTmp.errNum + 1;
+          userLogTmp.errLog = "Parsing Error";
+          updateMultipleUserLogValues(userLogTmp);
           alert("파싱에러가 발생했습니다! 다시 시도해주세요!");
         }
 

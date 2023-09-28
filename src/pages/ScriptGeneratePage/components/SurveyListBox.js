@@ -8,6 +8,7 @@ import Loading from "./Loading";
 import DetailOptions from "./DetailOptions";
 import HelpIcon from "../../../assets/icons/help.svg";
 import Help from "./Help";
+import { updateMultipleUserLogValues } from "../../../utils/api/localStorageUserLog";
 
 const Container = styled.div`
   width: 100%;
@@ -161,6 +162,7 @@ const SurveyListBox = ({
   answers,
   setSurveyListBoxShow,
   mainQuestion,
+  title,
 }) => {
   const [descriptionAnswerList, setDescriptionAnswerList] = useState([]);
   const [qnaMerge, setQnaMerge] = useState("");
@@ -248,6 +250,7 @@ const SurveyListBox = ({
       );
 
       const data = await response.json();
+
       if (response.status !== 200) {
         throw (
           data.error ||
@@ -279,7 +282,37 @@ const SurveyListBox = ({
       );
 
       const data2 = await response2.json();
+
+      // 여기서 user tracking을 한다. (번역까지 다 완료된 후에!)
+      const date = new Date();
+      var userLogTmp = {
+        title: title,
+        mainQuestion: mainQuestion,
+        interviewKor: mergeSentence,
+        interviewEng: parsedText,
+        optionList: [
+          detailOptions?.length?.prompt,
+          detailOptions?.level?.prompt,
+          detailOptions?.speech?.prompt,
+          detailOptions?.style,
+        ],
+        tryNum:
+          JSON.parse(localStorage.getItem(process.env.REACT_APP_USER_LOG_KEY))
+            .tryNum + 1,
+        errNum: JSON.parse(
+          localStorage.getItem(process.env.REACT_APP_USER_LOG_KEY),
+        ).errNum,
+        errLog: "",
+        reqDate: date.toString(),
+      };
+
       if (response2.status !== 200) {
+        userLogTmp.errNum = userLogTmp.errNum + 1;
+        userLogTmp.errLog = String(
+          data.error ||
+            new Error(`request failed with status ${response2.status}`),
+        );
+        updateMultipleUserLogValues(userLogTmp);
         throw (
           data.error ||
           new Error(`request failed with status ${response2.status}`)
@@ -304,17 +337,28 @@ const SurveyListBox = ({
         var tmpTestNum = Number(sessionStorage.getItem("testNum")) + 1;
         console.log(tmpTestNum);
         sessionStorage.setItem("testNum", tmpTestNum.toString());
+        userLogTmp.interviewKor =
+          userLogTmp.interviewKor + "\n\n ->" + parsedText3;
+        userLogTmp.interviewEng =
+          userLogTmp.interviewEng + "\n\n ->" + parsedText2;
+        updateMultipleUserLogValues(userLogTmp);
       } catch {
         setGptResult("파싱에러가 발생했습니다! 다시 생성 버튼을 눌러주세요!");
         setGptResultKor(
           "파싱에러가 발생했습니다! 다시 생성 버튼을 눌러해주세요!",
         );
+        userLogTmp.errNum = userLogTmp.errNum + 1;
+        userLogTmp.errLog = "Parsing Error";
+        updateMultipleUserLogValues(userLogTmp);
         alert("파싱에러가 발생했습니다! 다시 시도해주세요!");
       }
       setWaiting(false);
       // setQuestion("");
     } catch (error) {
       console.error(error);
+      userLogTmp.errNum = userLogTmp.errNum + 1;
+      userLogTmp.errLog = error;
+      updateMultipleUserLogValues(userLogTmp);
       // alert(error.message);
       setGptResult(error.message ? error.message : error);
       setWaiting(false);
@@ -350,6 +394,7 @@ const SurveyListBox = ({
               setGptResultKor={setGptResultKor}
               setSavedResult={setSavedResult}
               setSavedResultKor={setSavedResultKor}
+              title={title}
             />
           ) : (
             <>

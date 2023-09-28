@@ -5,6 +5,7 @@ import Logo from "../../assets/icons/logo.svg";
 import { Tutorial, TutorialCard } from "./components";
 import Tutorial1 from "../../assets/images/tutorial1.png";
 import Tutorial2 from "../../assets/images/tutorial2.png";
+import { initializeUserLog } from "../../utils/api/localStorageUserLog";
 
 const Container = styled.div`
   width: 100%;
@@ -84,6 +85,10 @@ const VersionText = styled.div`
 const IntroPage = () => {
   const [tutorialStatus, setTutorialStatus] = useState(false);
 
+  useEffect(() => {
+    initializeUserLog();
+  }, []);
+  
   const startOnClick = () => {
     window.location.href = "/generate";
   };

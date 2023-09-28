@@ -3,6 +3,9 @@ import styled from "styled-components";
 import { COLORS as palette } from "../../utils/style/Color/colors";
 import CategoryList from "./CategoryList.json";
 import { SelectMainQuestion } from "./components";
+import { getJson } from "../../utils/api/admin";
+import { initializeUserLog } from "../../utils/api/localStorageUserLog";
+
 
 const Container = styled.div`
   width: 100%;
@@ -87,20 +90,36 @@ const BackgroundImageArea = styled.div`
 
 const ScriptGeneratePage = () => {
   const [selectedCategoryId, setSelectedCategoryId] = useState(-1);
+  const [categories, setCategories] = useState();
+  // const Categories = CategoryList.categoryList;
+  useEffect(() => {
+    (async () => {
+      const getJsonResult = await getJson().then((res) => {
+        console.log(res);
+        if (res != "error") {
+          setCategories(res);
+        }
+      });
+    })();
+  }, []);
 
-  const Categories = CategoryList.categoryList;
+  useEffect(() => {
+    initializeUserLog();
+  }, []);
+
   return (
     <Container>
       {selectedCategoryId > -1 ? (
         <SelectMainQuestion
-          mainQuestionList={Categories[selectedCategoryId].mainQuestions}
+          mainQuestionList={categories[selectedCategoryId].mainQuestions}
           setSelectedCategoryId={setSelectedCategoryId}
+          title={categories[selectedCategoryId].title}
         />
       ) : (
         <>
           <PageTitle>주제 선택</PageTitle>
           <GategoryCardContainer>
-            {Categories.map((category, idx) => (
+            {categories?.map((category, idx) => (
               <CategoryBox
                 onClick={() => {
                   setSelectedCategoryId(idx);
