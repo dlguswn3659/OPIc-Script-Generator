@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { IntroPage, ScriptGeneratePage, AdminPage } from "./pages";
+import { IntroPage, ScriptGeneratePage, AdminPage, QuizletPage, QuizletListPage } from "./pages";
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
@@ -52,6 +52,8 @@ function App() {
               <Route exact path="/" element={<IntroPage />} />
               <Route path="/generate" element={<ScriptGeneratePage />} />
               <Route path="/admin" element={<AdminPage />} />
+              <Route path="/quizlet" element={<QuizletPage />} />
+              <Route path="/quizlet/record" element={<QuizletListPage />} />
             </Routes>
             <Footer />
           </WebAppContainer>
