@@ -10,6 +10,8 @@ import {
   getTranslated,
 } from "../../utils/api/quizlet";
 import ProfileListModal from "./components/ProfileListModal";
+import QuizletListPage from "../QuizletListPage/index";
+import CopyIcon from "../../assets/icons/copy.svg";
 
 const Container = styled.div`
   width: 100%;
@@ -98,13 +100,33 @@ const ButtonContainer = styled.div`
 `;
 
 const TextAreaTitle = styled.div`
-  padding: 12px 0px 2px 16px;
+  // padding: 12px 0px 2px 16px;
   font-family: Noto Sans KR;
   font-size: 18px;
   font-weight: 700;
   line-height: 32px;
   text-align: left;
   color: ${palette.darkest_green};
+`;
+
+const CopyButton = styled.button`
+  width: 24px;
+  height: 24px;
+  border: hidden;
+  margin: auto 0px;
+  background-color: transparent;
+  background-image: url(${CopyIcon});
+`;
+
+const CardHeader = styled.div`
+  font-size: 18px;
+  font-weight: 700;
+  font-family: Noto Sans KR;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 10px 3px 10px;
 `;
 
 const QuizletPage = () => {
@@ -123,6 +145,9 @@ const QuizletPage = () => {
   const [generateValid, setGenerateValid] = useState(false);
   const [recordValid, setRecordValid] = useState(false);
   const [profileListOn, setProfileListOn] = useState(false);
+  const [quizletListOn, setQuizletListOn] = useState(false);
+  const [password, setPassword] = useState("");
+  const [isValid, setIsValid] = useState(false);
 
   useEffect(() => {
     var match = /\/d\/([^/]+)/.exec(docsLink);
@@ -345,119 +370,196 @@ const QuizletPage = () => {
   };
 
   const getRecordOnClick = () => {
-    window.location.href = "/quizlet/record";
+    setQuizletListOn(true);
+    // window.location.href = "/quizlet/record";
+  };
+
+  const copyOnClick = (text) => {
+    console.log("hello");
+    console.log(text);
+    navigator.clipboard.writeText(text);
+    // toast.success("복사완료!");
+    alert("복사 완료!");
+  };
+
+  const quizletButtonOnClick = (text) => {
+    navigator.clipboard.writeText(text);
+    alert("클립보드에 자동복사된 텍스트를 '불러오기' 클릭 후 붙여넣으세요!");
+    const url = "https://quizlet.com/create-set"; // 특정 링크 URL을 여기에 입력하세요
+    const newWindow = window.open(url, "_blank");
+    if (newWindow) {
+      // 팝업 차단 등의 이유로 팝업 창이 제대로 열리지 않은 경우
+      // 사용자가 클릭하여 수동으로 열 수 있도록 안내합니다.
+      newWindow.focus();
+    } else {
+      alert("팝업이 차단되었습니다. 팝업 차단을 해제하고 다시 시도해주세요.");
+    }
   };
 
   return (
     <>
-      {profileListOn ? (
-        <ProfileListModal
-          visible={setProfileListOn}
-          maskClosable={true}
-          onClose={() => {
-            setProfileListOn(false);
-          }}
-          setCurrentStudent={setCurrentStudent}
-        />
-      ) : (
-        <></>
-      )}
-      <Container>
-        <Header>
-          <ListButton />
-          <HeaderTitle>Fluent Quizlet Generator</HeaderTitle>
-          <ListButton />
-        </Header>
-        <ContentBox>
-          <DocsButton
-            docsId={docsId}
-            setDocsParsing={setDocsParsing}
-            profileSaveOnClick={profileSaveOnClick}
-          />
-          <InfoBox>
-            <InputBox
-              onChange={(e) => setStudentName(e.target.value)}
-              value={studentName}
-              placeholder="학생 이름"
+      {isValid ? (
+        <>
+          {quizletListOn ? (
+            <QuizletListPage
+              name={studentName}
+              phoneNum={phoneNum}
+              setStatus={setQuizletListOn}
             />
-            <InputBox
-              onChange={(e) => setDocsLink(e.target.value)}
-              value={docsLink}
-              placeholder="문서 링크"
-            />
-            <InputBox
-              onChange={(e) => setQuizletNum(e.target.value)}
-              value={quizletNum}
-              placeholder="퀴즐렛 개수"
-            />
-            {/* <InputBox
+          ) : (
+            <>
+              {profileListOn ? (
+                <ProfileListModal
+                  visible={setProfileListOn}
+                  maskClosable={true}
+                  onClose={() => {
+                    setProfileListOn(false);
+                  }}
+                  setCurrentStudent={setCurrentStudent}
+                />
+              ) : (
+                <></>
+              )}
+              <Container>
+                <Header>
+                  <ListButton />
+                  <HeaderTitle>Fluent Quizlet Generator</HeaderTitle>
+                  <ListButton />
+                </Header>
+                <ContentBox>
+                  <DocsButton
+                    docsId={docsId}
+                    setDocsParsing={setDocsParsing}
+                    profileSaveOnClick={profileSaveOnClick}
+                  />
+                  <InfoBox>
+                    <InputBox
+                      onChange={(e) => setStudentName(e.target.value)}
+                      value={studentName}
+                      placeholder="학생 이름"
+                    />
+                    <InputBox
+                      onChange={(e) => setDocsLink(e.target.value)}
+                      value={docsLink}
+                      placeholder="문서 링크"
+                    />
+                    <InputBox
+                      onChange={(e) => setQuizletNum(e.target.value)}
+                      value={quizletNum}
+                      placeholder="퀴즐렛 개수"
+                    />
+                    {/* <InputBox
             onChange={(e) => setQuizletSetNum(e.target.value)}
             value={quizletSetNum}
             placeholder="퀴즐렛 세트 개수"
           /> */}
-          </InfoBox>
-          <InfoBox>
-            <InputBox
-              onChange={(e) => setEmail(e.target.value)}
-              value={email}
-              placeholder="이메일"
-            />
-            <InputBox
-              onChange={(e) => setPhoneNum(e.target.value)}
-              value={phoneNum}
-              placeholder="전화번호"
-            />
-          </InfoBox>
-          <TextAreaTitle>✏️ 수업 필기 내용</TextAreaTitle>
-          <TextArea
-            onChange={(e) => setDocsParsing(e.target.value)}
-            value={docsParsing}
-          />
-          {docsParsing.length > 0 ? (
-            <GenerateButton onClick={generateOnClick}>
-              Generate Quizlet
-            </GenerateButton>
-          ) : (
-            <GenerateButton
-              style={{ backgroundColor: palette.grey_5, color: palette.white }}
-            >
-              Generate Quizlet
-            </GenerateButton>
-          )}
-          {!isLoading ? (
-            <>
-              <TextAreaTitle>🔁 전체 수업 번역본</TextAreaTitle>
-              <TextArea
-                onChange={(e) => setDocsTranslate(e.target.value)}
-                value={docsTranslate}
-              />
-              <TextAreaTitle>🇶 퀴즐렛 표현</TextAreaTitle>
-              <TextArea
-                onChange={(e) => setQuizletFormat(e.target.value)}
-                value={quizletFormat}
-              />
-            </>
-          ) : (
-            <div style={{ marginTop: "-250px", marginBottom: "40px" }}>
-              <Loading />
-            </div>
-          )}
+                  </InfoBox>
+                  <InfoBox>
+                    <InputBox
+                      onChange={(e) => setEmail(e.target.value)}
+                      value={email}
+                      placeholder="이메일"
+                    />
+                    <InputBox
+                      onChange={(e) => setPhoneNum(e.target.value)}
+                      value={phoneNum}
+                      placeholder="전화번호"
+                    />
+                  </InfoBox>
+                  <CardHeader>
+                    <TextAreaTitle>✏️ 수업 필기 내용</TextAreaTitle>
+                    <CopyButton onClick={() => copyOnClick(docsParsing)} />
+                  </CardHeader>
+                  <TextArea
+                    onChange={(e) => setDocsParsing(e.target.value)}
+                    value={docsParsing}
+                  />
+                  {docsParsing.length > 0 ? (
+                    <GenerateButton onClick={generateOnClick}>
+                      Generate Quizlet
+                    </GenerateButton>
+                  ) : (
+                    <GenerateButton
+                      style={{
+                        backgroundColor: palette.grey_5,
+                        color: palette.white,
+                      }}
+                    >
+                      Generate Quizlet
+                    </GenerateButton>
+                  )}
+                  {!isLoading ? (
+                    <>
+                      <CardHeader>
+                        <TextAreaTitle>🔁 전체 수업 번역본</TextAreaTitle>
+                        <CopyButton
+                          onClick={() => copyOnClick(docsTranslate)}
+                        />
+                      </CardHeader>
+                      <TextArea
+                        onChange={(e) => setDocsTranslate(e.target.value)}
+                        value={docsTranslate}
+                      />
+                      <CardHeader>
+                        <TextAreaTitle>🇶 퀴즐렛 표현</TextAreaTitle>
+                        <CopyButton
+                          onClick={() => quizletButtonOnClick(quizletFormat)}
+                        />
+                      </CardHeader>
+                      <TextArea
+                        onChange={(e) => setQuizletFormat(e.target.value)}
+                        value={quizletFormat}
+                      />
+                    </>
+                  ) : (
+                    <div style={{ marginTop: "-250px", marginBottom: "40px" }}>
+                      <Loading />
+                    </div>
+                  )}
 
-          <ButtonContainer>
-            <GenerateButton onClick={recordOnClick}>기록</GenerateButton>
-            <GenerateButton onClick={getRecordOnClick}>
-              저장한 수업들
-            </GenerateButton>
-            <GenerateButton
+                  <ButtonContainer>
+                    <GenerateButton onClick={recordOnClick}>
+                      기록
+                    </GenerateButton>
+                    <GenerateButton onClick={getRecordOnClick}>
+                      저장한 수업들
+                    </GenerateButton>
+                    <GenerateButton
+                      onClick={() => {
+                        setProfileListOn(true);
+                      }}
+                    >
+                      프로필 변경
+                    </GenerateButton>
+                  </ButtonContainer>
+                </ContentBox>
+              </Container>
+            </>
+          )}
+        </>
+      ) : (
+        <>
+          <Container>
+            password
+            <input
+              onChange={(e) => setPassword(e.target.value)}
+              value={password}
+            />
+            <button
               onClick={() => {
-                setProfileListOn(true);
+                if (password == process.env.REACT_APP_PW) {
+                  setIsValid(false);
+                } else {
+                  alert("틀렸습니다. 다시 시도해주세요.");
+                  setPassword("");
+                }
               }}
             >
-              프로필 변경
-            </GenerateButton>
-          </ButtonContainer>
-        </ContentBox>
-      </Container>
+              check
+            </button>
+          </Container>
+        </>
+      )}
     </>
   );
 };

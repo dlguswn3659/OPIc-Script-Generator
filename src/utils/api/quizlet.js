@@ -135,16 +135,18 @@ export const saveTranslated = async (
 export const getTranslated = async (name, phoneNum) => {
   let returnValue;
 
+  const param = {
+    name: name,
+    phoneNum: phoneNum
+  }
+
   await axios
-    .get(
-      `${process.env.REACT_APP_EC2_IP_ADDRESS}/api/Student/getTranslated`,
-      `{"name":"${name}","phoneNum":"${phoneNum}"}`,
-      {
-        headers: {
-          "Content-Type": "application/json",
-        },
+    .get(`${process.env.REACT_APP_EC2_IP_ADDRESS}/api/Student/getTranslated`, {
+      headers: {
+        "Content-Type": "application/json",
       },
-    )
+      params: param,
+    })
     .then((res) => {
       console.log(res?.data);
       returnValue = res?.data?.translated; // list
